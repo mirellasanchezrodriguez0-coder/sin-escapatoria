@@ -26,8 +26,9 @@
 <h2>¿Quién juega?</h2>
 <p class="subtitle">Cada móvil conserva su identidad durante la partida.</p>
 <div class="grid">
-<button class="btn primary" onclick="setProfile('Mirella')">MIRELLA</button>
-<button class="btn secondary" onclick="setProfile('Pedro')">PEDRO</button>
+<button onclick="let n=prompt('Escribe tu nombre:', 'Jugador 1');if(n&&n.trim()){this.textContent=n.trim();establecerPerfil(n.trim())}">JUGADOR 1</button>
+
+<button onclick="let n=prompt('Escribe tu nombre:', 'Jugador 2');if(n&&n.trim()){this.textContent=n.trim();establecerPerfil(n.trim())}">JUGADOR 2</button>
 </div>
 <p class="small" id="profileNote">Elige tu perfil antes de crear o unirte.</p>
 </section>
