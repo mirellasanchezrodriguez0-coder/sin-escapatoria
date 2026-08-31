@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#130b19">
-<link rel="manifest" href="/manifest.json">
 <title>Sin Escapatoria</title>
 
 <style>
@@ -15,58 +14,40 @@
   --text:#fff;
   --muted:#c8bbce;
   --pink:#efb5da;
-  --violet:#cdb6ff
+  --violet:#cdb6ff;
 }
 
 *{
-  box-sizing:border-box
+  box-sizing:border-box;
 }
 
 html{
-  background:var(--bg)
+  background:var(--bg);
 }
 
 body{
   margin:0;
-  background:linear-gradient(
-    180deg,
-    #3d143b,
-    #130b19 60%
-  );
+  background:linear-gradient(180deg,#3d143b,#130b19 60%);
   color:var(--text);
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
-  min-height:100vh
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  min-height:100vh;
 }
 
 .app{
   max-width:700px;
   margin:auto;
-  padding:18px 15px 35px
+  padding:18px 15px 35px;
 }
 
 .top{
   text-align:center;
   padding:8px 8px 16px;
-  position:sticky;
-  top:0;
-  z-index:3;
-  background:
-    linear-gradient(
-      180deg,
-      #3d143b 75%,
-      transparent
-    )
 }
 
 .logo{
   font-size:13px;
   letter-spacing:2px;
-  opacity:.8
+  opacity:.8;
 }
 
 .title{
@@ -75,11 +56,11 @@ body{
   margin:2px;
   letter-spacing:1px;
   line-height:.92;
-  text-shadow:0 8px 30px #0008
+  text-shadow:0 8px 30px #0008;
 }
 
 .subtitle{
-  color:var(--muted)
+  color:var(--muted);
 }
 
 .card{
@@ -89,7 +70,7 @@ body{
   padding:20px;
   margin:14px 0;
   box-shadow:0 18px 50px #0006;
-  backdrop-filter:blur(18px)
+  backdrop-filter:blur(18px);
 }
 
 .btn{
@@ -100,78 +81,76 @@ body{
   margin:6px 0;
   font-size:16px;
   font-weight:850;
-  transition:
-    transform .12s,
-    opacity .12s;
-  cursor:pointer
+  cursor:pointer;
+  transition:transform .12s,opacity .12s;
 }
 
 .btn:active{
   transform:scale(.97);
-  opacity:.85
+  opacity:.85;
 }
 
 .primary{
-  background:
-    linear-gradient(
-      90deg,
-      var(--pink),
-      var(--violet)
-    );
-  color:#24102b
+  background:linear-gradient(90deg,var(--pink),var(--violet));
+  color:#24102b;
 }
 
 .secondary{
   background:#ffffff12;
-  color:#fff
+  color:#fff;
 }
 
 .input{
   width:100%;
   padding:15px;
+  margin-top:10px;
   border-radius:16px;
   border:1px solid var(--line);
   background:#ffffff08;
   color:#fff;
   font-size:18px;
   text-align:center;
-  outline:none
+  outline:none;
+}
+
+.input::placeholder{
+  color:#c8bbce99;
 }
 
 .input:focus{
-  border-color:var(--pink)
+  border-color:var(--pink);
 }
 
 .codeInput{
   text-transform:uppercase;
-  letter-spacing:5px
+  letter-spacing:5px;
 }
 
 .hidden{
-  display:none!important
+  display:none!important;
 }
 
 .grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:8px
+  gap:8px;
 }
 
 .grid .btn{
-  margin:0
+  margin:0;
 }
 
 .pills{
   display:flex;
   gap:7px;
-  flex-wrap:wrap
+  flex-wrap:wrap;
 }
 
 .pill{
   background:#ffffff10;
   padding:7px 10px;
   border-radius:999px;
-  font-size:13px
+  font-size:13px;
 }
 
 .bar{
@@ -179,20 +158,15 @@ body{
   background:#ffffff10;
   border-radius:99px;
   overflow:hidden;
-  margin:12px 0
+  margin:12px 0;
 }
 
 .bar i{
   display:block;
   height:100%;
   width:0;
-  background:
-    linear-gradient(
-      90deg,
-      var(--pink),
-      var(--violet)
-    );
-  transition:.5s
+  background:linear-gradient(90deg,var(--pink),var(--violet));
+  transition:.5s;
 }
 
 .type{
@@ -201,64 +175,64 @@ body{
   background:#ffffff10;
   padding:7px 10px;
   border-radius:999px;
-  font-size:12px
+  font-size:12px;
 }
 
 .prompt{
   font-size:24px;
   font-weight:850;
   line-height:1.2;
-  margin:15px 0
+  margin:15px 0;
 }
 
 .answers{
   display:grid;
-  gap:8px
+  gap:8px;
 }
 
 .answers .btn{
-  text-align:left
+  text-align:left;
 }
 
 .choice{
   border:1px solid #ffffff18;
-  background:
-    linear-gradient(
-      135deg,
-      #ffffff12,
-      #ffffff06
-    );
-  min-height:58px
+  background:linear-gradient(135deg,#ffffff12,#ffffff06);
+  min-height:58px;
 }
 
 .choice.selected{
   outline:2px solid var(--pink);
-  background:#efb5da22
+  background:#efb5da22;
+}
+
+.choice:disabled{
+  opacity:1;
 }
 
 .status{
   color:var(--muted);
-  min-height:24px
+  min-height:24px;
 }
 
 .code{
   font-size:42px;
   letter-spacing:8px;
   text-align:center;
-  font-weight:900
+  font-weight:900;
+  margin:20px 0;
 }
 
 .small{
   font-size:12px;
   color:var(--muted);
-  line-height:1.45
+  line-height:1.45;
 }
 
 .sectionTitle{
   font-size:12px;
   letter-spacing:2px;
   text-transform:uppercase;
-  color:#c8bbce
+  color:#c8bbce;
 }
 
 .nameBox{
@@ -266,12 +240,12 @@ body{
   padding:15px;
   background:#ffffff08;
   border-radius:18px;
-  border:1px solid var(--line)
+  border:1px solid var(--line);
 }
 
 .selectedProfile{
   outline:2px solid var(--pink);
-  background:#efb5da22
+  background:#efb5da22;
 }
 
 .toast{
@@ -287,11 +261,11 @@ body{
   display:none;
   z-index:50;
   max-width:90%;
-  text-align:center
+  text-align:center;
 }
 
 .toast.show{
-  display:block
+  display:block;
 }
 
 .special{
@@ -303,11 +277,11 @@ body{
   justify-content:center;
   text-align:center;
   z-index:40;
-  padding:25px
+  padding:25px;
 }
 
 .special.show{
-  display:flex
+  display:flex;
 }
 
 .specialBox{
@@ -316,15 +290,33 @@ body{
   background:#211128;
   border:1px solid var(--line);
   border-radius:28px;
-  padding:28px
+  padding:28px;
 }
 
 .error{
-  color:#ffb4b4
+  color:#ffb4b4;
 }
 
 .ok{
-  color:#c8ffcf
+  color:#c8ffcf;
+}
+
+@media(max-width:480px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .title{
+    font-size:32px;
+  }
+
+  .prompt{
+    font-size:21px;
+  }
+
+  .code{
+    font-size:34px;
+  }
 }
 </style>
 </head>
@@ -359,10 +351,8 @@ body{
   <h2>¿Quién juega?</h2>
 
   <p class="subtitle">
-    Elige el jugador y escribe el nombre.
-    No usamos ventanas emergentes del navegador.
+    Elige tu jugador y escribe tu nombre.
   </p>
-
 
   <div class="grid">
 
@@ -371,20 +361,15 @@ body{
       class="btn secondary"
       type="button"
       onclick="selectProfile('A')">
-
       JUGADOR 1
-
     </button>
-
 
     <button
       id="playerBButton"
       class="btn secondary"
       type="button"
       onclick="selectProfile('B')">
-
       JUGADOR 2
-
     </button>
 
   </div>
@@ -401,6 +386,7 @@ body{
     <input
       id="nameInput"
       class="input"
+      type="text"
       maxlength="40"
       autocomplete="name"
       placeholder="Escribe tu nombre">
@@ -409,9 +395,7 @@ body{
       class="btn primary"
       type="button"
       onclick="saveProfile()">
-
       GUARDAR NOMBRE
-
     </button>
 
   </div>
@@ -420,9 +404,7 @@ body{
   <p
     class="small"
     id="profileNote">
-
     Elige JUGADOR 1 o JUGADOR 2.
-
   </p>
 
 </section>
@@ -434,16 +416,10 @@ body{
     class="btn primary"
     type="button"
     onclick="createRoom()">
-
     CREAR PARTIDA
-
   </button>
 
-
-  <h3>
-    O UNIRSE
-  </h3>
-
+  <h3>O UNIRSE</h3>
 
   <input
     id="joinCode"
@@ -453,16 +429,12 @@ body{
     autocomplete="off"
     placeholder="CÓDIGO DE LA SALA">
 
-
   <button
     class="btn primary"
     type="button"
     onclick="joinRoom()">
-
     UNIRSE A LA PARTIDA
-
   </button>
-
 
   <p
     class="small"
@@ -492,9 +464,7 @@ body{
   <p
     class="status"
     id="lobbyStatus">
-
     Esperando al otro jugador…
-
   </p>
 
 </section>
@@ -526,37 +496,29 @@ body{
 
     </div>
 
-
     <div class="bar">
       <i id="progress"></i>
     </div>
-
 
     <div
       class="type"
       id="type">
     </div>
 
-
     <div class="small">
-
       Jugador:
       <b id="who"></b>
-
     </div>
-
 
     <div
       class="prompt"
       id="prompt">
     </div>
 
-
     <div
       class="answers"
       id="answers">
     </div>
-
 
     <p
       class="status"
@@ -574,49 +536,35 @@ body{
         class="btn secondary"
         type="button"
         onclick="roll()">
-
         🎲 Dado
-
       </button>
-
 
       <button
         class="btn secondary"
         type="button"
         onclick="challenge()">
-
         🔥 Reto
-
       </button>
-
 
       <button
         class="btn secondary"
         type="button"
         onclick="closeness()">
-
         🫶 Cercanía
-
       </button>
-
 
       <button
         class="btn secondary"
         type="button"
         onclick="nextIfReady()">
-
         ➡️ Continuar
-
       </button>
-
 
       <button
         class="btn secondary"
         type="button"
         onclick="showStats()">
-
         📊 Estadísticas
-
       </button>
 
     </div>
@@ -634,17 +582,14 @@ body{
     FIN DE LA NOCHE
   </div>
 
-
   <h2>
     Vuestra partida
   </h2>
-
 
   <p
     id="sumIntro"
     class="subtitle">
   </p>
-
 
   <div class="pills">
 
@@ -665,7 +610,6 @@ body{
 
   </div>
 
-
   <div class="card">
 
     <div class="sectionTitle">
@@ -676,14 +620,11 @@ body{
 
   </div>
 
-
   <button
     class="btn primary"
     type="button"
     onclick="closeSummary()">
-
     VOLVER A LA PARTIDA
-
   </button>
 
 </section>
@@ -700,1024 +641,3 @@ body{
   class="special">
 
   <div class="specialBox">
-
-    <div
-      id="spIcon"
-      style="font-size:55px">
-
-      🎲
-
-    </div>
-
-
-    <h2 id="spTitle"></h2>
-
-
-    <p id="spText"></p>
-
-
-    <button
-      class="btn primary"
-      type="button"
-      onclick="closeSpecial()">
-
-      VOLVER
-
-    </button>
-
-  </div>
-
-</div>
-
-</main>
-
-
-<script>
-
-"use strict";
-
-
-const API = location.origin;
-
-
-const $ = id =>
-  document.getElementById(id);
-
-
-let cards = [];
-
-let room = "";
-
-let player = "";
-
-let profile = "";
-
-let playerName = "";
-
-let currentState = null;
-
-let pollTimer = null;
-
-let advanceLock = false;
-
-let lastRenderedRound = -1;
-
-
-/* =========================
-   MENSAJES
-========================= */
-
-function toast(text){
-
-  const el = $("toast");
-
-  el.textContent = text;
-
-  el.classList.add("show");
-
-  clearTimeout(toast.timer);
-
-  toast.timer = setTimeout(
-    () => el.classList.remove("show"),
-    2200
-  );
-
-}
-
-
-function setStatus(
-  id,
-  text,
-  kind = ""
-){
-
-  const el = $(id);
-
-  if(!el)
-    return;
-
-  el.textContent = text;
-
-  el.className =
-    "small" +
-    (kind ? " " + kind : "");
-
-}
-
-
-/* =========================
-   NOMBRES
-========================= */
-
-function storageName(slot){
-
-  return localStorage.getItem(
-    slot === "A"
-      ? "se_name_A"
-      : "se_name_B"
-  ) || "";
-
-}
-
-
-function selectProfile(slot){
-
-  profile = slot;
-
-  localStorage.setItem(
-    "se_profile",
-    slot
-  );
-
-
-  const old =
-    storageName(slot);
-
-
-  $("nameBox")
-    .classList
-    .remove("hidden");
-
-
-  $("nameTitle")
-    .textContent =
-      "Nombre de JUGADOR " +
-      (slot === "A" ? "1" : "2");
-
-
-  $("nameInput").value =
-    old;
-
-
-  $("profileNote")
-    .textContent =
-      "Ahora escribe el nombre y pulsa GUARDAR NOMBRE.";
-
-
-  $("playerAButton")
-    .classList
-    .toggle(
-      "selectedProfile",
-      slot === "A"
-    );
-
-
-  $("playerBButton")
-    .classList
-    .toggle(
-      "selectedProfile",
-      slot === "B"
-    );
-
-
-  setTimeout(
-    () => $("nameInput").focus(),
-    50
-  );
-
-}
-
-
-function saveProfile(){
-
-  if(!profile){
-
-    toast(
-      "Primero elige un jugador"
-    );
-
-    return;
-
-  }
-
-
-  const name =
-    $("nameInput")
-      .value
-      .trim()
-      .replace(/\s+/g, " ");
-
-
-  if(!name){
-
-    toast(
-      "Escribe un nombre"
-    );
-
-    $("nameInput").focus();
-
-    return;
-
-  }
-
-
-  localStorage.setItem(
-    profile === "A"
-      ? "se_name_A"
-      : "se_name_B",
-    name
-  );
-
-
-  playerName = name;
-
-
-  $("playerAButton")
-    .textContent =
-      storageName("A") ||
-      "JUGADOR 1";
-
-
-  $("playerBButton")
-    .textContent =
-      storageName("B") ||
-      "JUGADOR 2";
-
-
-  $("profileNote")
-    .textContent =
-      "Perfil seleccionado: " +
-      name;
-
-
-  $("nameBox")
-    .classList
-    .add("hidden");
-
-
-  toast(
-    name +
-    " seleccionado"
-  );
-
-}
-
-
-/* =========================
-   RESTAURAR PERFIL
-========================= */
-
-function restoreProfile(){
-
-  const p =
-    localStorage.getItem(
-      "se_profile"
-    );
-
-
-  if(
-    p === "A" ||
-    p === "B"
-  ){
-
-    profile = p;
-
-    playerName =
-      storageName(p);
-
-  }
-
-
-  const a =
-    storageName("A");
-
-
-  const b =
-    storageName("B");
-
-
-  if(a){
-
-    $("playerAButton")
-      .textContent = a;
-
-  }
-
-
-  if(b){
-
-    $("playerBButton")
-      .textContent = b;
-
-  }
-
-
-  if(playerName){
-
-    $("profileNote")
-      .textContent =
-        "Perfil seleccionado: " +
-        playerName;
-
-  }
-
-
-  if(profile){
-
-    $(profile === "A"
-      ? "playerAButton"
-      : "playerBButton"
-    )
-      .classList
-      .add("selectedProfile");
-
-  }
-
-}
-
-
-/* =========================
-   API
-========================= */
-
-async function api(
-  path,
-  options = {}
-){
-
-  try{
-
-    const r =
-      await fetch(
-        API + path,
-        {
-          cache:"no-store",
-          ...options,
-
-          headers:{
-            "Content-Type":
-              "application/json",
-
-            ...(options.headers || {})
-
-          }
-
-        }
-      );
-
-
-    const text =
-      await r.text();
-
-
-    let data = {};
-
-
-    try{
-
-      data =
-        text
-          ? JSON.parse(text)
-          : {};
-
-    }
-    catch{
-
-      data = {
-        ok:false,
-        error:
-          "Respuesta no válida del servidor."
-      };
-
-    }
-
-
-    if(!r.ok){
-
-      data.ok = false;
-
-      data.error =
-        data.error ||
-        (
-          "Error del servidor (" +
-          r.status +
-          ")"
-        );
-
-    }
-
-
-    return data;
-
-  }
-  catch(e){
-
-    return {
-
-      ok:false,
-
-      error:
-        "El servidor no está disponible. " +
-        "Comprueba Render y vuelve a intentarlo."
-
-    };
-
-  }
-
-}
-
-
-/* =========================
-   VALIDACIÓN
-========================= */
-
-function ensureProfile(){
-
-  if(
-    !profile ||
-    !playerName
-  ){
-
-    $("profiles")
-      .scrollIntoView({
-        behavior:"smooth",
-        block:"center"
-      });
-
-
-    toast(
-      "Elige jugador y guarda el nombre"
-    );
-
-
-    return false;
-
-  }
-
-
-  return true;
-
-}
-
-
-/* =========================
-   CARTAS
-========================= */
-
-async function loadCards(){
-
-  const x =
-    await api(
-      "/cards.json?cache=" +
-      Date.now()
-    );
-
-
-  if(!x.ok){
-
-    setStatus(
-      "joinStatus",
-      "No se pudieron cargar las cartas. " +
-      "Revisa cards.json.",
-      "error"
-    );
-
-    return;
-
-  }
-
-
-  cards =
-    Array.isArray(x.cards)
-      ? x.cards
-      : [];
-
-
-  if(!cards.length){
-
-    setStatus(
-      "joinStatus",
-      "cards.json no contiene cartas.",
-      "error"
-    );
-
-  }
-
-}
-
-
-/* =========================
-   CREAR SALA
-========================= */
-
-async function createRoom(){
-
-  if(!ensureProfile())
-    return;
-
-
-  setStatus(
-    "joinStatus",
-    "Creando sala…"
-  );
-
-
-  const x =
-    await api(
-      "/api/create-room",
-      {
-        method:"POST",
-
-        body:
-          JSON.stringify({
-            name:playerName,
-            profile:profile
-          })
-
-      }
-    );
-
-
-  if(
-    !x.ok ||
-    !x.code
-  ){
-
-    setStatus(
-      "joinStatus",
-      x.error ||
-      "No se pudo crear la partida.",
-      "error"
-    );
-
-    return;
-
-  }
-
-
-  room =
-    String(x.code)
-      .toUpperCase();
-
-
-  player =
-    x.player?.id ||
-    "";
-
-
-  saveRoom();
-
-  showLobby();
-
-  await ensureInitialState();
-
-  startPolling();
-
-}
-
-
-/* =========================
-   UNIRSE
-========================= */
-
-async function joinRoom(){
-
-  if(!ensureProfile())
-    return;
-
-
-  const code =
-    $("joinCode")
-      .value
-      .trim()
-      .toUpperCase();
-
-
-  if(
-    !/^[A-Z0-9]{6}$/.test(code)
-  ){
-
-    setStatus(
-      "joinStatus",
-      "El código debe tener 6 caracteres.",
-      "error"
-    );
-
-    return;
-
-  }
-
-
-  setStatus(
-    "joinStatus",
-    "Conectando…"
-  );
-
-
-  const x =
-    await api(
-      "/api/join-room",
-      {
-        method:"POST",
-
-        body:
-          JSON.stringify({
-            code,
-            name:playerName,
-            profile:profile
-          })
-
-      }
-    );
-
-
-  if(
-    !x.ok ||
-    !x.code
-  ){
-
-    setStatus(
-      "joinStatus",
-      x.error ||
-      "No se pudo unir a la partida.",
-      "error"
-    );
-
-    return;
-
-  }
-
-
-  room =
-    String(x.code)
-      .toUpperCase();
-
-
-  player =
-    x.player?.id ||
-    "";
-
-
-  saveRoom();
-
-  showLobby();
-
-  startPolling();
-
-}
-
-
-/* =========================
-   SALA
-========================= */
-
-function saveRoom(){
-
-  localStorage.setItem(
-    "se_room",
-    room
-  );
-
-
-  localStorage.setItem(
-    "se_player",
-    player
-  );
-
-}
-
-
-function showLobby(){
-
-  $("profiles")
-    .classList
-    .add("hidden");
-
-
-  $("lobby")
-    .classList
-    .remove("hidden");
-
-
-  $("code")
-    .textContent = room;
-
-
-  $("lobbyStatus")
-    .textContent =
-      "Esperando al otro jugador…";
-
-}
-
-
-async function getRoom(){
-
-  if(!room)
-    return null;
-
-
-  return api(
-    "/api/room/" +
-    encodeURIComponent(room)
-  );
-
-}
-
-
-async function setRoomState(state){
-
-  return api(
-    "/api/room/" +
-    encodeURIComponent(room) +
-    "/state",
-    {
-      method:"POST",
-
-      body:
-        JSON.stringify({
-          state
-        })
-
-    }
-  );
-
-}
-
-
-async function ensureInitialState(){
-
-  const x =
-    await getRoom();
-
-
-  if(!x?.ok)
-    return;
-
-
-  if(
-    !x.state ||
-    typeof x.state !== "object" ||
-    Array.isArray(x.state)
-  ){
-
-    await setRoomState({
-
-      round:0,
-
-      started:false,
-
-      answers:{},
-
-      scores:{
-        A:0,
-        B:0
-      },
-
-      rolls:0,
-
-      intensity:1,
-
-      drinks:0,
-
-      matches:0,
-
-      moments:[]
-
-    });
-
-  }
-
-}
-
-
-/* =========================
-   POLLING
-========================= */
-
-function startPolling(){
-
-  if(pollTimer)
-    clearInterval(pollTimer);
-
-
-  pollRoom();
-
-
-  pollTimer =
-    setInterval(
-      pollRoom,
-      1000
-    );
-
-}
-
-
-async function pollRoom(){
-
-  if(!room)
-    return;
-
-
-  const x =
-    await getRoom();
-
-
-  if(!x?.ok){
-
-    $("lobbyStatus")
-      .textContent =
-        x?.error ||
-        "No se puede consultar la sala.";
-
-    return;
-
-  }
-
-
-  const players =
-    x.room?.players || [];
-
-
-  currentState =
-    x.state || {};
-
-
-  if(players.length < 2){
-
-    $("lobbyStatus")
-      .textContent =
-        "Esperando al otro jugador… (" +
-        players.length +
-        "/2)";
-
-    return;
-
-  }
-
-
-  $("lobbyStatus")
-    .textContent =
-      "¡Los dos jugadores estáis dentro!";
-
-
-  if(!currentState.started){
-
-    currentState = {
-      ...currentState,
-      started:true
-    };
-
-
-    await setRoomState(
-      currentState
-    );
-
-  }
-
-
-  $("lobby")
-    .classList
-    .add("hidden");
-
-
-  $("game")
-    .classList
-    .remove("hidden");
-
-
-  renderGame(
-    currentState
-  );
-
-}
-
-
-/* =========================
-   JUEGO
-========================= */
-
-function currentCard(){
-
-  return cards[
-    Number(
-      currentState?.round || 0
-    )
-  ] || null;
-
-}
-
-
-function renderGame(state){
-
-  if(
-    !state ||
-    !cards.length
-  )
-    return;
-
-
-  const round =
-    Number(
-      state.round || 0
-    );
-
-
-  if(
-    round >= cards.length ||
-    round >= 50
-  ){
-
-    showSummary();
-
-    return;
-
-  }
-
-
-  const card =
-    cards[round];
-
-
-  if(!card)
-    return;
-
-
-  const level =
-    Math.min(
-      10,
-      Math.floor(
-        round / 5
-      ) + 1
-    );
-
-
-  $("level")
-    .textContent = level;
-
-
-  $("headLevel")
-    .textContent = level;
-
-
-  $("intensity")
-    .textContent =
-      Math.min(
-        10,
-        Number(
-          state.intensity ||
-          level
-        )
-      );
-
-
-  $("drinks")
-    .textContent =
-      Number(
-        state.drinks || 0
-      );
-
-
-  $("score")
-    .textContent =
-      Number(
-        state.scores?.[profile] ||
-        0
-      );
-
-
-  $("progress")
-    .style
-    .width =
-      Math.min(
-        100,
-        level * 10
-      ) + "%";
-
-
-  $("type")
-    .textContent =
-      card.type ||
-      "Carta";
-
-
-  $("who")
-    .textContent =
-      playerName;
-
-
-  $("prompt")
-    .textContent =
-      card.prompt ||
-      "";
-
-
-  const answers =
-    $("answers");
-
-
-  answers.innerHTML = "";
-
-
-  const mine =
-    state.answers?.[profile];
-
-
-  const myValue =
-    mine?.round === round
-      ? mine.value
-      : null;
-
-
-  if(
-    Array.isArray(card.answers) &&
-    c
