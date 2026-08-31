@@ -104,7 +104,7 @@ async function joinRoom(){
   const c=document.getElementById("joinCode").value.trim().toUpperCase();
   if(!c){document.getElementById("joinStatus").textContent="Escribe el código de la sala.";return;}
   try{
-    let x=await req("/join/"+encodeURIComponent(c),{method:"POST"});
+    let x=await req("/api/join/"+encodeURIComponent(...)
     if(!x.ok){alert(x.error||"No se pudo unir a la partida");return;}
     room=c; player=x.player; enterLobby();
   }catch(e){alert("El servidor de partidas no está disponible en esta dirección.");}
