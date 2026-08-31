@@ -1543,4 +1543,481 @@ document.createElement(
 
 b.type="button";
 
-b
+b.className=
+"btn primary";
+
+b.textContent=
+myValue===null
+?"MARCAR RETO COMO HECHO"
+:"RETO HECHO";
+
+b.disabled=
+myValue!==null;
+
+b.onclick=
+()=>answer("HECHO");
+
+answers.appendChild(b);
+
+}
+
+const other=
+state.answers?.[
+profile==="A"?"B":"A"
+];
+
+$("status")
+.textContent=
+myValue!==null
+?
+(
+other?.round===round
+?
+"Los dos habéis respondido. Pulsa CONTINUAR."
+:
+"Respuesta guardada. Esperando al otro jugador…"
+)
+:
+"Elige una respuesta.";
+
+}
+
+
+/* RESPONDER */
+
+async function answer(value){
+
+if(
+advanceLock||
+!room||
+!currentState
+)
+return;
+
+const round=
+Number(
+currentState.round||
+0
+);
+
+const answers=
+{
+...(currentState.answers||{})
+};
+
+answers[profile]={
+round,
+value
+};
+
+let scores=
+{
+...(currentState.scores||
+{
+A:0,
+B:0
+})
+};
+
+scores[profile]=
+Number(
+scores[profile]||
+0
+)+1;
+
+let matches=
+Number(
+currentState.matches||
+0
+);
+
+const other=
+profile==="A"?"B":"A";
+
+if(
+answers[other]?.round===round&&
+answers[other].value===value
+){
+
+matches++;
+
+}
+
+const next={
+...currentState,
+answers,
+scores,
+matches
+};
+
+currentState=next;
+
+await setRoomState(next);
+
+renderGame(next);
+
+}
+
+
+/* CONTINUAR */
+
+async function nextIfReady(){
+
+if(
+advanceLock||
+!currentState
+)
+return;
+
+const round=
+Number(
+currentState.round||
+0
+);
+
+const a=
+currentState.answers?.A;
+
+const b=
+currentState.answers?.B;
+
+if(
+a?.round!==round||
+b?.round!==round
+){
+
+toast(
+"Los dos tenéis que responder primero"
+);
+
+return;
+
+}
+
+advanceLock=true;
+
+const next={
+...currentState,
+
+round:
+round+1,
+
+answers:{},
+
+intensity:
+Math.min(
+10,
+1+
+Math.floor(
+(round+1)/5
+)
+)
+
+};
+
+currentState=next;
+
+await setRoomState(next);
+
+renderGame(next);
+
+setTimeout(
+()=>advanceLock=false,
+500
+);
+
+}
+
+
+/* DADO */
+
+async function roll(){
+
+if(!currentState)
+return;
+
+const value=
+Math.floor(
+Math.random()*6
+)+1;
+
+const next={
+...currentState,
+
+rolls:
+Number(
+currentState.rolls||
+0
+)+1
+};
+
+currentState=next;
+
+await setRoomState(next);
+
+showSpecial(
+"🎲",
+"DADO",
+"Ha salido el número "+
+value+"."
+);
+
+}
+
+
+/* RETO */
+
+function challenge(){
+
+showSpecial(
+"🔥",
+"RETO",
+"Haz el reto de la carta y después pulsa CONTINUAR."
+);
+
+}
+
+
+/* CERCANÍA */
+
+function closeness(){
+
+showSpecial(
+"🫶",
+"CERCANÍA",
+"Acercaos solo hasta donde ambos estéis cómodos."
+);
+
+}
+
+
+/* VENTANA ESPECIAL */
+
+function showSpecial(
+icon,
+title,
+text
+){
+
+$("spIcon")
+.textContent=icon;
+
+$("spTitle")
+.textContent=title;
+
+$("spText")
+.textContent=text;
+
+$("special")
+.classList
+.add("show");
+
+}
+
+
+function closeSpecial(){
+
+$("special")
+.classList
+.remove("show");
+
+}
+
+
+/* ESTADÍSTICAS */
+
+function showStats(){
+
+const s=
+currentState||
+{};
+
+const total=
+Math.max(
+1,
+Number(
+s.round||
+0
+)
+);
+
+const pct=
+Math.round(
+(
+Number(
+s.matches||
+0
+)/
+total
+)*100
+);
+
+showSpecial(
+"📊",
+"ESTADÍSTICAS",
+"Rondas: "+
+(s.round||0)+
+" · Coincidencias: "+
+pct+
+"% · Tiradas: "+
+(s.rolls||0)
+);
+
+}
+
+
+/* FINAL */
+
+function showSummary(){
+
+if(pollTimer){
+
+clearInterval(
+pollTimer
+);
+
+pollTimer=null;
+
+}
+
+$("game")
+.classList
+.add("hidden");
+
+$("summary")
+.classList
+.remove("hidden");
+
+const s=
+currentState||
+{};
+
+const round=
+Number(
+s.round||
+0
+);
+
+const pct=
+Math.round(
+(
+Number(
+s.matches||
+0
+)/
+Math.max(1,round)
+)*100
+);
+
+$("sumMatch")
+.textContent=
+pct+"%";
+
+$("sumScore")
+.textContent=
+Number(
+s.scores?.[profile]||
+0
+);
+
+$("sumRolls")
+.textContent=
+Number(
+s.rolls||
+0
+);
+
+$("sumIntro")
+.textContent=
+playerName+
+", habéis llegado al final.";
+
+$("sumMoment")
+.textContent=
+"Habéis completado "+
+round+
+" rondas.";
+
+}
+
+
+function closeSummary(){
+
+$("summary")
+.classList
+.add("hidden");
+
+$("game")
+.classList
+.remove("hidden");
+
+startPolling();
+
+}
+
+
+/* ENTER */
+
+$("nameInput")
+.addEventListener(
+"keydown",
+e=>{
+
+if(e.key==="Enter"){
+
+e.preventDefault();
+
+saveProfile();
+
+}
+
+}
+);
+
+
+$("joinCode")
+.addEventListener(
+"keydown",
+e=>{
+
+if(e.key==="Enter")
+joinRoom();
+
+}
+);
+
+
+/* INICIO */
+
+(async function init(){
+
+restoreProfile();
+
+await loadCards();
+
+const savedRoom=
+localStorage
+  .getItem("se_room");
+
+const savedPlayer=
+localStorage.getItem("se_player");
+
+if(savedRoom){
+
+room=savedRoom;
+
+player=
+savedPlayer||
+"";
+
+showLobby();
+
+startPolling();
+
+}
+
+})();
+</script>
+
+</body>
+</html>
