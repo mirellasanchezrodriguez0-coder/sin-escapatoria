@@ -2,6 +2,6 @@
   "name": "sin-escapatoria-online",
   "version": "3.0.0",
   "scripts": {
-    "start": "node Server.js"
+    "start": "node server.js"
   }
 }
