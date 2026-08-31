@@ -94,7 +94,7 @@ async function req(path,opts={}){
 async function createRoom(){
   if(!profile){alert("Elige JUGADOR 1 o JUGADOR 2 primero");return;}
   try{
-    let x=await req("/room",{method:"POST"});
+    let x=await req("/api/create-room",{method:"POST"});
     if(!x.ok && !x.code){alert(x.error||"No se pudo crear la partida");return;}
     room=x.code; player=x.player; enterLobby();
   }catch(e){alert("El servidor de partidas no está disponible en esta dirección.");}
