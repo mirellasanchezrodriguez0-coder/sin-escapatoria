@@ -18,13 +18,28 @@
   --violet:#cdb6ff
 }
 
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box
+}
+
+html{
+  background:var(--bg)
+}
 
 body{
   margin:0;
-  background:linear-gradient(180deg,#3d143b,#130b19 55%);
+  background:linear-gradient(
+    180deg,
+    #3d143b,
+    #130b19 60%
+  );
   color:var(--text);
-  font-family:system-ui,-apple-system,Segoe UI,sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   min-height:100vh
 }
 
@@ -36,12 +51,16 @@ body{
 
 .top{
   text-align:center;
-  padding:8px;
+  padding:8px 8px 16px;
   position:sticky;
   top:0;
   z-index:3;
-  background:linear-gradient(180deg,#3d143b 75%,transparent);
-  padding-bottom:16px
+  background:
+    linear-gradient(
+      180deg,
+      #3d143b 75%,
+      transparent
+    )
 }
 
 .logo{
@@ -59,7 +78,9 @@ body{
   text-shadow:0 8px 30px #0008
 }
 
-.subtitle{color:var(--muted)}
+.subtitle{
+  color:var(--muted)
+}
 
 .card{
   background:#ffffff0c;
@@ -79,7 +100,10 @@ body{
   margin:6px 0;
   font-size:16px;
   font-weight:850;
-  transition:transform .12s,opacity .12s
+  transition:
+    transform .12s,
+    opacity .12s;
+  cursor:pointer
 }
 
 .btn:active{
@@ -88,7 +112,12 @@ body{
 }
 
 .primary{
-  background:linear-gradient(90deg,var(--pink),var(--violet));
+  background:
+    linear-gradient(
+      90deg,
+      var(--pink),
+      var(--violet)
+    );
   color:#24102b
 }
 
@@ -105,12 +134,22 @@ body{
   background:#ffffff08;
   color:#fff;
   font-size:18px;
-  text-transform:uppercase;
   text-align:center;
+  outline:none
+}
+
+.input:focus{
+  border-color:var(--pink)
+}
+
+.codeInput{
+  text-transform:uppercase;
   letter-spacing:5px
 }
 
-.hidden{display:none}
+.hidden{
+  display:none!important
+}
 
 .grid{
   display:grid;
@@ -118,7 +157,9 @@ body{
   gap:8px
 }
 
-.grid .btn{margin:0}
+.grid .btn{
+  margin:0
+}
 
 .pills{
   display:flex;
@@ -144,7 +185,13 @@ body{
 .bar i{
   display:block;
   height:100%;
-  background:linear-gradient(90deg,var(--pink),var(--violet));
+  width:0;
+  background:
+    linear-gradient(
+      90deg,
+      var(--pink),
+      var(--violet)
+    );
   transition:.5s
 }
 
@@ -169,16 +216,23 @@ body{
   gap:8px
 }
 
-.answers .btn{text-align:left}
+.answers .btn{
+  text-align:left
+}
 
 .choice{
   border:1px solid #ffffff18;
-  background:linear-gradient(135deg,#ffffff12,#ffffff06);
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff12,
+      #ffffff06
+    );
   min-height:58px
 }
 
 .choice.selected{
-  outline:2px solid #efb5da;
+  outline:2px solid var(--pink);
   background:#efb5da22
 }
 
@@ -207,8 +261,17 @@ body{
   color:#c8bbce
 }
 
-.glow{
-  box-shadow:0 0 0 1px #efb5da22,0 20px 70px #b34b9a22
+.nameBox{
+  margin-top:12px;
+  padding:15px;
+  background:#ffffff08;
+  border-radius:18px;
+  border:1px solid var(--line)
+}
+
+.selectedProfile{
+  outline:2px solid var(--pink);
+  background:#efb5da22
 }
 
 .toast{
@@ -222,39 +285,46 @@ body{
   border-radius:999px;
   font-weight:800;
   display:none;
-  z-index:9
+  z-index:50;
+  max-width:90%;
+  text-align:center
 }
 
-.cinema{
+.toast.show{
+  display:block
+}
+
+.special{
   position:fixed;
   inset:0;
-  background:radial-gradient(circle at 50% 40%,#7b2f6a,#130b19 65%);
+  background:#130b19ee;
   display:none;
   align-items:center;
   justify-content:center;
   text-align:center;
-  z-index:20;
-  padding:30px
+  z-index:40;
+  padding:25px
 }
 
-.cinema.show{
-  display:flex;
-  animation:fade .45s
+.special.show{
+  display:flex
 }
 
-.cinema .big{
-  font-size:58px;
-  font-weight:950
+.specialBox{
+  max-width:600px;
+  width:100%;
+  background:#211128;
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:28px
 }
 
-.cinema .sub{
-  font-size:18px;
-  color:#e7dbea
+.error{
+  color:#ffb4b4
 }
 
-@keyframes fade{
-  from{opacity:0}
-  to{opacity:1}
+.ok{
+  color:#c8ffcf
 }
 </style>
 </head>
@@ -264,6 +334,7 @@ body{
 <main class="app">
 
 <header class="top">
+
   <div class="logo">
     NIVEL <b id="headLevel">1</b> · DOS JUGADORES
   </div>
@@ -275,7 +346,9 @@ body{
   <div class="subtitle">
     La noche empieza cuando ambos entráis.
   </div>
+
 </header>
+
 
 <section id="profiles" class="card">
 
@@ -286,57 +359,122 @@ body{
   <h2>¿Quién juega?</h2>
 
   <p class="subtitle">
-    Cada móvil conserva su identidad durante la partida.
+    Elige el jugador y escribe el nombre.
+    No usamos ventanas emergentes del navegador.
   </p>
+
 
   <div class="grid">
 
     <button
       id="playerAButton"
       class="btn secondary"
-      onclick="chooseProfile('A')">
+      type="button"
+      onclick="selectProfile('A')">
+
       JUGADOR 1
+
     </button>
+
 
     <button
       id="playerBButton"
       class="btn secondary"
-      onclick="chooseProfile('B')">
+      type="button"
+      onclick="selectProfile('B')">
+
       JUGADOR 2
+
     </button>
 
   </div>
 
-  <p class="small" id="profileNote">
-    Elige tu perfil antes de crear o unirte.
+
+  <div
+    id="nameBox"
+    class="nameBox hidden">
+
+    <div id="nameTitle">
+      <b>Nombre de JUGADOR 1</b>
+    </div>
+
+    <input
+      id="nameInput"
+      class="input"
+      maxlength="40"
+      autocomplete="name"
+      placeholder="Escribe tu nombre">
+
+    <button
+      class="btn primary"
+      type="button"
+      onclick="saveProfile()">
+
+      GUARDAR NOMBRE
+
+    </button>
+
+  </div>
+
+
+  <p
+    class="small"
+    id="profileNote">
+
+    Elige JUGADOR 1 o JUGADOR 2.
+
   </p>
 
 </section>
 
-<button
-  class="btn primary"
-  onclick="createRoom()">
-  CREAR PARTIDA
-</button>
 
-<h3>O UNIRSE</h3>
+<section class="card">
 
-<input
-  id="joinCode"
-  class="input"
-  type="text"
-  maxlength="6"
-  placeholder="ESCRIBE EL CÓDIGO DE LA SALA">
+  <button
+    class="btn primary"
+    type="button"
+    onclick="createRoom()">
 
-<button
-  class="btn primary"
-  onclick="joinRoom()">
-  UNIRSE A LA PARTIDA
-</button>
+    CREAR PARTIDA
 
-<p class="small" id="joinStatus"></p>
+  </button>
 
-<section id="lobby" class="card hidden">
+
+  <h3>
+    O UNIRSE
+  </h3>
+
+
+  <input
+    id="joinCode"
+    class="input codeInput"
+    type="text"
+    maxlength="6"
+    autocomplete="off"
+    placeholder="CÓDIGO DE LA SALA">
+
+
+  <button
+    class="btn primary"
+    type="button"
+    onclick="joinRoom()">
+
+    UNIRSE A LA PARTIDA
+
+  </button>
+
+
+  <p
+    class="small"
+    id="joinStatus">
+  </p>
+
+</section>
+
+
+<section
+  id="lobby"
+  class="card hidden">
 
   <div class="type">
     SALA PRIVADA
@@ -346,15 +484,25 @@ body{
     Comparte este código
   </h2>
 
-  <div class="code" id="code"></div>
+  <div
+    class="code"
+    id="code">
+  </div>
 
-  <p class="status" id="lobbyStatus">
+  <p
+    class="status"
+    id="lobbyStatus">
+
     Esperando al otro jugador…
+
   </p>
 
 </section>
 
-<section id="game" class="hidden">
+
+<section
+  id="game"
+  class="hidden">
 
   <div class="card">
 
@@ -378,46 +526,97 @@ body{
 
     </div>
 
+
     <div class="bar">
       <i id="progress"></i>
     </div>
 
-    <div class="type" id="type"></div>
 
-    <div class="small">
-      Jugador: <b id="who"></b>
+    <div
+      class="type"
+      id="type">
     </div>
 
-    <div class="prompt" id="prompt"></div>
 
-    <div class="answers" id="answers"></div>
+    <div class="small">
 
-    <p class="status" id="status"></p>
+      Jugador:
+      <b id="who"></b>
+
+    </div>
+
+
+    <div
+      class="prompt"
+      id="prompt">
+    </div>
+
+
+    <div
+      class="answers"
+      id="answers">
+    </div>
+
+
+    <p
+      class="status"
+      id="status">
+    </p>
 
   </div>
+
 
   <div class="card">
 
     <div class="grid">
 
-      <button class="btn secondary" onclick="roll()">
+      <button
+        class="btn secondary"
+        type="button"
+        onclick="roll()">
+
         🎲 Dado
+
       </button>
 
-      <button class="btn secondary" onclick="challenge()">
+
+      <button
+        class="btn secondary"
+        type="button"
+        onclick="challenge()">
+
         🔥 Reto
+
       </button>
 
-      <button class="btn secondary" onclick="closeness()">
+
+      <button
+        class="btn secondary"
+        type="button"
+        onclick="closeness()">
+
         🫶 Cercanía
+
       </button>
 
-      <button class="btn secondary" onclick="nextIfReady()">
+
+      <button
+        class="btn secondary"
+        type="button"
+        onclick="nextIfReady()">
+
         ➡️ Continuar
+
       </button>
 
-      <button class="btn secondary" onclick="showStats()">
+
+      <button
+        class="btn secondary"
+        type="button"
+        onclick="showStats()">
+
         📊 Estadísticas
+
       </button>
 
     </div>
@@ -426,35 +625,48 @@ body{
 
 </section>
 
-<section id="summary" class="card hidden">
+
+<section
+  id="summary"
+  class="card hidden">
 
   <div class="sectionTitle">
     FIN DE LA NOCHE
   </div>
 
-  <h2 id="sumTitle">
+
+  <h2>
     Vuestra partida
   </h2>
 
-  <p id="sumIntro" class="subtitle"></p>
+
+  <p
+    id="sumIntro"
+    class="subtitle">
+  </p>
+
 
   <div class="pills">
 
     <span class="pill">
-      ❤️ Coincidencias <b id="sumMatch">0%</b>
+      ❤️ Coincidencias
+      <b id="sumMatch">0%</b>
     </span>
 
     <span class="pill">
-      ⭐ <b id="sumScore">0</b> puntos
+      ⭐ <b id="sumScore">0</b>
+      puntos
     </span>
 
     <span class="pill">
-      🎲 <b id="sumRolls">0</b> tiradas
+      🎲 <b id="sumRolls">0</b>
+      tiradas
     </span>
 
   </div>
 
-  <div class="card" style="margin:12px 0 0">
+
+  <div class="card">
 
     <div class="sectionTitle">
       MOMENTOS
@@ -464,83 +676,151 @@ body{
 
   </div>
 
+
   <button
     class="btn primary"
+    type="button"
     onclick="closeSummary()">
+
     VOLVER A LA PARTIDA
+
   </button>
 
 </section>
 
-<section id="special" class="card hidden">
 
-  <div
-    style="font-size:55px;text-align:center"
-    id="spIcon">
-    🎲
+<div
+  id="toast"
+  class="toast">
+</div>
+
+
+<div
+  id="special"
+  class="special">
+
+  <div class="specialBox">
+
+    <div
+      id="spIcon"
+      style="font-size:55px">
+
+      🎲
+
+    </div>
+
+
+    <h2 id="spTitle"></h2>
+
+
+    <p id="spText"></p>
+
+
+    <button
+      class="btn primary"
+      type="button"
+      onclick="closeSpecial()">
+
+      VOLVER
+
+    </button>
+
   </div>
 
-  <h2 id="spTitle"></h2>
-
-  <p id="spText"></p>
-
-  <button
-    class="btn primary"
-    onclick="closeSpecial()">
-    Volver
-  </button>
-
-</section>
-
-<div id="toast" class="toast"></div>
-
-<div id="cinema" class="cinema">
-  <div>
-    <div class="big" id="cinemaTitle"></div>
-    <div class="sub" id="cinemaSub"></div>
-  </div>
 </div>
 
 </main>
 
+
 <script>
 
-const API = "https://sin-escapatoria.onrender.com";
+"use strict";
+
+
+const API = location.origin;
+
+
+const $ = id =>
+  document.getElementById(id);
+
+
+let cards = [];
 
 let room = "";
+
 let player = "";
-let lastRound = -1;
-let myAnswer = null;
+
 let profile = "";
-let lastState = null;
+
+let playerName = "";
+
+let currentState = null;
+
+let pollTimer = null;
+
+let advanceLock = false;
+
+let lastRenderedRound = -1;
 
 
 /* =========================
-   PERFILES
+   MENSAJES
 ========================= */
 
-function chooseProfile(slot){
+function toast(text){
 
-  let current =
+  const el = $("toast");
+
+  el.textContent = text;
+
+  el.classList.add("show");
+
+  clearTimeout(toast.timer);
+
+  toast.timer = setTimeout(
+    () => el.classList.remove("show"),
+    2200
+  );
+
+}
+
+
+function setStatus(
+  id,
+  text,
+  kind = ""
+){
+
+  const el = $(id);
+
+  if(!el)
+    return;
+
+  el.textContent = text;
+
+  el.className =
+    "small" +
+    (kind ? " " + kind : "");
+
+}
+
+
+/* =========================
+   NOMBRES
+========================= */
+
+function storageName(slot){
+
+  return localStorage.getItem(
     slot === "A"
-      ? (localStorage.getItem("se_name_A") || "Jugador 1")
-      : (localStorage.getItem("se_name_B") || "Jugador 2");
+      ? "se_name_A"
+      : "se_name_B"
+  ) || "";
 
-  let n = prompt(
-    "Escribe el nombre de " +
-    (slot === "A" ? "Jugador 1" : "Jugador 2") +
-    ":",
-    current
-  );
+}
 
-  if(!n || !n.trim()) return;
 
-  n = n.trim();
-
-  localStorage.setItem(
-    slot === "A" ? "se_name_A" : "se_name_B",
-    n
-  );
+function selectProfile(slot){
 
   profile = slot;
 
@@ -549,18 +829,127 @@ function chooseProfile(slot){
     slot
   );
 
-  document.getElementById(
-    slot === "A"
-      ? "playerAButton"
-      : "playerBButton"
-  ).textContent = n;
 
-  document.getElementById(
-    "profileNote"
-  ).textContent =
-    "Perfil seleccionado: " + n;
+  const old =
+    storageName(slot);
 
-  toast(n + " seleccionado");
+
+  $("nameBox")
+    .classList
+    .remove("hidden");
+
+
+  $("nameTitle")
+    .textContent =
+      "Nombre de JUGADOR " +
+      (slot === "A" ? "1" : "2");
+
+
+  $("nameInput").value =
+    old;
+
+
+  $("profileNote")
+    .textContent =
+      "Ahora escribe el nombre y pulsa GUARDAR NOMBRE.";
+
+
+  $("playerAButton")
+    .classList
+    .toggle(
+      "selectedProfile",
+      slot === "A"
+    );
+
+
+  $("playerBButton")
+    .classList
+    .toggle(
+      "selectedProfile",
+      slot === "B"
+    );
+
+
+  setTimeout(
+    () => $("nameInput").focus(),
+    50
+  );
+
+}
+
+
+function saveProfile(){
+
+  if(!profile){
+
+    toast(
+      "Primero elige un jugador"
+    );
+
+    return;
+
+  }
+
+
+  const name =
+    $("nameInput")
+      .value
+      .trim()
+      .replace(/\s+/g, " ");
+
+
+  if(!name){
+
+    toast(
+      "Escribe un nombre"
+    );
+
+    $("nameInput").focus();
+
+    return;
+
+  }
+
+
+  localStorage.setItem(
+    profile === "A"
+      ? "se_name_A"
+      : "se_name_B",
+    name
+  );
+
+
+  playerName = name;
+
+
+  $("playerAButton")
+    .textContent =
+      storageName("A") ||
+      "JUGADOR 1";
+
+
+  $("playerBButton")
+    .textContent =
+      storageName("B") ||
+      "JUGADOR 2";
+
+
+  $("profileNote")
+    .textContent =
+      "Perfil seleccionado: " +
+      name;
+
+
+  $("nameBox")
+    .classList
+    .add("hidden");
+
+
+  toast(
+    name +
+    " seleccionado"
+  );
+
 }
 
 
@@ -568,56 +957,242 @@ function chooseProfile(slot){
    RESTAURAR PERFIL
 ========================= */
 
-(function restoreProfiles(){
-
-  const a = localStorage.getItem("se_name_A");
-  const b = localStorage.getItem("se_name_B");
-
-  if(a){
-    document.getElementById(
-      "playerAButton"
-    ).textContent = a;
-  }
-
-  if(b){
-    document.getElementById(
-      "playerBButton"
-    ).textContent = b;
-  }
+function restoreProfile(){
 
   const p =
-    localStorage.getItem("se_profile");
+    localStorage.getItem(
+      "se_profile"
+    );
 
-  if(p){
+
+  if(
+    p === "A" ||
+    p === "B"
+  ){
 
     profile = p;
 
-    document.getElementById(
-      "profileNote"
-    ).textContent =
-      "Perfil seleccionado: " +
-      (
-        p === "A"
-          ? (a || "Jugador 1")
-          : (b || "Jugador 2")
-      );
+    playerName =
+      storageName(p);
+
   }
 
-})();
+
+  const a =
+    storageName("A");
+
+
+  const b =
+    storageName("B");
+
+
+  if(a){
+
+    $("playerAButton")
+      .textContent = a;
+
+  }
+
+
+  if(b){
+
+    $("playerBButton")
+      .textContent = b;
+
+  }
+
+
+  if(playerName){
+
+    $("profileNote")
+      .textContent =
+        "Perfil seleccionado: " +
+        playerName;
+
+  }
+
+
+  if(profile){
+
+    $(profile === "A"
+      ? "playerAButton"
+      : "playerBButton"
+    )
+      .classList
+      .add("selectedProfile");
+
+  }
+
+}
 
 
 /* =========================
-   PETICIÓN API
+   API
 ========================= */
 
-async function req(path, opts = {}){
+async function api(
+  path,
+  options = {}
+){
 
-  const r = await fetch(
-    API + path,
-    opts
-  );
+  try{
 
-  return r.json();
+    const r =
+      await fetch(
+        API + path,
+        {
+          cache:"no-store",
+          ...options,
+
+          headers:{
+            "Content-Type":
+              "application/json",
+
+            ...(options.headers || {})
+
+          }
+
+        }
+      );
+
+
+    const text =
+      await r.text();
+
+
+    let data = {};
+
+
+    try{
+
+      data =
+        text
+          ? JSON.parse(text)
+          : {};
+
+    }
+    catch{
+
+      data = {
+        ok:false,
+        error:
+          "Respuesta no válida del servidor."
+      };
+
+    }
+
+
+    if(!r.ok){
+
+      data.ok = false;
+
+      data.error =
+        data.error ||
+        (
+          "Error del servidor (" +
+          r.status +
+          ")"
+        );
+
+    }
+
+
+    return data;
+
+  }
+  catch(e){
+
+    return {
+
+      ok:false,
+
+      error:
+        "El servidor no está disponible. " +
+        "Comprueba Render y vuelve a intentarlo."
+
+    };
+
+  }
+
+}
+
+
+/* =========================
+   VALIDACIÓN
+========================= */
+
+function ensureProfile(){
+
+  if(
+    !profile ||
+    !playerName
+  ){
+
+    $("profiles")
+      .scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+      });
+
+
+    toast(
+      "Elige jugador y guarda el nombre"
+    );
+
+
+    return false;
+
+  }
+
+
+  return true;
+
+}
+
+
+/* =========================
+   CARTAS
+========================= */
+
+async function loadCards(){
+
+  const x =
+    await api(
+      "/cards.json?cache=" +
+      Date.now()
+    );
+
+
+  if(!x.ok){
+
+    setStatus(
+      "joinStatus",
+      "No se pudieron cargar las cartas. " +
+      "Revisa cards.json.",
+      "error"
+    );
+
+    return;
+
+  }
+
+
+  cards =
+    Array.isArray(x.cards)
+      ? x.cards
+      : [];
+
+
+  if(!cards.length){
+
+    setStatus(
+      "joinStatus",
+      "cards.json no contiene cartas.",
+      "error"
+    );
+
+  }
+
 }
 
 
@@ -627,50 +1202,522 @@ async function req(path, opts = {}){
 
 async function createRoom(){
 
-  if(!profile){
-
-    alert(
-      "Elige JUGADOR 1 o JUGADOR 2 primero"
-    );
-
+  if(!ensureProfile())
     return;
-  }
 
-  try{
 
-    const name =
-      profile === "A"
-        ? (
-            localStorage.getItem("se_name_A")
-            || "Jugador 1"
-          )
-        : (
-            localStorage.getItem("se_name_B")
-            || "Jugador 2"
-          );
+  setStatus(
+    "joinStatus",
+    "Creando sala…"
+  );
 
-    let x = await req(
+
+  const x =
+    await api(
       "/api/create-room",
       {
         method:"POST",
-        headers:{
-          "Content-Type":"application/json"
-        },
-        body:JSON.stringify({
-          name:name,
-          profile:profile
-        })
+
+        body:
+          JSON.stringify({
+            name:playerName,
+            profile:profile
+          })
+
       }
     );
 
-    if(!x.ok || !x.code){
 
-      alert(
-        x.error ||
-        "No se pudo crear la partida"
+  if(
+    !x.ok ||
+    !x.code
+  ){
+
+    setStatus(
+      "joinStatus",
+      x.error ||
+      "No se pudo crear la partida.",
+      "error"
+    );
+
+    return;
+
+  }
+
+
+  room =
+    String(x.code)
+      .toUpperCase();
+
+
+  player =
+    x.player?.id ||
+    "";
+
+
+  saveRoom();
+
+  showLobby();
+
+  await ensureInitialState();
+
+  startPolling();
+
+}
+
+
+/* =========================
+   UNIRSE
+========================= */
+
+async function joinRoom(){
+
+  if(!ensureProfile())
+    return;
+
+
+  const code =
+    $("joinCode")
+      .value
+      .trim()
+      .toUpperCase();
+
+
+  if(
+    !/^[A-Z0-9]{6}$/.test(code)
+  ){
+
+    setStatus(
+      "joinStatus",
+      "El código debe tener 6 caracteres.",
+      "error"
+    );
+
+    return;
+
+  }
+
+
+  setStatus(
+    "joinStatus",
+    "Conectando…"
+  );
+
+
+  const x =
+    await api(
+      "/api/join-room",
+      {
+        method:"POST",
+
+        body:
+          JSON.stringify({
+            code,
+            name:playerName,
+            profile:profile
+          })
+
+      }
+    );
+
+
+  if(
+    !x.ok ||
+    !x.code
+  ){
+
+    setStatus(
+      "joinStatus",
+      x.error ||
+      "No se pudo unir a la partida.",
+      "error"
+    );
+
+    return;
+
+  }
+
+
+  room =
+    String(x.code)
+      .toUpperCase();
+
+
+  player =
+    x.player?.id ||
+    "";
+
+
+  saveRoom();
+
+  showLobby();
+
+  startPolling();
+
+}
+
+
+/* =========================
+   SALA
+========================= */
+
+function saveRoom(){
+
+  localStorage.setItem(
+    "se_room",
+    room
+  );
+
+
+  localStorage.setItem(
+    "se_player",
+    player
+  );
+
+}
+
+
+function showLobby(){
+
+  $("profiles")
+    .classList
+    .add("hidden");
+
+
+  $("lobby")
+    .classList
+    .remove("hidden");
+
+
+  $("code")
+    .textContent = room;
+
+
+  $("lobbyStatus")
+    .textContent =
+      "Esperando al otro jugador…";
+
+}
+
+
+async function getRoom(){
+
+  if(!room)
+    return null;
+
+
+  return api(
+    "/api/room/" +
+    encodeURIComponent(room)
+  );
+
+}
+
+
+async function setRoomState(state){
+
+  return api(
+    "/api/room/" +
+    encodeURIComponent(room) +
+    "/state",
+    {
+      method:"POST",
+
+      body:
+        JSON.stringify({
+          state
+        })
+
+    }
+  );
+
+}
+
+
+async function ensureInitialState(){
+
+  const x =
+    await getRoom();
+
+
+  if(!x?.ok)
+    return;
+
+
+  if(
+    !x.state ||
+    typeof x.state !== "object" ||
+    Array.isArray(x.state)
+  ){
+
+    await setRoomState({
+
+      round:0,
+
+      started:false,
+
+      answers:{},
+
+      scores:{
+        A:0,
+        B:0
+      },
+
+      rolls:0,
+
+      intensity:1,
+
+      drinks:0,
+
+      matches:0,
+
+      moments:[]
+
+    });
+
+  }
+
+}
+
+
+/* =========================
+   POLLING
+========================= */
+
+function startPolling(){
+
+  if(pollTimer)
+    clearInterval(pollTimer);
+
+
+  pollRoom();
+
+
+  pollTimer =
+    setInterval(
+      pollRoom,
+      1000
+    );
+
+}
+
+
+async function pollRoom(){
+
+  if(!room)
+    return;
+
+
+  const x =
+    await getRoom();
+
+
+  if(!x?.ok){
+
+    $("lobbyStatus")
+      .textContent =
+        x?.error ||
+        "No se puede consultar la sala.";
+
+    return;
+
+  }
+
+
+  const players =
+    x.room?.players || [];
+
+
+  currentState =
+    x.state || {};
+
+
+  if(players.length < 2){
+
+    $("lobbyStatus")
+      .textContent =
+        "Esperando al otro jugador… (" +
+        players.length +
+        "/2)";
+
+    return;
+
+  }
+
+
+  $("lobbyStatus")
+    .textContent =
+      "¡Los dos jugadores estáis dentro!";
+
+
+  if(!currentState.started){
+
+    currentState = {
+      ...currentState,
+      started:true
+    };
+
+
+    await setRoomState(
+      currentState
+    );
+
+  }
+
+
+  $("lobby")
+    .classList
+    .add("hidden");
+
+
+  $("game")
+    .classList
+    .remove("hidden");
+
+
+  renderGame(
+    currentState
+  );
+
+}
+
+
+/* =========================
+   JUEGO
+========================= */
+
+function currentCard(){
+
+  return cards[
+    Number(
+      currentState?.round || 0
+    )
+  ] || null;
+
+}
+
+
+function renderGame(state){
+
+  if(
+    !state ||
+    !cards.length
+  )
+    return;
+
+
+  const round =
+    Number(
+      state.round || 0
+    );
+
+
+  if(
+    round >= cards.length ||
+    round >= 50
+  ){
+
+    showSummary();
+
+    return;
+
+  }
+
+
+  const card =
+    cards[round];
+
+
+  if(!card)
+    return;
+
+
+  const level =
+    Math.min(
+      10,
+      Math.floor(
+        round / 5
+      ) + 1
+    );
+
+
+  $("level")
+    .textContent = level;
+
+
+  $("headLevel")
+    .textContent = level;
+
+
+  $("intensity")
+    .textContent =
+      Math.min(
+        10,
+        Number(
+          state.intensity ||
+          level
+        )
       );
 
-      return;
-    }
 
-    room
+  $("drinks")
+    .textContent =
+      Number(
+        state.drinks || 0
+      );
+
+
+  $("score")
+    .textContent =
+      Number(
+        state.scores?.[profile] ||
+        0
+      );
+
+
+  $("progress")
+    .style
+    .width =
+      Math.min(
+        100,
+        level * 10
+      ) + "%";
+
+
+  $("type")
+    .textContent =
+      card.type ||
+      "Carta";
+
+
+  $("who")
+    .textContent =
+      playerName;
+
+
+  $("prompt")
+    .textContent =
+      card.prompt ||
+      "";
+
+
+  const answers =
+    $("answers");
+
+
+  answers.innerHTML = "";
+
+
+  const mine =
+    state.answers?.[profile];
+
+
+  const myValue =
+    mine?.round === round
+      ? mine.value
+      : null;
+
+
+  if(
+    Array.isArray(card.answers) &&
+    c
