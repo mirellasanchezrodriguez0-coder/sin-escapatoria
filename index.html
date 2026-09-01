@@ -225,7 +225,7 @@ function ensureProfile(){
 }
 
 async function loadCards(){
- const x=await api("/cards.json?cache="+Date.now());
+ const x=await api("/cards-data.json?cache="+Date.now())
  if(!x.ok){
   cards=[];
   setStatus("joinStatus","No se pudieron cargar las cartas. Revisa cards.json.","error");
