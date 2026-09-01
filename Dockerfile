@@ -5,7 +5,7 @@ WORKDIR /app
 COPY package.json ./
 RUN npm install
 
-COPY server.js ./
+COPY Server.js. ./server.js
 COPY cards.json ./
 COPY index.html ./
 COPY web ./web
