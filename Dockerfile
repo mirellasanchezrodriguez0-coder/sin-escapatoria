@@ -6,7 +6,7 @@ COPY package.json ./
 RUN npm install
 
 COPY Server.js. ./server.js
-COPY cards.json ./
+COPY cards.json ./cards-data.json
 COPY index.html ./
 COPY web ./web
 
