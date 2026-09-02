@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0710">
+<title>Sin Escapatoria</title>
+<style>
+:root{
+ --bg:#08070d;--bg2:#120b18;--panel:#17121d;--panel2:#21182a;--line:#ffffff18;
+ --text:#fff;--muted:#bdb2c5;--accent:#ff9bd4;--accent2:#b99cff;--accent3:#7be7ff;
+ --hot:#ff6fb5;--gold:#ffd58c;--good:#8ff0ba;--shadow:0 24px 70px #000b;
+}
+*{box-sizing:border-box}
+html{background:var(--bg);scroll-behavior:smooth}
+body{margin:0;min-height:100vh;color:var(--text);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:
+ radial-gradient(900px 500px at 50% -10%,color-mix(in srgb,var(--accent) 20%,transparent),transparent 62%),
+ radial-gradient(700px 500px at 100% 45%,color-mix(in srgb,var(--accent2) 11%,transparent),transparent 65%),
+ linear-gradient(180deg,#100a16 0%,var(--bg) 55%,#07070b 100%);transition:background .7s ease}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.55;background:radial-gradient(circle at 50% 20%,#ffffff08,transparent 34%)}
+body.lvl-1{--accent:#82dfff;--accent2:#a98cff;--accent3:#80f2d2}
+body.lvl-2{--accent:#b9b1ff;--accent2:#e29dff;--accent3:#83e7ff}
+body.lvl-3{--accent:#e49cff;--accent2:#ff91c9;--accent3:#a79cff}
+body.lvl-4{--accent:#ff9acb;--accent2:#ff8fc1;--accent3:#ffd18a}
+body.lvl-5{--accent:#ff86b8;--accent2:#d79aff;--accent3:#ffd08a}
+body.lvl-6{--accent:#ff79a9;--accent2:#c996ff;--accent3:#ffcf83}
+body.lvl-7{--accent:#ff709c;--accent2:#b995ff;--accent3:#ffbd7c}
+body.lvl-8{--accent:#ff678d;--accent2:#a98cff;--accent3:#ffbd74}
+body.lvl-9{--accent:#ff5e83;--accent2:#9f85ff;--accent3:#ffb56d}
+body.lvl-10{--accent:#ffcf7a;--accent2:#ff8fb6;--accent3:#fff09c}
+.app{max-width:760px;margin:auto;padding:10px 14px 42px}
+.top{position:sticky;top:0;z-index:20;text-align:center;padding:10px 8px 15px;background:linear-gradient(180deg,#100a16 70%,transparent);backdrop-filter:blur(12px)}
+.logo{font-size:11px;letter-spacing:3px;color:#d9ccdf;text-transform:uppercase}.logo b{color:var(--accent)}
+.title{font-size:40px;font-weight:950;margin:5px 0 5px;letter-spacing:2px;line-height:.88;text-shadow:0 10px 38px #000}
+.subtitle{color:var(--muted);font-size:14px}.topPulse{display:inline-flex;gap:7px;align-items:center;margin-top:10px;padding:6px 11px;border-radius:999px;border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);background:color-mix(in srgb,var(--accent) 8%,transparent);font-size:11px;color:#eee6ef}
+.pulseDot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 14px var(--accent);animation:pulse 1.8s infinite}@keyframes pulse{50%{opacity:.35;transform:scale(.7)}}
+.card{background:linear-gradient(145deg,#ffffff0e,#ffffff04);border:1px solid var(--line);border-radius:25px;padding:20px;margin:12px 0;box-shadow:var(--shadow);backdrop-filter:blur(18px)}
+.hero{padding:25px 20px;text-align:center}.sectionTitle{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#cbbdce}h2{margin:7px 0 8px;font-size:25px}h3{font-size:13px;letter-spacing:1.5px;color:#cfc1d2;margin:18px 0 8px}
+.btn{width:100%;border:0;border-radius:16px;padding:15px;margin:5px 0;font-size:15px;font-weight:900;cursor:pointer;transition:transform .12s,opacity .12s,box-shadow .2s,background .3s}.btn:active{transform:scale(.97);opacity:.88}
+.primary{background:linear-gradient(100deg,var(--accent),var(--accent2));color:#241027;box-shadow:0 12px 32px color-mix(in srgb,var(--accent) 23%,transparent)}
+.secondary{background:#ffffff0b;color:#fff;border:1px solid #ffffff12}.danger{background:#ffffff08;color:#e8dce9}.btn:focus-visible{outline:3px solid color-mix(in srgb,var(--accent) 60%,white);outline-offset:2px}
+.input{width:100%;padding:15px;margin-top:10px;border-radius:15px;border:1px solid var(--line);background:#ffffff08;color:#fff;font-size:17px;text-align:center;outline:none}.input:focus{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 12%,transparent)}
+.codeInput{text-transform:uppercase;letter-spacing:5px}.hidden{display:none!important}.grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.grid .btn{margin:0}
+.pills{display:flex;gap:7px;flex-wrap:wrap}.pill{background:#ffffff0a;border:1px solid #ffffff0c;padding:7px 10px;border-radius:999px;font-size:12px;color:#ddd1df}.pill strong{color:var(--accent)}
+.bar{height:9px;background:#ffffff0d;border-radius:99px;overflow:hidden;margin:13px 0 3px}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:.55s;box-shadow:0 0 18px color-mix(in srgb,var(--accent) 40%,transparent)}
+.intensityText{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:5px}.phaseLine{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-top:8px}.phaseName{font-weight:900;color:#fff}.roundText{font-size:11px;color:var(--muted)}
+.type{display:inline-block;margin-top:9px;background:color-mix(in srgb,var(--accent) 9%,transparent);border:1px solid color-mix(in srgb,var(--accent) 20%,transparent);padding:7px 10px;border-radius:999px;font-size:11px}.prompt{font-size:25px;font-weight:900;line-height:1.2;margin:16px 0 17px}.answers{display:grid;gap:9px}.answers .btn{text-align:left}
+.choice{border:1px solid #ffffff16;background:linear-gradient(135deg,#ffffff12,#ffffff06);min-height:58px;color:#fff!important;text-shadow:0 1px 1px #000}.choice:hover{border-color:color-mix(in srgb,var(--accent) 42%,transparent);transform:translateY(-1px)}.choice.selected{outline:2px solid var(--accent);background:color-mix(in srgb,var(--accent) 18%,transparent)}.choice:disabled{opacity:1}
+.status{color:var(--muted);min-height:23px;font-size:13px}.code{font-size:43px;letter-spacing:8px;text-align:center;font-weight:950;margin:20px 0}.small{font-size:12px;color:var(--muted);line-height:1.45}
+.nameBox{margin-top:12px;padding:15px;background:#ffffff07;border-radius:18px;border:1px solid var(--line)}.selectedProfile{outline:2px solid var(--accent);background:color-mix(in srgb,var(--accent) 15%,transparent)}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#fff;color:#211127;padding:11px 17px;border-radius:999px;font-weight:850;display:none;z-index:90;max-width:90%;text-align:center;box-shadow:0 12px 35px #0009}.toast.show{display:block}
+.special{position:fixed;inset:0;background:#050308ed;display:none;align-items:center;justify-content:center;text-align:center;z-index:70;padding:18px}.special.show{display:flex}.specialBox{max-width:610px;width:100%;max-height:92vh;overflow:auto;background:linear-gradient(145deg,#28172f,#110a17);border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);border-radius:30px;padding:27px;box-shadow:0 30px 100px #000}.specialBox:before{content:"";display:block;width:70px;height:4px;margin:0 auto 18px;border-radius:99px;background:linear-gradient(90deg,var(--accent),var(--accent2))}.specialBox h2{font-size:30px}.specialText{font-size:18px;line-height:1.48;color:#eee2ee}.specialActions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px}
+.actionCard{padding:13px;margin-top:10px}.actionsTitle{display:flex;justify-content:space-between;align-items:center;margin-bottom:9px;gap:12px}.actionsTitle b{font-size:12px;letter-spacing:1.8px;text-transform:uppercase;color:#cfc1d2}.continueBox{margin:13px 0 4px}.continueBox .btn{padding:17px;font-size:16px}.continueBox .btn:disabled{opacity:.45;cursor:not-allowed;box-shadow:none}.autoTag{display:block;text-align:center;margin:8px auto 0;padding:7px 11px;border-radius:999px;background:#ffffff0b;border:1px solid #ffffff10;color:#d9c9db;font-size:11px;letter-spacing:.35px}.extraGrid{margin-top:10px}.extraGrid .btn{font-size:13px;padding:13px}.finalNote{font-size:13px;color:#d9c9db}.error{color:#ffb4b4}.ok{color:#c8ffcf}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.title{font-size:34px}.prompt{font-size:22px}.app{padding-left:11px;padding-right:11px}.card{border-radius:22px;padding:17px}.specialBox{padding:22px 18px}.specialActions{grid-template-columns:1fr}.phaseLine{align-items:flex-start;flex-direction:column;gap:2px}}
+</style>
+</head>
+<body>
+<main class="app">
+<header class="top">
+ <div class="logo">SIN ESCAPATORIA · <b id="headLevel">1</b>/10</div>
+ <div class="title">SIN<br>ESCAPATORIA</div>
+ <div class="subtitle">Una noche. Dos jugadores. Sin saber qué viene después.</div>
+ <div class="topPulse"><span class="pulseDot"></span><span id="phaseNameTop">Curiosidad</span><span>·</span><span id="roundTop">Ronda 1</span></div>
+</header>
+
+<section id="profiles" class="card hero">
+ <div class="sectionTitle">PREPARAD LA NOCHE</div>
+ <h2>¿Quién juega?</h2>
+ <p class="subtitle">Elegid vuestro jugador y poned vuestro nombre.</p>
+ <div class="grid">
+  <button id="playerAButton" class="btn secondary" type="button" onclick="selectProfile('A')">JUGADOR 1</button>
+  <button id="playerBButton" class="btn secondary" type="button" onclick="selectProfile('B')">JUGADOR 2</button>
+ </div>
+ <div id="nameBox" class="nameBox hidden">
+  <div id="nameTitle"><b>Nombre de JUGADOR 1</b></div>
+  <input id="nameInput" class="input" type="text" maxlength="40" autocomplete="name" autocapitalize="words" inputmode="text" enterkeyhint="done" placeholder="Escribe tu nombre">
+  <button class="btn primary" type="button" onclick="saveProfile()">GUARDAR NOMBRE</button>
+ </div>
+ <p class="small" id="profileNote">Elegid JUGADOR 1 o JUGADOR 2.</p>
+</section>
+
+<section class="card">
+ <button class="btn primary" type="button" onclick="createRoom()">CREAR PARTIDA</button>
+ <h3>O UNIRSE A UNA PARTIDA</h3>
+ <input id="joinCode" class="input codeInput" type="text" maxlength="6" autocomplete="off" autocapitalize="characters" inputmode="text" placeholder="CÓDIGO DE LA SALA">
+ <button class="btn secondary" type="button" onclick="joinRoom()">UNIRSE A LA PARTIDA</button>
+ <button id="cancelRoomButton" class="btn danger hidden" type="button" onclick="resetSession()">NUEVA PARTIDA</button>
+ <p class="small" id="joinStatus"></p>
+</section>
+
+<section id="lobby" class="card hidden hero">
+ <div class="sectionTitle">SALA PRIVADA</div>
+ <h2>Comparte este código</h2>
+ <div class="code" id="code"></div>
+ <p class="status" id="lobbyStatus">Esperando al otro jugador…</p>
+ <button class="btn secondary" type="button" onclick="resetSession()">CANCELAR SALA</button>
+</section>
+
+<section id="game" class="hidden">
+ <div class="card">
+  <div class="pills">
+   <span class="pill">NIVEL <strong id="level">1</strong>/10</span>
+   <span class="pill">🔥 <strong id="intensity">1</strong>/10</span>
+   <span class="pill">🍷 <strong id="drinks">0</strong></span>
+   <span class="pill">⭐ <strong id="score">0</strong></span>
+  </div>
+  <div class="phaseLine"><span class="phaseName" id="phaseName">Curiosidad</span><span class="roundText" id="roundText">Ronda 1 de 47</span></div>
+  <div class="bar"><i id="progress"></i></div>
+  <div class="intensityText"><span>✨ Curiosidad</span><span>❤️‍🔥 Clímax</span></div>
+ </div>
+
+ <div class="card">
+  <div class="type" id="type"></div>
+  <div class="small" style="margin-top:8px">Para <b id="who"></b></div>
+  <div class="prompt" id="prompt"></div>
+  <div class="answers" id="answers"></div>
+  <p class="status" id="status"></p>
+ </div>
+
+ <div class="continueBox">
+  <button id="continueButton" class="btn primary" type="button" onclick="nextIfReady()">➡️ CONTINUAR</button>
+   <div id="autoHint" class="autoTag">El juego elige la siguiente dinámica automáticamente.</div>
+ </div>
+
+ <div class="card actionCard">
+  <div class="actionsTitle">
+   <b>EXTRAS DE LA NOCHE</b><span class="small">Opcionales · el juego principal va solo</span>
+  </div>
+  <div class="grid extraGrid">
+   <button class="btn secondary" type="button" onclick="roll()">🎲 DADO</button>
+   <button class="btn secondary" type="button" onclick="doubleDice()">🎲🎲 DOS DADOS</button>
+   <button class="btn secondary" type="button" onclick="challenge()">🔥 RETO</button>
+   <button class="btn secondary" type="button" onclick="closeness()">💕 CERCANÍA</button>
+   <button class="btn secondary" type="button" onclick="showStats()">📊 ESTADÍSTICAS</button>
+  </div>
+ </div>
+</section>
+
+<section id="summary" class="card hidden hero">
+ <div class="sectionTitle">FIN DE LA NOCHE</div>
+ <h2>Vuestra partida</h2>
+ <p id="sumIntro" class="subtitle"></p>
+ <div class="pills">
+  <span class="pill">❤️ Coincidencias <b id="sumMatch">0%</b></span>
+  <span class="pill">⭐ <b id="sumScore">0</b> puntos</span>
+  <span class="pill">🎲 <b id="sumRolls">0</b> tiradas</span>
+ </div>
+ <div class="card"><div class="sectionTitle">MOMENTOS</div><p id="sumMoment"></p></div>
+ <button class="btn secondary" type="button" onclick="finalHotEnding()">❤️‍🔥 FINAL DE LA NOCHE</button>
+ <button class="btn primary" type="button" onclick="closeSummary()">VOLVER A LA PARTIDA</button>
+</section>
+
+<div id="toast" class="toast"></div>
+<div id="special" class="special">
+ <div class="specialBox">
+  <div id="spIcon" style="font-size:55px">🎲</div>
+  <h2 id="spTitle"></h2>
+  <p id="spText" class="specialText"></p>
+  <div class="specialActions">
+   <button class="btn primary" type="button" onclick="closeSpecial()">✓ LISTOS · CONTINUAR</button>
+   <button class="btn secondary" type="button" onclick="rerollInterlude()">↻ CAMBIAR DINÁMICA</button>
+  </div>
+ </div>
+</div>
+</main>
+
+<script>
+"use strict";
+const API=location.origin;
+const $=id=>document.getElementById(id);
+let cards=[],room="",player="",profile="",playerName="",currentState=null,pollTimer=null,advanceLock=false;
+
+function toast(text){const el=$("toast");el.textContent=text;el.classList.add("show");clearTimeout(toast.timer);toast.timer=setTimeout(()=>el.classList.remove("show"),2500)}
+function setStatus(id,text,kind=""){const el=$(id);if(!el)return;el.textContent=text;el.className="small"+(kind?" "+kind:"")}
+function storageName(slot){return localStorage.getItem(slot==="A"?"se_name_A":"se_name_B")||""}
+
+function selectProfile(slot){
+ profile=slot;localStorage.setItem("se_profile",slot);const input=$("nameInput");
+ $("nameBox").classList.remove("hidden");$("nameTitle").textContent="Nombre de JUGADOR "+(slot==="A"?"1":"2");
+ input.value=storageName(slot);$("profileNote").textContent="Escribe el nombre y pulsa GUARDAR NOMBRE.";
+ $("playerAButton").classList.toggle("selectedProfile",slot==="A");$("playerBButton").classList.toggle("selectedProfile",slot==="B");input.focus()
+}
+function saveProfile(){
+ if(!profile){toast("Primero elige un jugador");return}
+ const name=$("nameInput").value.trim().replace(/\s+/g," ");
+ if(!name){toast("Escribe un nombre");$("nameInput").focus();return}
+ localStorage.setItem(profile==="A"?"se_name_A":"se_name_B",name);playerName=name;
+ $("playerAButton").textContent=storageName("A")||"JUGADOR 1";$("playerBButton").textContent=storageName("B")||"JUGADOR 2";
+ $("profileNote").textContent="Perfil seleccionado: "+name;$("nameBox").classList.add("hidden");toast(name+" seleccionado")
+}
+function restoreProfile(){
+ const p=localStorage.getItem("se_profile");
+ if(p==="A"||p==="B"){profile=p;playerName=storageName(p)}
+ const a=storageName("A"),b=storageName("B");if(a)$("playerAButton").textContent=a;if(b)$("playerBButton").textContent=b;
+ if(profile){$(profile==="A"?"playerAButton":"playerBButton").classList.add("selectedProfile");if(playerName)$("profileNote").textContent="Perfil seleccionado: "+playerName}
+}
+async function api(path,options={}){
+ const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),10000);
+ try{
+  const r=await fetch(API+path,{cache:"no-store",...options,signal:controller.signal,headers:{"Content-Type":"application/json",...(options.headers||{})}});
+  const text=await r.text();let data={};try{data=text?JSON.parse(text):{}}catch{data={ok:false,error:"Respuesta no válida del servidor."}}
+  if(!r.ok){data.ok=false;data.error=data.error||"Error del servidor ("+r.status+")"}return data
+ }catch(err){if(err.name==="AbortError")return{ok:false,error:"El servidor tardó demasiado en responder."};return{ok:false,error:"El servidor no está disponible. Comprueba Render y vuelve a intentarlo."}}
+ finally{clearTimeout(timeout)}
+}
+function ensureProfile(){
+ if(!profile||!playerName){$("profiles").classList.remove("hidden");$("profiles").scrollIntoView({behavior:"smooth",block:"center"});toast("Elige jugador y guarda el nombre");return false}
+ return true
+}
+async function loadCards(){
+ const endpoints=["/tarjetas.json","/datos-tarjetas.json","/cards.json","/cards-data.json"];
+ for(const endpoint of endpoints){
+  const x=await api(endpoint+"?cache="+Date.now());if(!x||x.ok===false)continue;
+  let loaded=[];if(Array.isArray(x))loaded=x;else if(Array.isArray(x.cards))loaded=x.cards;else if(Array.isArray(x.tarjetas))loaded=x.tarjetas;else if(Array.isArray(x.data))loaded=x.data;
+  if(loaded.length){cards=loaded;setStatus("joinStatus","Cartas cargadas: "+cards.length,"ok");return true}
+ }
+ cards=[];setStatus("joinStatus","No se pudieron cargar las cartas. Comprueba tarjetas.json.","error");return false
+}
+async function createRoom(){
+ if(!ensureProfile())return;setStatus("joinStatus","Creando sala…");
+ const x=await api("/api/create-room",{method:"POST",body:JSON.stringify({name:playerName,profile:profile})});
+ if(!x.ok||!x.code){setStatus("joinStatus",x.error||"No se pudo crear la partida.","error");return}
+ room=String(x.code).toUpperCase();player=x.player?.id||"";saveRoom();showLobby();await ensureInitialState();await loadCards();startPolling()
+}
+async function joinRoom(){
+ if(!ensureProfile())return;const code=$("joinCode").value.trim().toUpperCase();
+ if(!/^[A-Z0-9]{6}$/.test(code)){setStatus("joinStatus","El código debe tener 6 caracteres.","error");return}
+ setStatus("joinStatus","Conectando…");const x=await api("/api/join-room",{method:"POST",body:JSON.stringify({code,name:playerName,profile:profile})});
+ if(!x.ok||!x.code){setStatus("joinStatus",x.error||"No se pudo unir a la partida.","error");return}
+ room=String(x.code).toUpperCase();player=x.player?.id||"";saveRoom();showLobby();await loadCards();startPolling()
+}
+function saveRoom(){if(room)localStorage.setItem("se_room",room);if(player)localStorage.setItem("se_player",player)}
+function showLobby(){$("profiles").classList.add("hidden");$("cancelRoomButton").classList.remove("hidden");$("lobby").classList.remove("hidden");$("code").textContent=room;$("lobbyStatus").textContent="Esperando al otro jugador…"}
+function clearRoomStorage(){localStorage.removeItem("se_room");localStorage.removeItem("se_player");room="";player="";currentState=null}
+function resetSession(){
+ if(pollTimer){clearInterval(pollTimer);pollTimer=null}clearRoomStorage();$("profiles").classList.remove("hidden");$("lobby").classList.add("hidden");$("game").classList.add("hidden");$("summary").classList.add("hidden");$("cancelRoomButton").classList.add("hidden");$("joinStatus").textContent="";$("lobbyStatus").textContent="Esperando al otro jugador…";$("joinCode").value="";$("nameBox").classList.add("hidden");restoreProfile();toast("Nueva partida preparada")
+}
+async function getRoom(){if(!room)return null;return api("/api/room/"+encodeURIComponent(room)+"?t="+Date.now())}
+async function setRoomState(state){if(!room)return{ok:false,error:"No hay sala."};return api("/api/room/"+encodeURIComponent(room)+"/state",{method:"POST",body:JSON.stringify({state})})}
+async function ensureInitialState(){
+ const x=await getRoom();if(!x?.ok){if(x?.error)setStatus("joinStatus",x.error,"error");return false}
+ if(!x.state||typeof x.state!=="object"||Array.isArray(x.state)){const result=await setRoomState({round:0,started:false,answers:{},scores:{A:0,B:0},rolls:0,intensity:1,drinks:0,matches:0,moments:[]});return !!result?.ok}
+ return true
+}
+function startPolling(){if(pollTimer)clearInterval(pollTimer);pollRoom();pollTimer=setInterval(pollRoom,1500)}
+async function pollRoom(){
+ if(!room)return;const x=await getRoom();
+ if(!x?.ok){
+  if(x?.error==="La sala no existe o ha caducado."){clearRoomStorage();$("lobby").classList.add("hidden");$("profiles").classList.remove("hidden");$("cancelRoomButton").classList.add("hidden");setStatus("joinStatus","La sala anterior ya no existe. Puedes crear una nueva partida.","error");return}
+  $("lobbyStatus").textContent=x?.error||"No se puede consultar la sala.";return
+ }
+ const players=x.room?.players||[];currentState=x.state||{};
+ if(players.length<2){$("lobbyStatus").textContent="Esperando al otro jugador… ("+players.length+"/2)";return}
+ if(!currentState.started){currentState={...currentState,started:true};await setRoomState(currentState)}
+ if(!cards.length){const loaded=await loadCards();if(!loaded){$("lobbyStatus").textContent="No se pudieron cargar las cartas.";return}}
+ $("lobbyStatus").textContent="¡Los dos jugadores estáis dentro!";$("lobby").classList.add("hidden");$("game").classList.remove("hidden");renderGame(currentState)
+}
+function aRoundReady(state,round){
+ const a=state?.answers?.A,b=state?.answers?.B;
+ return a?.round===round&&b?.round===round;
+}
+
+function renderGame(state){
+ if(!state||!cards.length)return;const round=Number(state.round||0);if(round>=cards.length){showSummary();return}
+ const card=cards[round],level=Math.min(10,Math.floor(round/5)+1);if(!card)return;
+ applyLevelTheme(level,round,cards.length);
+ $("level").textContent=level;$("headLevel").textContent=level;$("intensity").textContent=Math.min(10,Number(state.intensity||level));$("drinks").textContent=Number(state.drinks||0);$("score").textContent=Number(state.scores?.[profile]||0);
+ $("progress").style.width=Math.min(100,((round+1)/Math.min(cards.length,50))*100)+"%";$("type").textContent=card.type||"Carta";$("who").textContent=playerName;$("prompt").textContent=card.prompt||"";
+ const answers=$("answers");answers.innerHTML="";const mine=state.answers?.[profile],myValue=mine?.round===round?mine.value:null;
+ if(Array.isArray(card.answers)&&card.answers.length){card.answers.forEach(value=>{const b=document.createElement("button");b.type="button";b.className="btn choice";b.textContent=value;if(myValue===value)b.classList.add("selected");b.onclick=()=>answer(value);if(myValue!==null)b.disabled=true;answers.appendChild(b)})}
+ else{const b=document.createElement("button");b.type="button";b.className="btn primary";b.textContent=myValue===null?"MARCAR RETO COMO HECHO":"RETO HECHO";b.disabled=myValue!==null;b.onclick=()=>answer("HECHO");answers.appendChild(b)}
+ const other=state.answers?.[profile==="A"?"B":"A"];
+ const bothAnswered=aRoundReady(state,round);
+ const continueButton=$("continueButton");
+ if(continueButton){
+  continueButton.disabled=!bothAnswered;
+  continueButton.textContent=bothAnswered?"➡️ CONTINUAR":"⏳ ESPERANDO A LOS DOS";
+ }
+ $("autoHint").textContent=bothAnswered
+  ?"✨ El juego ha elegido una dinámica para esta ronda."
+  :"Elige una respuesta. Cuando los dos respondáis, el juego decidirá qué ocurre después.";
+ $("status").textContent=myValue!==null?(other?.round===round?"Los dos habéis respondido. La siguiente dinámica aparece sola.":"Respuesta guardada. Esperando al otro jugador…"):"Elige una respuesta.";
+ if(bothAnswered) maybeAutomaticInterlude(state);
+}
+async function answer(value){
+ if(advanceLock||!room||!currentState||!profile)return;const round=Number(currentState.round||0);if(currentState.answers?.[profile]?.round===round)return;
+ const answers={...(currentState.answers||{})};answers[profile]={round,value};let scores={...(currentState.scores||{A:0,B:0})};scores[profile]=Number(scores[profile]||0)+1;
+ let matches=Number(currentState.matches||0);const other=profile==="A"?"B":"A";if(answers[other]?.round===round&&answers[other].value===value)matches++;
+ const next={...currentState,answers,scores,matches},result=await setRoomState(next);if(!result?.ok){toast(result?.error||"No se pudo guardar la respuesta.");return}currentState=next;renderGame(next)
+}
+async function nextIfReady(){
+ if(advanceLock||!currentState||!room)return;
+ const round=Number(currentState.round||0),a=currentState.answers?.A,b=currentState.answers?.B;
+ if(a?.round!==round||b?.round!==round){toast("Los dos tenéis que responder primero");return}
+ advanceLock=true;
+ closeSpecial();
+ const next={
+  ...currentState,
+  round:round+1,
+  answers:{},
+  intensity:Math.min(10,1+Math.floor((round+1)/5))
+ };
+ const result=await setRoomState(next);
+ if(!result?.ok){advanceLock=false;toast(result?.error||"No se pudo avanzar.");return}
+ currentState=next;
+ renderGame(next);
+ setTimeout(()=>advanceLock=false,500);
+}
+
+/* EXPERIENCIA DEFINITIVA
+   Un solo juego integrado: las preguntas y dinámicas avanzan automáticamente.
+   El contenido de pareja es consensuado y no explícito. */
+const levelMeta={
+ 1:{name:"Curiosidad",tag:"Romper el hielo y descubrirse"},
+ 2:{name:"Complicidad",tag:"Empezar a leerse entre líneas"},
+ 3:{name:"Coqueteo",tag:"Más miradas, más juego"},
+ 4:{name:"Tensión",tag:"La distancia empieza a desaparecer"},
+ 5:{name:"Química",tag:"Sube la conexión"},
+ 6:{name:"Anticipación",tag:"La imaginación toma el control"},
+ 7:{name:"Cercanía",tag:"Más confianza, menos instrucciones"},
+ 8:{name:"Intensidad",tag:"Todo se siente más cerca"},
+ 9:{name:"Intimidad",tag:"Solo queda lo que queréis compartir"},
+ 10:{name:"Clímax",tag:"El juego deja de decidir"}
+};
+function applyLevelTheme(level,round,total){
+ const n=Math.max(1,Math.min(10,Number(level)||1)),meta=levelMeta[n]||levelMeta[1];
+ document.body.className="lvl-"+n;
+ if($("phaseName"))$("phaseName").textContent=meta.name;
+ if($("phaseNameTop"))$("phaseNameTop").textContent=meta.name;
+ if($("roundText"))$("roundText").textContent="Ronda "+(Number(round)+1)+" de "+total;
+ if($("roundTop"))$("roundTop").textContent="Ronda "+(Number(round)+1);
+}
+function currentIntensity(){
+ const round=Number(currentState?.round||0);
+ return Math.max(1,Math.min(10,Number(currentState?.intensity||Math.floor(round/5)+1)));
+}
+
+const automaticDeck={
+ 1:[
+  "😂 ROMPEHIELO","Imitad durante 10 segundos una manía del otro. Quien adivine primero gana.",
+  "🧠 QUIÉN CONOCE MEJOR","Sin hablar, señalad quién tardaría más en pedir perdón después de una discusión. Reveladlo a la vez.",
+  "🎭 MEMORIA","Cada uno cuenta un recuerdo pequeño que todavía le hace sonreír. El otro añade un detalle que recuerde.",
+  "⚡ 5 SEGUNDOS","A la cuenta de tres elegid: aventura, sofá o escapada. Después explicad vuestra elección.",
+  "👀 MIRADA","Miraros 15 segundos sin hablar. El primero que se ría debe decir algo bonito.",
+  "🎯 APUESTA","Cada uno predice quién ganará la próxima pregunta. El que acierte elige la siguiente dinámica.",
+  "😂 IMITACIÓN","Uno representa cómo reacciona el otro cuando está contento. El otro puntúa la imitación.",
+  "🧩 DOS VERDADES","Cada uno dice dos cosas que cree saber del otro. El otro responde cuál es la más acertada.",
+  "💭 PRIMERA IMPRESIÓN","Decid una cosa que os sorprendió del otro al conoceros mejor.",
+  "🏆 MINIPUNTO","Inventad una categoría divertida en la que uno de los dos sea claramente campeón."
+ ],
+ 2:[
+  "😉 COQUETEO","Decidle al otro una cualidad que os atrae y que no tenga que ver con el físico.",
+  "🧠 PREDICCIÓN","Adivinad qué responderá el otro en la próxima pregunta. Revelad las respuestas a la vez.",
+  "💬 CONFESIÓN","Completad: «Cuando haces ______, me resulta imposible no sonreír».",
+  "👀 MIRADA + CUMPLIDO","20 segundos de mirada. Quien aparte la mirada primero hace un cumplido.",
+  "🎯 CITA PERFECTA","Cada uno describe una cita perfecta para vosotros sin decir dónde sería.",
+  "🧠 LECTURA RÁPIDA","Mirad al otro y decid qué creeis que está pensando. Después comprobadlo.",
+  "💌 MENSAJE","Decid en voz alta el mensaje de una sola frase que os gustaría recibir del otro.",
+  "😂 CAMBIO","Durante 20 segundos, uno habla como si fuera el otro. Después cambiad.",
+  "💭 LO QUE MÁS VALORO","Cada uno dice una cosa del carácter del otro que valora especialmente.",
+  "⚡ ELECCIÓN DOBLE","Elegid a la vez: conversación profunda o aventura improvisada. Comparad."
+ ],
+ 3:[
+  "💕 ABRAZO","Abrazo largo. Cuando ambos queráis separaros, decid una palabra que describa el momento.",
+  "😈 PROVOCACIÓN","Durante 30 segundos intentad poner nervioso al otro solo con palabras y miradas.",
+  "💋 ELECCIÓN","Elegid juntos entre beso cariñoso, abrazo o 20 segundos de mirada.",
+  "🧠 MENTE","Cada uno intenta adivinar qué gesto suyo le gusta más al otro.",
+  "🔥 SIN PALABRAS","Comunicad una intención solo con gestos. El otro tiene que interpretarla.",
+  "👀 CERCA","Acercaos lentamente y mantened la mirada durante 20 segundos. Sin obligación de tocar.",
+  "🎭 PAPEL","Representad durante 30 segundos cómo creeis que el otro coquetea.",
+  "💬 FRASE","Decid una frase que os parecería irresistible escuchar esta noche.",
+  "🎯 DECISIÓN","Cada uno propone dos planes para seguir jugando. El otro escoge uno.",
+  "💕 RITMO","Bailad juntos 30 segundos. Uno marca el ritmo y después cambiad."
+ ],
+ 4:[
+  "🌙 SENSUAL","Abrazo o masaje suave de hombros durante 30 segundos. Cambiad de turno.",
+  "👀 TENSIÓN","Quedad muy cerca y mantened la mirada durante 20 segundos.",
+  "🧠 JUEGO MENTAL","Pensad algo que os gustaría recibir más del otro esta noche. Compartidlo.",
+  "💬 AL OÍDO","Decid al oído una frase bonita que normalmente no decís.",
+  "🎭 CAMBIO DE PAPEL","Uno interpreta cómo cree que el otro seduce. Después cambiad.",
+  "🔥 SIN TOCAR","Durante 30 segundos intentad poner nervioso al otro sin tocarlo.",
+  "💕 PAUSA","Quedaos abrazados 30 segundos sin hablar. Después decid qué habéis pensado.",
+  "🎯 DOS OPCIONES","Cada uno ofrece dos dinámicas. El otro puede elegir una o decir «paso».",
+  "👀 DISTANCIA","Empezad separados y acercaros poco a poco hasta donde ambos estéis cómodos.",
+  "🧠 PUNTO DÉBIL","Sin tocar, intentad descubrir qué mirada o palabra pone más nervioso al otro."
+ ],
+ 5:[
+  "🔥 RETO","El jugador que no lee la carta propone una prueba sensual sencilla. Solo se hace con un sí de ambos.",
+  "💕 CONTACTO","Elegid una caricia afectuosa en una zona no íntima y mantenedla 20 segundos.",
+  "😈 PROVOCACIÓN","30 segundos para poner nervioso al otro con palabras, expresión y mirada.",
+  "🧠 DESEO","Cada uno completa: «Esta noche me gustaría que hubiera más ______».",
+  "💋 MOMENTO","Elegid entre beso, abrazo largo o baile lento de un minuto.",
+  "❤️‍🔥 CAMBIO DE RITMO","Uno marca un ritmo lento durante 20 segundos y el otro lo sigue. Después invertid.",
+  "👀 ANTICIPACIÓN","Acercaos, deteneos antes de tocar y mantened la mirada 15 segundos.",
+  "💬 LO QUE ME GUSTA","Decid una forma de cariño que os haga sentir especialmente conectados.",
+  "🎭 ESCENA","Inventad una escena romántica de 20 segundos y representadla sin palabras.",
+  "🎯 ELECCIÓN LIBRE","Cada uno propone una prueba. Solo continúa la que los dos elijan."
+ ],
+ 6:[
+  "❤️‍🔥 OJOS CERRADOS","Un jugador cierra los ojos. El otro puede hablarle o tomarle la mano. Nada más.",
+  "🧠 ADIVINA","Adivinad qué gesto del otro os resulta más irresistible. Reveladlo a la vez.",
+  "💕 BAILE LENTO","Bailad lentamente durante 60 segundos sin hablar.",
+  "🔥 DOS RETOS","Cada uno propone dos pruebas sensuales. El otro elige una o ninguna.",
+  "👀 SILENCIO","30 segundos muy cerca sin hablar. Al terminar, una sola palabra cada uno.",
+  "💬 VOZ","Decid una frase que aumente la confianza y la cercanía entre vosotros.",
+  "🎯 CONTROL","Durante 30 segundos uno marca el ritmo y el otro decide si quiere seguirlo.",
+  "❤️‍🔥 RESPIRACIÓN","Tomados de las manos, respirad al mismo ritmo durante 30 segundos.",
+  "🧠 IMAGINA","Describid una escena romántica ideal usando solo tres palabras cada uno.",
+  "💕 PAUSA CÓMPLICE","Un minuto sin pantalla ni instrucciones. Después retomad cuando queráis."
+ ],
+ 7:[
+  "❤️‍🔥 CERCANÍA","Elegid una postura cómoda para quedar muy cerca durante 30 segundos.",
+  "🔥 RETO DOBLE","Cada uno propone un reto sensual. Solo se realiza el que ambos acepten.",
+  "🧠 PUNTO DÉBIL","Descubrid qué gesto, mirada o palabra del otro le pone más nervioso.",
+  "💕 PAUSA","Apagad el juego durante un minuto y disfrutad del momento sin instrucciones.",
+  "🎭 CAMBIO DE CONTROL","Durante un minuto uno propone el ritmo y el otro decide qué acepta. Después cambiad.",
+  "👀 MIRADA PROFUNDA","Miraros durante 30 segundos y después decid qué os llamó más la atención.",
+  "💬 LO QUE QUIERO RECIBIR","Cada uno elige entre atención, palabras, contacto o tiempo y explica por qué.",
+  "🔥 IMPROVISA","Inventad una prueba que no haya aparecido todavía. Ambos deben aprobarla.",
+  "🎯 SIN PLAN","Elegid al azar entre abrazo, baile lento o conversación cercana.",
+  "🧠 LECTURA MUTUA","Cada uno dice qué cree que el otro necesita ahora mismo. Comprobadlo."
+ ],
+ 8:[
+  "❤️‍🔥 INTENSIDAD","Elegid abrazo prolongado, baile lento o mirada cercana durante 45 segundos.",
+  "🧠 LO QUE NO DICES","Compartid algo que os gustaría recibir más del otro: atención, palabras, contacto o tiempo.",
+  "🔥 RETO NUEVO","Inventad juntos una prueba sensual que no haya aparecido todavía.",
+  "💕 CONEXIÓN","Tomados de las manos, miraros y respirad al mismo ritmo durante 30 segundos.",
+  "😈 SORPRESA","Uno inventa dos propuestas y el otro escoge una o «ninguna».",
+  "👀 CERCA SIN PRISA","Acercaos lentamente y deteneos donde ambos estéis cómodos.",
+  "💬 VERDAD","Decid qué momento de esta partida os ha sorprendido más.",
+  "🎭 PERSONAJE","Durante 30 segundos sed dos desconocidos que acaban de sentir química.",
+  "🔥 PAUSA Y VUELTA","Alejaos unos segundos, sonreíd y volved a acercaros al ritmo que ambos queráis.",
+  "🧠 ELECCIÓN MENTAL","Pensad una dinámica que os apetecería repetir. Reveladla a la vez."
+ ],
+ 9:[
+  "❤️‍🔥 FASE ÍNTIMA","Elegid entre cercanía, baile lento, beso o un reto sensual. No hay prisa.",
+  "🧠 MENTE Y DESEO","Completad: «Lo que más me atrae de cómo me miras es…».",
+  "🔥 ÚLTIMA PRUEBA","Cada uno imagina una prueba para este nivel. Escoged solo una que guste a los dos.",
+  "💕 SIN PALABRAS","Un minuto de cercanía sin hablar. Después una sola palabra cada uno.",
+  "🎲 TRES OPCIONES","Elegid entre mirada, contacto afectuoso o pausa.",
+  "👀 MIRADA FINAL","30 segundos de mirada. Después decid qué sentisteis sin explicar demasiado.",
+  "💬 CASI SIN FILTRO","Decid algo que os atrae de la personalidad del otro.",
+  "🔥 CAMBIO","Durante 30 segundos uno dirige el ritmo y el otro puede detenerlo en cualquier momento.",
+  "🧠 PREDICCIÓN FINAL","Adivinad qué dinámica elegiría el otro si pudiera escoger libremente.",
+  "💕 VUESTRO RITMO","Elegid juntos cómo queréis vivir los próximos 60 segundos."
+ ],
+ 10:[
+  "❤️‍🔥 FINAL","Habéis llegado al 100. El juego deja de mandar: elegid juntos cómo queréis continuar.",
+  "💕 VUESTRO MOMENTO","Un minuto sin pantalla. Miraros, abrazaros o simplemente quedaos juntos.",
+  "🧠 ÚLTIMA PREGUNTA","¿Qué momento de la partida repetirías ahora mismo? Responded a la vez.",
+  "🔥 ÚLTIMO RETO","Cada uno propone una última prueba. Solo se hace la que los dos quieran.",
+  "✨ FINAL ABIERTO","No hay siguiente instrucción. Vosotros decidís qué viene después.",
+  "💭 RECUERDO","Decid cuál ha sido vuestra sorpresa favorita de toda la partida.",
+  "🏆 GANADOR","No hay ganador individual: inventad juntos un premio para la mejor conexión.",
+  "💕 CIERRE","Abrazo, mirada o pausa. Elegid sin que el juego os diga cuál.",
+  "🔥 ÚLTIMA ELECCIÓN","Cada uno propone una opción para cerrar la partida. Elegid una juntos.",
+  "✨ SIN ESCAPATORIA","La partida termina aquí. Lo que pase después ya es solo vuestro."
+ ]
+};
+
+let shownInterludeRound=-1;
+
+function pickAutomatic(round){
+ const level=Math.max(1,Math.min(10,Math.floor(round/5)+1));
+ const deck=automaticDeck[level]||automaticDeck[1];
+ return deck[(round*7+level*3)%deck.length];
+}
+
+function namesForGame(){
+ const a=storageName("A")||"Jugador 1";
+ const b=storageName("B")||"Jugador 2";
+ return {a,b};
+}
+
+function maybeAutomaticInterlude(state){
+ if(!state||!room)return;
+ const round=Number(state.round||0);
+ const a=state.answers?.A,b=state.answers?.B;
+ if(a?.round!==round||b?.round!==round||shownInterludeRound===round)return;
+ shownInterludeRound=round;
+ const [title,text]=pickAutomatic(round);
+ const level=Math.min(10,Math.floor(round/5)+1);
+ const {a:nameA,b:nameB}=namesForGame();
+ const personal=round%4===0
+  ? `<br><br><span class="small">${escapeHtml(nameA)} y ${escapeHtml(nameB)}: esta dinámica la decide el juego. No tenéis que elegir ninguna categoría.</span>`
+  : `<br><br><span class="small">El juego ha elegido esta dinámica para vosotros. Si cualquiera no quiere, podéis cambiarla.</span>`;
+ showSpecial("✨","JUEGO SORPRESA · NIVEL "+level,title+"<br><br>"+text+personal);
+}
+function escapeHtml(v){return String(v).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]))}
+function rerollInterlude(){
+ const round=Number(currentState?.round||0);
+ const level=Math.max(1,Math.min(10,Math.floor(round/5)+1));
+ const deck=automaticDeck[level]||automaticDeck[1];
+ let idx=Math.floor(Math.random()*deck.length);
+ const [title,text]=deck[idx];
+ showSpecial("✨","NUEVA DINÁMICA · NIVEL "+level,title+"<br><br>"+text+"<br><br><span class='small'>El juego sigue siendo automático. Si los dos queréis cambiarla, se genera otra.</span>");
+}
+
+async function roll(){
+ if(!currentState||!room)return;
+ const value=Math.floor(Math.random()*6)+1;
+ const next={...currentState,rolls:Number(currentState.rolls||0)+1};
+ const result=await setRoomState(next);
+ if(!result?.ok){toast("No se pudo guardar la tirada.");return}
+ currentState=next;
+ const [title,text]=pickAutomatic(Number(next.round||0)+value);
+ showSpecial("🎲","DADO · "+value,title+"<br><br>"+text+"<br><br><span class='small'>Es un extra. La partida principal sigue automáticamente.</span>");
+}
+
+
+function doubleDice(){
+ if(!currentState||!room)return;
+ const level=currentIntensity();
+ const bodyDeck=[
+  "👀 Mirada","💋 Mejilla","💋 Labios","🤗 Cuello y hombros",
+  "🫶 Manos","💆 Hombros","❤️ Frente","✨ Espalda alta"
+ ];
+ const actionDeckByLevel={
+  1:["Beso tierno","Caricia suave","Mirada durante 15 segundos","Abrazo de 20 segundos"],
+  2:["Beso y una frase bonita","Caricia afectuosa","Mirada sin hablar","Abrazo lento"],
+  3:["Beso suave","Caricia lenta","Susurro cercano","Mirada provocadora"],
+  4:["Beso lento","Caricia sensual","Susurro al oído","Abrazo muy cercano"],
+  5:["Beso lento y prolongado","Caricia sensual durante 20 segundos","Mirada sin apartarse","Baile lento muy cerca"],
+  6:["Beso y pausa para mirarse","Caricia lenta","Susurro de una fantasía romántica","Baile lento"],
+  7:["Beso elegido por ambos","Caricia que resulte cómoda","Mirada intensa","Abrazo y respiración sincronizada"],
+  8:["Beso lento","Caricia sensual acordada","Susurro de lo que más os atrae","Un minuto de cercanía"],
+  9:["Beso lento y cercano","Caricia sensual acordada","Mirada intensa y silencio","Baile lento muy cerca"],
+  10:["Elegid un beso que ambos queráis","Elegid una caricia que ambos queráis","Un minuto de besos, abrazos y miradas","Cread vuestro propio final sensual"]
+ };
+ const actionDeck=actionDeckByLevel[Math.min(10,Math.max(1,level))];
+ const body=bodyDeck[Math.floor(Math.random()*bodyDeck.length)];
+ const action=actionDeck[Math.floor(Math.random()*actionDeck.length)];
+ showSpecial("🎲🎲","DOS DADOS · NIVEL "+level,
+  body+"<br><br><b>"+action+"</b>"+
+  "<br><br><span class='small'>Los dos dados se combinan automáticamente. Si no os apetece, cambiad la tirada. Sin presión y siempre consensuado.</span>");
+}
+
+function challenge(){
+ const [title,text]=pickAutomatic(Number(currentState?.round||0)+2);
+ showSpecial("🔥","RETO EXTRA",title+"<br><br>"+text+"<br><br><span class='small'>Solo si ambos queréis. El juego principal no se detiene.</span>");
+}
+
+function closeness(){
+ const level=currentIntensity();
+ const [title,text]=level<4
+ ?["💕 CERCANÍA","Abrazo, mirada o una caricia afectuosa. Elegid juntos."]
+ :level<7
+ ?["💕 CERCANÍA","Contacto afectuoso o sensual que resulte cómodo para ambos durante 20 segundos."]
+ :["❤️‍🔥 CERCANÍA","Elegid una forma de contacto cercano y cómodo. El ritmo lo marcáis vosotros."];
+ showSpecial("💕","CERCANÍA",title+"<br><br>"+text+"<br><br><span class='small'>Consentimiento y comodidad siempre primero.</span>");
+}
+
+
+function finalHotEnding(){
+ const {a,b}=namesForGame();
+ showSpecial("❤️‍🔥","FINAL DE LA NOCHE",
+  "Apagad las pantallas y quedaos a solas un minuto.<br><br>"+
+  "<b>"+escapeHtml(a)+" y "+escapeHtml(b)+": elegid juntos vuestro mejor momento de la partida y repetidlo de la forma que más os guste.</b>"+
+  "<br><br>Después: una mirada, un abrazo y un beso lento.<br><br>"+
+  "<span class='small'>El final es vuestro: podéis parar, cambiarlo o simplemente quedaros juntos. Sin presión.</span>");
+}
+
+function showSpecial(icon,title,text){$("spIcon").textContent=icon;$("spTitle").textContent=title;$("spText").innerHTML=text;$("special").classList.add("show")}
+function closeSpecial(){$("special").classList.remove("show")}
+function showStats(){
+ const s=currentState||{},total=Math.max(1,Number(s.round||0)),pct=Math.round((Number(s.matches||0)/total)*100);
+ showSpecial("📊","ESTADÍSTICAS","Rondas: "+(s.round||0)+"<br>Coincidencias: "+pct+"%<br>Tiradas: "+(s.rolls||0)+"<br>Intensidad: "+(Number(s.intensity||1)*10)+"%")
+}
+function showSummary(){
+ if(pollTimer){clearInterval(pollTimer);pollTimer=null}$("game").classList.add("hidden");$("summary").classList.remove("hidden");
+ const s=currentState||{},round=Number(s.round||0),pct=Math.round((Number(s.matches||0)/Math.max(1,round))*100);
+ $("sumMatch").textContent=pct+"%";$("sumScore").textContent=Number(s.scores?.[profile]||0);$("sumRolls").textContent=Number(s.rolls||0);$("sumIntro").textContent=playerName+", habéis llegado al final.";$("sumMoment").textContent="Habéis completado "+round+" rondas y alcanzado el final de la noche."
+}
+function closeSummary(){$("summary").classList.add("hidden");$("game").classList.remove("hidden");startPolling()}
+$("nameInput").addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();saveProfile()}});
+$("joinCode").addEventListener("input",e=>{e.target.value=e.target.value.toUpperCase().replace(/[^A-Z0-9]/g,"").slice(0,6)});
+$("joinCode").addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();joinRoom()}});
+async function init(){
+ restoreProfile();await loadCards();
+ const savedRoom=localStorage.getItem("se_room"),savedPlayer=localStorage.getItem("se_player");
+ if(savedRoom&&savedPlayer){room=savedRoom.toUpperCase();player=savedPlayer;const check=await getRoom();if(check?.ok){showLobby();startPolling();return}clearRoomStorage()}
+ $("profiles").classList.remove("hidden");$("lobby").classList.add("hidden");$("game").classList.add("hidden");$("summary").classList.add("hidden");$("cancelRoomButton").classList.add("hidden")
+}
+init();
+</script>
+</body>
+</html>
