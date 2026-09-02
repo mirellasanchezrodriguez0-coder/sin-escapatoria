@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Sin Escapatoria</title>
+<style>html,body{margin:0;min-height:100%;background:#0b0710;color:#fff;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}body{display:grid;place-items:center;padding:24px;box-sizing:border-box}.box{max-width:520px;text-align:center;padding:28px;border:1px solid #ffffff18;border-radius:24px;background:#ffffff08;box-shadow:0 20px 60px #0008}.title{font-size:30px;font-weight:900;letter-spacing:2px}.sub{color:#b9aebe;margin-top:10px}.error{color:#ffb4b4;margin-top:16px;font-size:14px}.spin{display:inline-block;width:22px;height:22px;border:3px solid #ffffff30;border-top-color:#f3a9d4;border-radius:50%;animation:s 1s linear infinite}@keyframes s{to{transform:rotate(360deg)}}</style>
+</head>
+<body>
+<div class="box" id="loading"><div class="spin"></div><div class="title">SIN ESCAPATORIA</div><div class="sub">Cargando la versión actual…</div></div>
+<script>
+(async()=>{
+ const url="https://raw.githubusercontent.com/mirellasanchezrodriguez0-coder/sin-escapatoria/main/index.html?sync="+Date.now();
+ try{
+  const r=await fetch(url,{cache:"no-store"});
+  if(!r.ok)throw new Error("No se pudo cargar la versión actual");
+  const html=await r.text();
+  document.open();document.write(html);document.close();
+ }catch(e){
+  document.getElementById("loading").innerHTML='<div class="title">SIN ESCAPATORIA</div><div class="error">No se pudo cargar la versión actual. Recarga la página.</div>';
+ }
+})();
+</script>
+</body>
+</html>
