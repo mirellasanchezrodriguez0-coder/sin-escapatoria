@@ -5,25 +5,63 @@ const crypto = require("crypto");
 
 const PORT = Number(process.env.PORT || 8787);
 const ROOT = __dirname;
-const ROOM_TTL = 2 * 60 * 60 * 1000;
+
 const rooms = new Map();
+const ROOM_TTL = 2 * 60 * 60 * 1000;
+
+/* =========================================================
+   CARGAR TARJETAS
+   ========================================================= */
 
 function loadCards() {
-  try {
-    const raw = JSON.parse(
-      fs.readFileSync(path.join(ROOT, "cards.json"), "utf8")
-    );
+  const possibleFiles = [
+    "tarjetas.json",
+    "datos-tarjetas.json",
+    "cards.json",
+    "cards-data.json"
+  ];
 
-    return Array.isArray(raw)
-      ? raw
-      : (Array.isArray(raw.cards) ? raw.cards : []);
-  } catch (err) {
-    console.error("No se pudo cargar cards.json:", err.message);
-    return [];
+  for (const file of possibleFiles) {
+    try {
+      const filePath = path.join(ROOT, file);
+
+      if (!fs.existsSync(filePath)) {
+        continue;
+      }
+
+      const raw = fs.readFileSync(filePath, "utf8");
+      const data = JSON.parse(raw);
+
+      if (Array.isArray(data)) {
+        console.log(`Tarjetas cargadas desde ${file}: ${data.length}`);
+        return data;
+      }
+
+      if (data && Array.isArray(data.cards)) {
+        console.log(`Tarjetas cargadas desde ${file}: ${data.cards.length}`);
+        return data.cards;
+      }
+
+      if (data && Array.isArray(data.tarjetas)) {
+        console.log(`Tarjetas cargadas desde ${file}: ${data.tarjetas.length}`);
+        return data.tarjetas;
+      }
+
+    } catch (error) {
+      console.error(`Error leyendo ${file}:`, error.message);
+    }
   }
+
+  console.error("NO SE ENCONTRARON LAS TARJETAS.");
+
+  return [];
 }
 
 const cards = loadCards();
+
+/* =========================================================
+   RESPUESTAS
+   ========================================================= */
 
 function json(res, status, data) {
   const body = JSON.stringify(data);
@@ -37,12 +75,7 @@ function json(res, status, data) {
   res.end(body);
 }
 
-function text(
-  res,
-  status,
-  body,
-  type = "text/plain; charset=utf-8"
-) {
+function text(res, status, body, type = "text/plain; charset=utf-8") {
   res.writeHead(status, {
     "Content-Type": type,
     "Cache-Control": "no-store"
@@ -50,6 +83,10 @@ function text(
 
   res.end(body);
 }
+
+/* =========================================================
+   LEER BODY
+   ========================================================= */
 
 function parseBody(req) {
   return new Promise((resolve, reject) => {
@@ -59,19 +96,20 @@ function parseBody(req) {
       body += chunk;
 
       if (body.length > 100000) {
+        reject(new Error("Datos demasiado grandes"));
         req.destroy();
-        reject(new Error("Payload demasiado grande"));
       }
     });
 
     req.on("end", () => {
       if (!body) {
-        return resolve({});
+        resolve({});
+        return;
       }
 
       try {
         resolve(JSON.parse(body));
-      } catch {
+      } catch (error) {
         resolve({});
       }
     });
@@ -80,8 +118,12 @@ function parseBody(req) {
   });
 }
 
+/* =========================================================
+   CÓDIGOS Y JUGADORES
+   ========================================================= */
+
 function makeCode() {
-const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+  const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
 
   let code;
 
@@ -91,13 +133,14 @@ const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
     for (let i = 0; i < 6; i++) {
       code += chars[crypto.randomInt(chars.length)];
     }
+
   } while (rooms.has(code));
 
   return code;
 }
 
 function makeToken() {
-  return crypto.randomBytes(18).toString("hex");
+  return crypto.randomBytes(20).toString("hex");
 }
 
 function cleanName(value, fallback) {
@@ -109,32 +152,46 @@ function cleanName(value, fallback) {
   return name || fallback;
 }
 
-function makeInitialState() {
+/* =========================================================
+   ESTADO INICIAL
+   ========================================================= */
+
+function initialState() {
   return {
     round: 0,
     started: false,
+
     answers: {},
+
     scores: {
       A: 0,
       B: 0
     },
+
     rolls: 0,
     intensity: 1,
     drinks: 0,
     matches: 0,
+
     moments: []
   };
 }
 
-function makeRoom() {
+/* =========================================================
+   SALAS
+   ========================================================= */
+
+function createRoom() {
   const code = makeCode();
 
   const room = {
     code,
     createdAt: Date.now(),
     updatedAt: Date.now(),
+
     players: {},
-    state: makeInitialState()
+
+    state: initialState()
   };
 
   rooms.set(code, room);
@@ -142,9 +199,13 @@ function makeRoom() {
   return room;
 }
 
-function getRoom(code) {
+function findRoom(code) {
+  if (!code) {
+    return null;
+  }
+
   const room = rooms.get(
-    String(code || "").toUpperCase()
+    String(code).trim().toUpperCase()
   );
 
   if (!room) {
@@ -153,18 +214,12 @@ function getRoom(code) {
 
   room.updatedAt = Date.now();
 
-  return room;
+    return room;
 }
 
-function playerSlot(room, token) {
-  for (const slot of ["A", "B"]) {
-    if (room.players[slot]?.token === token) {
-      return slot;
-    }
-  }
-
-  return null;
-}
+/* =========================================================
+   SALA PÚBLICA
+   ========================================================= */
 
 function publicRoom(room) {
   return {
@@ -181,7 +236,32 @@ function publicRoom(room) {
   };
 }
 
-function stateResponse(room, token) {
+/* =========================================================
+   BUSCAR JUGADOR
+   ========================================================= */
+
+function playerSlot(room, token) {
+  if (!token) {
+    return null;
+  }
+
+  for (const slot of ["A", "B"]) {
+    if (
+      room.players[slot] &&
+      room.players[slot].token === token
+    ) {
+      return slot;
+    }
+  }
+
+  return null;
+}
+
+/* =========================================================
+   ESTADO DE SALA
+   ========================================================= */
+
+function roomStateResponse(room, token) {
   const slot = playerSlot(room, token);
 
   if (!slot) {
@@ -193,16 +273,28 @@ function stateResponse(room, token) {
 
   return {
     ok: true,
+
     room: publicRoom(room),
-    state: room.state
+
+    state: room.state,
+
+    player: {
+      id: token,
+      slot,
+      name: room.players[slot].name
+    }
   };
 }
 
-function updateState(room, state) {
+/* =========================================================
+   ACTUALIZAR ESTADO
+   ========================================================= */
+
+function updateRoomState(room, newState) {
   if (
-    !state ||
-    typeof state !== "object" ||
-    Array.isArray(state)
+    !newState ||
+    typeof newState !== "object" ||
+    Array.isArray(newState)
   ) {
     return {
       ok: false,
@@ -210,35 +302,39 @@ function updateState(room, state) {
     };
   }
 
+  const oldState = room.state || initialState();
+
   room.state = {
- ...makeInitialState(),
-    ...room.state,
-    ...state,
+    ...initialState(),
+    ...oldState,
+    ...newState,
 
     scores: {
       A: Number(
-        state.scores?.A ??
-        room.state.scores?.A ??
-        0
+        newState.scores &&
+        newState.scores.A !== undefined
+          ? newState.scores.A
+          : oldState.scores.A || 0
       ),
 
       B: Number(
-        state.scores?.B ??
-        room.state.scores?.B ??
-        0
+        newState.scores &&
+        newState.scores.B !== undefined
+          ? newState.scores.B
+          : oldState.scores.B || 0
       )
     },
 
     answers:
-      state.answers &&
-      typeof state.answers === "object"
-        ? state.answers
-        : {},
+      newState.answers &&
+      typeof newState.answers === "object"
+        ? newState.answers
+        : oldState.answers || {},
 
     moments:
-      Array.isArray(state.moments)
-        ? state.moments
-        : []
+      Array.isArray(newState.moments)
+        ? newState.moments
+        : oldState.moments || []
   };
 
   room.updatedAt = Date.now();
@@ -249,51 +345,84 @@ function updateState(room, state) {
   };
 }
 
-function serveStatic(req, res, pathname) {
-  const requested =
-    pathname === "/"
-      ? "/index.html"
-      : pathname;
+/* =========================================================
+   ARCHIVOS ESTÁTICOS
+   ========================================================= */
+
+function serveStatic(pathname, res) {
+
+  let requestedFile;
+
+  if (
+    pathname === "/" ||
+    pathname === "/index.html" ||
+    pathname === "/indice.html"
+  ) {
+    requestedFile = "índice.html";
+  } else {
+    requestedFile = pathname.replace(/^\/+/, "");
+  }
 
   const filePath = path.resolve(
     ROOT,
-    "." + requested
+    requestedFile
   );
 
   if (
-    !filePath.startsWith(ROOT + path.sep) &&
-    filePath !== ROOT
+    filePath !== ROOT &&
+    !filePath.startsWith(ROOT + path.sep)
   ) {
     return text(res, 403, "Forbidden");
   }
 
-  fs.stat(filePath, (err, stat) => {
-    if (err || !stat.isFile()) {
+  fs.stat(filePath, (error, stats) => {
+
+    if (error || !stats.isFile()) {
+
       if (
         pathname === "/" ||
-        !path.extname(pathname)
+        pathname === "/index.html"
       ) {
-        return fs.readFile(
-          path.join(ROOT, "index.html"),
-          (e, data) => {
-            if (e) {
-              return text(res, 404, "Not found");
-            }
+        const fallbackFiles = [
+          "índice.html",
+          "index.html"
+        ];
 
-            text(
-              res,
-              200,
-              data,
-              "text/html; charset=utf-8"
+        for (const file of fallbackFiles) {
+          const fallbackPath = path.join(
+            ROOT,
+            file
+          );
+
+          if (fs.existsSync(fallbackPath)) {
+            return fs.readFile(
+              fallbackPath,
+              (readError, data) => {
+
+                if (readError) {
+                  return text(
+                    res,
+                    500,
+                    "Error cargando la aplicación."
+                  );
+                }
+
+                return text(
+                  res,
+                  200,
+                  data,
+                  "text/html; charset=utf-8"
+                );
+              }
             );
           }
-        );
+        }
       }
 
       return text(res, 404, "Not found");
     }
 
-    const ext = path
+    const extension = path
       .extname(filePath)
       .toLowerCase();
 
@@ -307,14 +436,12 @@ function serveStatic(req, res, pathname) {
       ".jpg": "image/jpeg",
       ".jpeg": "image/jpeg",
       ".webp": "image/webp",
-      ".ico": "image/x-icon",
-      ".webmanifest":
-        "application/manifest+json; charset=utf-8"
+      ".ico": "image/x-icon"
     };
 
     res.writeHead(200, {
       "Content-Type":
-        types[ext] ||
+        types[extension] ||
         "application/octet-stream",
 
       "Cache-Control": "no-cache"
@@ -324,9 +451,15 @@ function serveStatic(req, res, pathname) {
   });
 }
 
+/* =========================================================
+   SERVIDOR
+   ========================================================= */
+
 const server = http.createServer(
   async (req, res) => {
+
     try {
+
       const url = new URL(
         req.url,
         `http://${req.headers.host || "localhost"}`
@@ -338,7 +471,12 @@ const server = http.createServer(
 
       const method = req.method || "GET";
 
+      /* ---------------------------------------------
+         OPTIONS
+         --------------------------------------------- */
+
       if (method === "OPTIONS") {
+
         res.writeHead(204, {
           "Access-Control-Allow-Origin": "*",
           "Access-Control-Allow-Headers":
@@ -350,64 +488,73 @@ const server = http.createServer(
         return res.end();
       }
 
-      /*
-       * HEALTH CHECK
-       */
+      /* ---------------------------------------------
+         HEALTH
+         --------------------------------------------- */
 
       if (
         pathname === "/health" ||
         pathname === "/api/health"
       ) {
+
         return json(res, 200, {
           ok: true,
           status: "online",
           service: "sin-escapatoria",
-          port: PORT,
-          rooms: rooms.size,
-          cards: cards.length
+          cards: cards.length,
+          rooms: rooms.size
         });
       }
 
-      /*
-     * CARTAS
-       */
+      /* ---------------------------------------------
+         TARJETAS
+         --------------------------------------------- */
 
       if (
         method === "GET" &&
         (
           pathname === "/cards.json" ||
-          pathname === "/cards-data.json"
+          pathname === "/cards-data.json" ||
+          pathname === "/tarjetas.json" ||
+          pathname === "/datos-tarjetas.json"
         )
       ) {
+
         return json(res, 200, {
-          cards
+          cards: cards
         });
       }
 
-      /*
-       * CREAR SALA
-       */
+      /* ---------------------------------------------
+         CREAR PARTIDA
+         --------------------------------------------- */
 
       if (
         method === "POST" &&
         pathname === "/api/create-room"
       ) {
+
         const body = await parseBody(req);
 
-        const requested =
+        let profile =
           String(body.profile || "A")
-            .toUpperCase() === "B"
-            ? "B"
-            : "A";
+            .toUpperCase();
 
-        const room = makeRoom();
+        if (
+          profile !== "A" &&
+          profile !== "B"
+        ) {
+          profile = "A";
+        }
 
-        room.players[requested] = {
+        const room = createRoom();
+
+        room.players[profile] = {
           token: makeToken(),
 
           name: cleanName(
             body.name,
-            requested === "A"
+            profile === "A"
               ? "Jugador 1"
               : "Jugador 2"
           )
@@ -417,24 +564,30 @@ const server = http.createServer(
 
         return json(res, 200, {
           ok: true,
+
           code: room.code,
 
           player: {
-            id: room.players[requested].token
+            id: room.players[profile].token,
+
+            slot: profile,
+
+            name: room.players[profile].name
           },
 
           room: publicRoom(room)
         });
       }
 
-      /*
-       * UNIRSE A SALA
-       */
+      /* ---------------------------------------------
+         UNIRSE A PARTIDA
+         --------------------------------------------- */
 
       if (
         method === "POST" &&
         pathname === "/api/join-room"
       ) {
+
         const body = await parseBody(req);
 
         const code = String(
@@ -444,16 +597,18 @@ const server = http.createServer(
           .toUpperCase();
 
         if (!/^[A-Z0-9]{6}$/.test(code)) {
+
           return json(res, 400, {
             ok: false,
             error:
-              "El código debe tener 6 caracteres."
+              "El código de la sala no es válido."
           });
         }
 
-        const room = getRoom(code);
+        const room = findRoom(code);
 
         if (!room) {
+
           return json(res, 404, {
             ok: false,
             error:
@@ -465,6 +620,7 @@ const server = http.createServer(
           room.players.A &&
           room.players.B
         ) {
+
           return json(res, 409, {
             ok: false,
             error:
@@ -492,19 +648,24 @@ const server = http.createServer(
 
         return json(res, 200, {
           ok: true,
+
           code: room.code,
 
           player: {
-            id: room.players[slot].token
+            id: room.players[slot].token,
+
+            slot,
+
+            name: room.players[slot].name
           },
 
           room: publicRoom(room)
         });
       }
 
-      /*
-       * LEER SALA
-       */
+      /* ---------------------------------------------
+         OBTENER SALA
+         --------------------------------------------- */
 
       const roomMatch =
         pathname.match(
@@ -515,10 +676,12 @@ const server = http.createServer(
         method === "GET" &&
         roomMatch
       ) {
+
         const room =
-          getRoom(roomMatch[1]);
+          findRoom(roomMatch[1]);
 
         if (!room) {
+
           return json(res, 404, {
             ok: false,
             error:
@@ -530,10 +693,11 @@ const server = http.createServer(
           url.searchParams.get("player");
 
         if (token) {
+
           return json(
             res,
             200,
-            stateResponse(
+            roomStateResponse(
               room,
               token
             )
@@ -542,14 +706,16 @@ const server = http.createServer(
 
         return json(res, 200, {
           ok: true,
+
           room: publicRoom(room),
+
           state: room.state
         });
       }
 
-      /*
- * ACTUALIZAR ESTADO
-       */
+      /* ---------------------------------------------
+         ACTUALIZAR ESTADO
+         --------------------------------------------- */
 
       const stateMatch =
         pathname.match(
@@ -560,10 +726,12 @@ const server = http.createServer(
         method === "POST" &&
         stateMatch
       ) {
+
         const room =
-          getRoom(stateMatch[1]);
+          findRoom(stateMatch[1]);
 
         if (!room) {
+
           return json(res, 404, {
             ok: false,
             error:
@@ -577,26 +745,27 @@ const server = http.createServer(
         return json(
           res,
           200,
-          updateState(
+          updateRoomState(
             room,
             body.state
           )
         );
       }
 
-      /*
-       * ENDPOINT ANTIGUO:
-       * CREAR SALA
-       */
+      /* ---------------------------------------------
+         ENDPOINT ANTIGUO /room
+         --------------------------------------------- */
 
       if (
         method === "POST" &&
         pathname === "/room"
       ) {
+
         const body =
           await parseBody(req);
 
-        const room = makeRoom();
+        const room =
+          createRoom();
 
         room.players.A = {
           token: makeToken(),
@@ -607,24 +776,21 @@ const server = http.createServer(
           )
         };
 
-        room.state = {
-          ...makeInitialState(),
-          round: 0,
-          started: false
-        };
-
         return json(res, 200, {
           ok: true,
+
           code: room.code,
+
           player:
-            room.players.A.token
+            room.players.A.token,
+
+          room: publicRoom(room)
         });
       }
 
-      /*
-       * ENDPOINT ANTIGUO:
-       * UNIRSE
-       */
+      /* ---------------------------------------------
+         ENDPOINT ANTIGUO /join
+         --------------------------------------------- */
 
       const legacyJoin =
         pathname.match(
@@ -635,10 +801,14 @@ const server = http.createServer(
         method === "POST" &&
         legacyJoin
       ) {
+
         const room =
-          getRoom(legacyJoin[1]);
+          findRoom(
+            legacyJoin[1]
+          );
 
         if (!room) {
+
           return json(res, 404, {
             ok: false,
             error:
@@ -650,6 +820,7 @@ const server = http.createServer(
           room.players.A &&
           room.players.B
         ) {
+
           return json(res, 409, {
             ok: false,
             error:
@@ -669,44 +840,55 @@ const server = http.createServer(
           )
         };
 
+        room.updatedAt = Date.now();
+
         return json(res, 200, {
           ok: true,
+
           code: room.code,
+
           player:
-            room.players.B.token
+            room.players.B.token,
+
+          room: publicRoom(room)
         });
       }
 
-      /*
-       * ARCHIVOS ESTÁTICOS
-       */
+      /* ---------------------------------------------
+         ARCHIVOS
+         --------------------------------------------- */
 
       return serveStatic(
-        req,
-        res,
-        pathname
+        pathname,
+        res
       );
 
-    } catch (err) {
-      console.error(err);
+    } catch (error) {
+
+      console.error(
+        "ERROR DEL SERVIDOR:",
+        error
+      );
 
       return json(res, 500, {
         ok: false,
         error:
-           "Error interno del servidor."
+          "Error interno del servidor."
       });
     }
   }
 );
 
-/*
- * LIMPIEZA DE SALAS ANTIGUAS
- */
+/* =========================================================
+   LIMPIAR SALAS ANTIGUAS
+   ========================================================= */
 
 setInterval(() => {
+
   const now = Date.now();
 
   for (const [code, room] of rooms) {
+
     if (
       now - room.updatedAt >
       ROOM_TTL
@@ -714,22 +896,43 @@ setInterval(() => {
       rooms.delete(code);
     }
   }
+
 }, 10 * 60 * 1000).unref();
 
-/*
- * INICIAR SERVIDOR
- */
+/* =========================================================
+   ARRANCAR
+   ========================================================= */
 
 server.listen(
   PORT,
   "0.0.0.0",
   () => {
+
     console.log(
-      `Sin Escapatoria escuchando en el puerto ${PORT}`
+      "================================="
     );
 
     console.log(
-      `Cartas cargadas: ${cards.length}`
+      "SIN ESCAPATORIA"
+    );
+
+    console.log(
+      "Servidor iniciado correctamente"
+    );
+
+    console.log(
+      "Puerto:",
+      PORT
+    );
+
+    console.log(
+      "Tarjetas:",
+      cards.length
+    );
+
+    console.log(
+      "================================="
     );
   }
 );
+            
