@@ -9,6 +9,7 @@ COPY Server.js ./server.js
 COPY cards.json ./cards.json
 COPY cards-data.json ./cards-data.json
 COPY index.html ./
+COPY web ./web
 
 EXPOSE 8787
 
