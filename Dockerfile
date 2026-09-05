@@ -2,7 +2,7 @@ FROM node:22-alpine
 
 WORKDIR /app
 
-COPY paquete.json ./package.json
+COPY package.json ./package.json
 
 RUN npm install --omit=dev
 
@@ -10,4 +10,4 @@ COPY . .
 
 EXPOSE 3000
 
-CMD ["node", "Servidor.js"]
+CMD ["node", "Server.js"]
