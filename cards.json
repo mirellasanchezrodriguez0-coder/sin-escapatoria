@@ -1,0 +1,3998 @@
+{
+  "version": 8.0,
+  "game": "Sin Escapatoria",
+  "cards": [
+    {
+      "phase": "Calentando",
+      "type": "🎲 Juego",
+      "prompt": "¿Quién suele provocar primero una conversación cuando el silencio pesa?",
+      "answers": [
+        "Mirella",
+        "Pedro",
+        "Los dos",
+        "Nadie"
+      ],
+      "id": "LEGACY-001",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Calentando",
+      "type": "😂 Juego",
+      "prompt": "A la cuenta de tres: ¿quién es más cabezota cuando cree tener razón?",
+      "answers": [
+        "Mirella",
+        "Pedro",
+        "Los dos",
+        "Depende"
+      ],
+      "id": "LEGACY-002",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Calentando",
+      "type": "🧠 Recuerdo",
+      "prompt": "Cuando pensáis en el comienzo, ¿qué pesa más?",
+      "answers": [
+        "La curiosidad",
+        "La ilusión",
+        "La sorpresa",
+        "Lo que vino después"
+      ],
+      "id": "LEGACY-003",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Calentando",
+      "type": "🎯 Apuesta",
+      "prompt": "Adivina qué elegirá el otro: ¿qué os mantiene hablando?",
+      "answers": [
+        "Costumbre",
+        "Cariño",
+        "Curiosidad",
+        "Complicidad"
+      ],
+      "id": "LEGACY-004",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Calentando",
+      "type": "🔥 Reto",
+      "prompt": "Cada uno imita durante 10 segundos la reacción típica del otro cuando algo le molesta.",
+      "answers": null,
+      "id": "LEGACY-005",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Complicidad",
+      "type": "❤️",
+      "prompt": "¿Qué reconoces antes en el otro?",
+      "answers": [
+        "El humor",
+        "El orgullo",
+        "La sensibilidad",
+        "La forma de provocar"
+      ],
+      "id": "LEGACY-006",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Complicidad",
+      "type": "🎯 Apuesta",
+      "prompt": "¿Quién tiene más facilidad para hacer que el otro cambie de humor?",
+      "answers": [
+        "Mirella",
+        "Pedro",
+        "Los dos",
+        "Ninguno"
+      ],
+      "id": "LEGACY-007",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Complicidad",
+      "type": "🃏 Carta",
+      "prompt": "Si vuestra historia fuera una película, el género sería…",
+      "answers": [
+        "Romance",
+        "Comedia",
+        "Drama",
+        "Imposible de clasificar"
+      ],
+      "id": "LEGACY-008",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Complicidad",
+      "type": "😂 Juego",
+      "prompt": "Elegid a la vez quién recuerda mejor los detalles.",
+      "answers": [
+        "Mirella",
+        "Pedro",
+        "Los dos",
+        "Ninguno"
+      ],
+      "id": "LEGACY-009",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Complicidad",
+      "type": "🍷 Consecuencia",
+      "prompt": "¿Qué os cuesta más hacer cuando estáis enfadados?",
+      "answers": [
+        "Dar el primer paso",
+        "Pedir perdón",
+        "No provocar",
+        "No seguir hablando"
+      ],
+      "id": "LEGACY-010",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Lo nuestro",
+      "type": "🖤 Pasado",
+      "prompt": "¿Qué parte de vuestra historia ha cambiado más vuestra forma de ver al otro?",
+      "answers": [
+        "El comienzo",
+        "La ruptura",
+        "El tiempo separados",
+        "Lo que ha ocurrido después"
+      ],
+      "id": "LEGACY-011",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Lo nuestro",
+      "type": "🖤 Pasado",
+      "prompt": "Si pudierais repetir una sola conversación, elegiríais…",
+      "answers": [
+        "Una del principio",
+        "Una durante la relación",
+        "Una de la ruptura",
+        "Una reciente"
+      ],
+      "id": "LEGACY-012",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Lo nuestro",
+      "type": "❤️ Sentimientos",
+      "prompt": "¿Qué palabra describe mejor lo que todavía existe?",
+      "answers": [
+        "Cariño",
+        "Nostalgia",
+        "Confianza",
+        "Algo difícil de nombrar"
+      ],
+      "id": "LEGACY-013",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Lo nuestro",
+      "type": "🎯 Apuesta",
+      "prompt": "¿Quién crees que recuerda más cosas de vuestra etapa juntos?",
+      "answers": [
+        "Mirella",
+        "Pedro",
+        "Los dos",
+        "Ninguno"
+      ],
+      "id": "LEGACY-014",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Lo nuestro",
+      "type": "🃏 Verdad",
+      "prompt": "¿Qué cuesta más admitir?",
+      "answers": [
+        "Que algo dolió",
+        "Que algo se echa de menos",
+        "Que algo cambió",
+        "Que todavía importa"
+      ],
+      "id": "LEGACY-015",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Lo nuestro",
+      "type": "🔥 Reto",
+      "prompt": "Cada uno dice una cosa que aprendió del otro. Solo una frase.",
+      "answers": null,
+      "id": "LEGACY-016",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Lo pendiente",
+      "type": "🖤 Tabú",
+      "prompt": "¿Qué tema habéis evitado más veces?",
+      "answers": [
+        "El pasado",
+        "Los sentimientos",
+        "Los celos",
+        "Lo que podría pasar"
+      ],
+      "id": "LEGACY-017",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Lo pendiente",
+      "type": "🃏 Verdad",
+      "prompt": "¿Qué pregunta os daría más miedo que hiciera el otro?",
+      "answers": [
+        "¿Me quieres?",
+        "¿Me echas de menos?",
+        "¿Te atraigo?",
+        "¿Qué quieres de mí?"
+      ],
+      "id": "LEGACY-018",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Lo pendiente",
+      "type": "🎯 Apuesta",
+      "prompt": "Antes de responder, apuesta por la respuesta del otro.",
+      "answers": [
+        "Coincidir",
+        "Sorprender",
+        "Evitar",
+        "Decir demasiado"
+      ],
+      "id": "LEGACY-019",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Lo pendiente",
+      "type": "❤️",
+      "prompt": "¿Qué sería más difícil perder definitivamente?",
+      "answers": [
+        "La amistad",
+        "La confianza",
+        "La complicidad",
+        "La posibilidad de algo más"
+      ],
+      "id": "LEGACY-020",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Celos",
+      "type": "👀",
+      "prompt": "Si el otro empezara a ilusionarse con alguien, ¿qué dolería más?",
+      "answers": [
+        "Verlo feliz",
+        "Que cambiara conmigo",
+        "Que dejara de buscarme",
+        "Que pareciera olvidarme"
+      ],
+      "id": "LEGACY-021",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Celos",
+      "type": "👀",
+      "prompt": "¿Qué provoca más reacción?",
+      "answers": [
+        "Un like",
+        "Un mensaje",
+        "Un tonteo",
+        "Un beso"
+      ],
+      "id": "LEGACY-022",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Celos",
+      "type": "🎯 Apuesta",
+      "prompt": "Señalad a la vez quién provoca más celos sin querer.",
+      "answers": [
+        "Mirella",
+        "Pedro",
+        "Los dos",
+        "Ninguno"
+      ],
+      "id": "LEGACY-023",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Celos",
+      "type": "🃏 Verdad",
+      "prompt": "¿Qué sería más difícil reconocer?",
+      "answers": [
+        "Que tienes celos",
+        "Que te importa",
+        "Que te preocupa perderlo",
+        "Que te atrae"
+      ],
+      "id": "LEGACY-024",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Celos",
+      "type": "🔥 Reto",
+      "prompt": "Cada uno inventa una situación hipotética que pondría celoso al otro. Sin hacerla realidad.",
+      "answers": null,
+      "id": "LEGACY-025",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Verdades",
+      "type": "🃏 Verdad",
+      "prompt": "¿Qué echas más de menos de la persona, no de la relación?",
+      "answers": [
+        "Su humor",
+        "Su forma de hablar",
+        "La complicidad",
+        "La cercanía"
+      ],
+      "id": "LEGACY-026",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Verdades",
+      "type": "🃏 Verdad",
+      "prompt": "¿Qué te descoloca más actualmente?",
+      "answers": [
+        "Una mirada",
+        "Un mensaje",
+        "Una frase",
+        "Que se acerque"
+      ],
+      "id": "LEGACY-027",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Verdades",
+      "type": "🎯 Apuesta",
+      "prompt": "¿Quién es más probable que esconda lo que siente?",
+      "answers": [
+        "Mirella",
+        "Pedro",
+        "Los dos",
+        "Ninguno"
+      ],
+      "id": "LEGACY-028",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Verdades",
+      "type": "❤️",
+      "prompt": "¿Qué necesitarías para sentir que puedes hablar sin filtros?",
+      "answers": [
+        "Confianza",
+        "Tiempo",
+        "Una noche tranquila",
+        "Saber qué quiere el otro"
+      ],
+      "id": "LEGACY-029",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Verdades",
+      "type": "🔥 Reto",
+      "prompt": "Cada uno completa: «Lo que nunca te digo es…» con una sola frase.",
+      "answers": null,
+      "id": "LEGACY-030",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Química",
+      "type": "❤️‍🔥",
+      "prompt": "Tu atracción actual por el otro se siente…",
+      "answers": [
+        "Baja",
+        "Moderada",
+        "Fuerte",
+        "Difícil de ignorar"
+      ],
+      "id": "LEGACY-031",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Química",
+      "type": "👀",
+      "prompt": "Cuando os miráis demasiado…",
+      "answers": [
+        "Nos reímos",
+        "Nos ponemos nerviosos",
+        "Aparece tensión",
+        "Nadie aparta la mirada"
+      ],
+      "id": "LEGACY-032",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Química",
+      "type": "🎯 Apuesta",
+      "prompt": "¿Quién rompe antes una mirada intensa?",
+      "answers": [
+        "Mirella",
+        "Pedro",
+        "Los dos",
+        "Ninguno"
+      ],
+      "id": "LEGACY-033",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Química",
+      "type": "🫶",
+      "prompt": "¿Qué genera más tensión?",
+      "answers": [
+        "La mirada",
+        "La sonrisa",
+        "La cercanía",
+        "Lo que no se dice"
+      ],
+      "id": "LEGACY-034",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Química",
+      "type": "🔥 Reto",
+      "prompt": "20 segundos de mirada. Después, una palabra cada uno.",
+      "answers": null,
+      "id": "LEGACY-035",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Noche juntos",
+      "type": "🌙",
+      "prompt": "Imaginad una noche sin prisas y sin móviles. ¿Qué ambiente elegiríais?",
+      "answers": [
+        "Hablar y reír",
+        "Música",
+        "Luz tenue",
+        "Dejar que la noche avance"
+      ],
+      "id": "LEGACY-036",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Noche juntos",
+      "type": "🌙",
+      "prompt": "Si aparece un momento incómodo pero intenso…",
+      "answers": [
+        "Hago una broma",
+        "Pregunto qué siente",
+        "Me quedo cerca",
+        "Dejo que ambos decidamos"
+      ],
+      "id": "LEGACY-037",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Noche juntos",
+      "type": "🫶",
+      "prompt": "Elegid una postura de cercanía cómoda para la siguiente carta.",
+      "answers": [
+        "Lado a lado",
+        "Frente a frente",
+        "Hombro con hombro",
+        "Cada uno en su sitio"
+      ],
+      "id": "LEGACY-038",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Noche juntos",
+      "type": "🎲",
+      "prompt": "Tira el dado: la noche decide la siguiente acción.",
+      "answers": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "id": "LEGACY-039",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Noche juntos",
+      "type": "🍷",
+      "prompt": "¿Qué brindis encaja mejor con esta noche?",
+      "answers": [
+        "Por lo que fuimos",
+        "Por lo que somos",
+        "Por lo que aprendimos",
+        "Por lo que pueda pasar"
+      ],
+      "id": "LEGACY-040",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Sin filtros",
+      "type": "❤️‍🔥",
+      "prompt": "¿Qué te costaría más reconocer en voz alta?",
+      "answers": [
+        "Que me importa",
+        "Que lo echo de menos",
+        "Que todavía me atrae",
+        "Que no sé qué somos"
+      ],
+      "id": "LEGACY-041",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Sin filtros",
+      "type": "🔥",
+      "prompt": "Si el otro se acerca lentamente…",
+      "answers": [
+        "Me aparto",
+        "Me quedo quieto/a",
+        "Me acerco también",
+        "Pregunto qué quiere"
+      ],
+      "id": "LEGACY-042",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Sin filtros",
+      "type": "🃏",
+      "prompt": "Elige sin explicar: ¿qué te gustaría que el otro entendiera esta noche?",
+      "answers": [
+        "Lo que siento",
+        "Lo que deseo",
+        "Lo que me preocupa",
+        "Lo que no me atrevo a decir"
+      ],
+      "id": "LEGACY-043",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Sin filtros",
+      "type": "🎯",
+      "prompt": "Apuesta qué elegirá el otro y después revelad las respuestas.",
+      "answers": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "id": "LEGACY-044",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Sin filtros",
+      "type": "🔥 Reto",
+      "prompt": "Susurrad una cosa que os atraiga del otro. Sin justificarla.",
+      "answers": null,
+      "id": "LEGACY-045",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Final",
+      "type": "🔓",
+      "prompt": "Habéis llegado al último tramo. ¿Qué queréis descubrir?",
+      "answers": [
+        "Qué queda",
+        "Qué sentís",
+        "Qué os atrae",
+        "Qué podría pasar"
+      ],
+      "id": "LEGACY-046",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "phase": "Final",
+      "type": "🎲",
+      "prompt": "Dado final: elegid juntos si queréis continuar con una carta sensual, una conversación o un reto.",
+      "answers": [
+        "Sensual",
+        "Conversación",
+        "Reto",
+        "Parar aquí"
+      ],
+      "id": "LEGACY-047",
+      "mode": "aventura",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "quien",
+      "type": "👀 ¿QUIÉN?",
+      "prompt": "¿Quién recuerda mejor las pequeñas cosas que el otro dice de pasada?",
+      "answers": [
+        "Jugador 1",
+        "Jugador 2",
+        "Los dos",
+        "Ninguno"
+      ],
+      "points": 1,
+      "tags": [
+        "who"
+      ],
+      "id": "C001",
+      "time": 15,
+      "intensity": 2,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "quien",
+      "type": "👀 ¿QUIÉN?",
+      "prompt": "¿Quién tiene más probabilidades de convertir una tontería en una broma?",
+      "answers": [
+        "Jugador 1",
+        "Jugador 2",
+        "Los dos",
+        "Depende"
+      ],
+      "points": 1,
+      "tags": [
+        "who"
+      ],
+      "id": "C002",
+      "time": 15,
+      "intensity": 3,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "quien",
+      "type": "👀 ¿QUIÉN?",
+      "prompt": "¿Quién aguanta menos tiempo sin hablar después de una discusión?",
+      "answers": [
+        "Jugador 1",
+        "Jugador 2",
+        "Los dos",
+        "Depende"
+      ],
+      "points": 1,
+      "tags": [
+        "who"
+      ],
+      "id": "C003",
+      "time": 15,
+      "intensity": 4,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "quien",
+      "type": "👀 ¿QUIÉN?",
+      "prompt": "¿Quién es más probable que diga «me da igual» cuando claramente no le da igual?",
+      "answers": [
+        "Jugador 1",
+        "Jugador 2",
+        "Los dos",
+        "Ninguno"
+      ],
+      "points": 1,
+      "tags": [
+        "who"
+      ],
+      "id": "C004",
+      "time": 15,
+      "intensity": 5,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "quien",
+      "type": "👀 ¿QUIÉN?",
+      "prompt": "¿Quién suele detectar antes que el otro está raro?",
+      "answers": [
+        "Jugador 1",
+        "Jugador 2",
+        "Los dos",
+        "Ninguno"
+      ],
+      "points": 1,
+      "tags": [
+        "who"
+      ],
+      "id": "C005",
+      "time": 15,
+      "intensity": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "quien",
+      "type": "👀 ¿QUIÉN?",
+      "prompt": "¿Quién improvisaría mejor una cita sin preparar nada?",
+      "answers": [
+        "Jugador 1",
+        "Jugador 2",
+        "Los dos",
+        "Ninguno"
+      ],
+      "points": 1,
+      "tags": [
+        "who"
+      ],
+      "id": "C006",
+      "time": 15,
+      "intensity": 2,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "quien",
+      "type": "👀 ¿QUIÉN?",
+      "prompt": "¿Quién se ríe antes cuando intenta mantener la seriedad?",
+      "answers": [
+        "Jugador 1",
+        "Jugador 2",
+        "Los dos",
+        "Depende"
+      ],
+      "points": 1,
+      "tags": [
+        "who"
+      ],
+      "id": "C007",
+      "time": 15,
+      "intensity": 3,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "quien",
+      "type": "👀 ¿QUIÉN?",
+      "prompt": "¿Quién es más probable que proponga una locura de última hora?",
+      "answers": [
+        "Jugador 1",
+        "Jugador 2",
+        "Los dos",
+        "Ninguno"
+      ],
+      "points": 1,
+      "tags": [
+        "who"
+      ],
+      "id": "C008",
+      "time": 15,
+      "intensity": 4,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "pareja",
+      "type": "❤️ PAREJA",
+      "prompt": "¿Qué detalle pequeño del otro te hace sentir especialmente querido/a?",
+      "answers": [
+        "Una mirada",
+        "Que me escuche",
+        "Que me busque",
+        "Que me haga reír"
+      ],
+      "points": 2,
+      "tags": [
+        "couple"
+      ],
+      "id": "C009",
+      "time": 15,
+      "intensity": 5,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "pareja",
+      "type": "❤️ PAREJA",
+      "prompt": "¿Qué crees que necesita más vuestra relación ahora mismo?",
+      "answers": [
+        "Más tiempo",
+        "Más risas",
+        "Más conversaciones",
+        "Más sorpresas"
+      ],
+      "points": 2,
+      "tags": [
+        "couple"
+      ],
+      "id": "C010",
+      "time": 15,
+      "intensity": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "pareja",
+      "type": "❤️ PAREJA",
+      "prompt": "Si pudieras repetir un día de vuestra historia, ¿cuál elegirías?",
+      "answers": [
+        "El comienzo",
+        "Un día divertido",
+        "Una noche especial",
+        "Uno que salió inesperadamente bien"
+      ],
+      "points": 2,
+      "tags": [
+        "couple"
+      ],
+      "id": "C011",
+      "time": 15,
+      "intensity": 2,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "pareja",
+      "type": "❤️ PAREJA",
+      "prompt": "¿Qué palabra describe mejor vuestra complicidad?",
+      "answers": [
+        "Caos",
+        "Risas",
+        "Confianza",
+        "Química"
+      ],
+      "points": 2,
+      "tags": [
+        "couple"
+      ],
+      "id": "C012",
+      "time": 15,
+      "intensity": 3,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "pareja",
+      "type": "❤️ PAREJA",
+      "prompt": "¿Qué plan sencillo disfrutaríais más juntos?",
+      "answers": [
+        "Cena",
+        "Paseo",
+        "Película",
+        "Improvisar"
+      ],
+      "points": 2,
+      "tags": [
+        "couple"
+      ],
+      "id": "C013",
+      "time": 15,
+      "intensity": 4,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "pareja",
+      "type": "❤️ PAREJA",
+      "prompt": "¿Qué hace que una reconciliación sea de verdad?",
+      "answers": [
+        "Hablar",
+        "Escuchar",
+        "Reírse juntos",
+        "Un gesto sincero"
+      ],
+      "points": 2,
+      "tags": [
+        "couple"
+      ],
+      "id": "C014",
+      "time": 15,
+      "intensity": 5,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "pareja",
+      "type": "❤️ PAREJA",
+      "prompt": "¿Qué crees que el otro entiende de ti mejor que casi nadie?",
+      "answers": [
+        "Mi humor",
+        "Mis silencios",
+        "Mis manías",
+        "Mis cambios de ánimo"
+      ],
+      "points": 2,
+      "tags": [
+        "couple"
+      ],
+      "id": "C015",
+      "time": 15,
+      "intensity": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "pareja",
+      "type": "❤️ PAREJA",
+      "prompt": "Si vuestra historia fuera una película, ¿qué género sería?",
+      "answers": [
+        "Comedia",
+        "Romance",
+        "Drama",
+        "Aventura"
+      ],
+      "points": 2,
+      "tags": [
+        "couple"
+      ],
+      "id": "C016",
+      "time": 15,
+      "intensity": 2,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "recuerdos",
+      "type": "🧠 RECUERDOS",
+      "prompt": "Pensad en vuestro primer contacto. ¿Qué detalle creéis que recuerda mejor el otro?",
+      "answers": [
+        "La primera impresión",
+        "Una frase",
+        "El momento",
+        "Lo que vino después"
+      ],
+      "points": 2,
+      "tags": [
+        "memory"
+      ],
+      "id": "C017",
+      "time": 25,
+      "intensity": 3,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "recuerdos",
+      "type": "🧠 RECUERDOS",
+      "prompt": "Elegid una etapa de vuestra historia que os haya cambiado.",
+      "answers": [
+        "El principio",
+        "Una etapa difícil",
+        "Una reconciliación",
+        "Una etapa divertida"
+      ],
+      "points": 2,
+      "tags": [
+        "memory"
+      ],
+      "id": "C018",
+      "time": 25,
+      "intensity": 4,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "recuerdos",
+      "type": "🧠 RECUERDOS",
+      "prompt": "¿Qué recuerdo os hace reír incluso si lo contáis muchas veces?",
+      "answers": [
+        "Una salida",
+        "Una conversación",
+        "Una metedura de pata",
+        "Algo inesperado"
+      ],
+      "points": 2,
+      "tags": [
+        "memory"
+      ],
+      "id": "C019",
+      "time": 25,
+      "intensity": 5,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "recuerdos",
+      "type": "🧠 RECUERDOS",
+      "prompt": "¿Qué momento os hizo pensar «esto ya es algo especial»?",
+      "answers": [
+        "Una mirada",
+        "Una conversación",
+        "Una noche",
+        "Un gesto"
+      ],
+      "points": 2,
+      "tags": [
+        "memory"
+      ],
+      "id": "C020",
+      "time": 25,
+      "intensity": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "recuerdos",
+      "type": "🧠 RECUERDOS",
+      "prompt": "Cada uno piensa en una fecha importante. ¿Crees que el otro la acertaría?",
+      "answers": [
+        "Sí",
+        "Probablemente",
+        "Ni de broma",
+        "Solo con una pista"
+      ],
+      "points": 2,
+      "tags": [
+        "memory"
+      ],
+      "id": "C021",
+      "time": 25,
+      "intensity": 2,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "recuerdos",
+      "type": "🧠 RECUERDOS",
+      "prompt": "¿Qué objeto, canción o lugar os transporta inmediatamente a un recuerdo compartido?",
+      "answers": [
+        "Una canción",
+        "Un lugar",
+        "Una foto",
+        "Una cosa cotidiana"
+      ],
+      "points": 2,
+      "tags": [
+        "memory"
+      ],
+      "id": "C022",
+      "time": 25,
+      "intensity": 3,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "distancia",
+      "type": "📱 DISTANCIA",
+      "prompt": "Desde donde estáis ahora, elegid qué haríais juntos si estuvierais en la misma habitación.",
+      "answers": [
+        "Abrazarnos",
+        "Hablar",
+        "Ver algo",
+        "Salir"
+      ],
+      "points": 2,
+      "tags": [
+        "distance"
+      ],
+      "id": "C023",
+      "time": 25,
+      "intensity": 4,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "distancia",
+      "type": "📱 DISTANCIA",
+      "prompt": "Escribid una frase de cinco palabras que describa vuestra conexión.",
+      "answers": null,
+      "points": 2,
+      "tags": [
+        "distance"
+      ],
+      "id": "C024",
+      "time": 25,
+      "intensity": 5,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "distancia",
+      "type": "📱 DISTANCIA",
+      "prompt": "Cada uno elige una canción que pondría ahora mismo para el otro.",
+      "answers": null,
+      "points": 2,
+      "tags": [
+        "distance"
+      ],
+      "id": "C025",
+      "time": 25,
+      "intensity": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "distancia",
+      "type": "📱 DISTANCIA",
+      "prompt": "Mirad la pantalla durante 10 segundos sin hablar y después decid qué habéis pensado.",
+      "answers": null,
+      "points": 2,
+      "tags": [
+        "distance"
+      ],
+      "id": "C026",
+      "time": 25,
+      "intensity": 2,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "distancia",
+      "type": "📱 DISTANCIA",
+      "prompt": "Mandad al otro un emoji que explique vuestro estado de ánimo. Luego intentad adivinar el significado.",
+      "answers": [
+        "❤️",
+        "😂",
+        "😈",
+        "🥰"
+      ],
+      "points": 2,
+      "tags": [
+        "distance"
+      ],
+      "id": "C027",
+      "time": 25,
+      "intensity": 3,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "distancia",
+      "type": "📱 DISTANCIA",
+      "prompt": "Elegid una mini-cita para hacer cuando volváis a estar juntos.",
+      "answers": [
+        "Cena",
+        "Paseo",
+        "Noche de peli",
+        "Plan sorpresa"
+      ],
+      "points": 2,
+      "tags": [
+        "distance"
+      ],
+      "id": "C028",
+      "time": 25,
+      "intensity": 4,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "retos",
+      "type": "🔥 RETO",
+      "prompt": "Durante 20 segundos, haced reír al otro sin contar un chiste.",
+      "answers": null,
+      "points": 3,
+      "tags": [
+        "challenge"
+      ],
+      "id": "C029",
+      "time": 25,
+      "intensity": 5,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "retos",
+      "type": "🔥 RETO",
+      "prompt": "Imitad durante 15 segundos una frase o gesto típico del otro.",
+      "answers": null,
+      "points": 3,
+      "tags": [
+        "challenge"
+      ],
+      "id": "C030",
+      "time": 25,
+      "intensity": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "retos",
+      "type": "🔥 RETO",
+      "prompt": "Cada uno tiene 15 segundos para vender una cita absurda como si fuera un anuncio.",
+      "answers": null,
+      "points": 3,
+      "tags": [
+        "challenge"
+      ],
+      "id": "C031",
+      "time": 25,
+      "intensity": 2,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "retos",
+      "type": "🔥 RETO",
+      "prompt": "Mirada seria: gana quien aguante más sin reírse.",
+      "answers": null,
+      "points": 3,
+      "tags": [
+        "challenge"
+      ],
+      "id": "C032",
+      "time": 25,
+      "intensity": 3,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "retos",
+      "type": "🔥 RETO",
+      "prompt": "Inventad un saludo secreto en 30 segundos.",
+      "answers": null,
+      "points": 3,
+      "tags": [
+        "challenge"
+      ],
+      "id": "C033",
+      "time": 25,
+      "intensity": 4,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "retos",
+      "type": "🔥 RETO",
+      "prompt": "Cada uno dice tres cosas positivas del otro, pero una debe ser inesperada.",
+      "answers": null,
+      "points": 3,
+      "tags": [
+        "challenge"
+      ],
+      "id": "C034",
+      "time": 25,
+      "intensity": 5,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "retos",
+      "type": "🔥 RETO",
+      "prompt": "Haced una escena de película improvisada usando las palabras «cena», «caos» y «secreto».",
+      "answers": null,
+      "points": 3,
+      "tags": [
+        "challenge"
+      ],
+      "id": "C035",
+      "time": 25,
+      "intensity": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "retos",
+      "type": "🔥 RETO",
+      "prompt": "Durante la siguiente carta, quien se ría primero pierde 1 punto.",
+      "answers": null,
+      "points": 3,
+      "tags": [
+        "challenge"
+      ],
+      "id": "C036",
+      "time": 25,
+      "intensity": 2,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "retos",
+      "type": "🔥 RETO",
+      "prompt": "Uno hace mímica de una película y el otro intenta adivinarla.",
+      "answers": null,
+      "points": 3,
+      "tags": [
+        "challenge"
+      ],
+      "id": "C037",
+      "time": 25,
+      "intensity": 3,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "retos",
+      "type": "🔥 RETO",
+      "prompt": "Inventad un apodo cariñoso nuevo para el otro. El otro decide si se queda.",
+      "answers": null,
+      "points": 3,
+      "tags": [
+        "challenge"
+      ],
+      "id": "C038",
+      "time": 25,
+      "intensity": 4,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "azar",
+      "type": "🎲 AZAR",
+      "prompt": "El azar decide: quien tenga menos puntos empieza la siguiente ronda.",
+      "answers": [
+        "Hecho",
+        "Volver a tirar",
+        "Que empiece el otro"
+      ],
+      "points": 2,
+      "tags": [
+        "random"
+      ],
+      "id": "C039",
+      "time": 25,
+      "intensity": 5,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "azar",
+      "type": "🎲 AZAR",
+      "prompt": "Intercambiad vuestros papeles durante una ronda: responde quien normalmente pregunta.",
+      "answers": [
+        "Aceptado",
+        "Otra regla",
+        "Siguiente"
+      ],
+      "points": 2,
+      "tags": [
+        "random"
+      ],
+      "id": "C040",
+      "time": 25,
+      "intensity": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "azar",
+      "type": "🎲 AZAR",
+      "prompt": "La siguiente carta vale doble.",
+      "answers": [
+        "Aceptado",
+        "Volver a tirar",
+        "Cancelar"
+      ],
+      "points": 2,
+      "tags": [
+        "random"
+      ],
+      "id": "C041",
+      "time": 25,
+      "intensity": 2,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "azar",
+      "type": "🎲 AZAR",
+      "prompt": "Avanza una casilla extra y activa un evento sorpresa.",
+      "answers": [
+        "Aceptado",
+        "No gracias"
+      ],
+      "points": 2,
+      "tags": [
+        "random"
+      ],
+      "id": "C042",
+      "time": 25,
+      "intensity": 3,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "azar",
+      "type": "🎲 AZAR",
+      "prompt": "Elige: ¿pregunta difícil o reto divertido?",
+      "answers": [
+        "Pregunta",
+        "Reto",
+        "Azar"
+      ],
+      "points": 2,
+      "tags": [
+        "random"
+      ],
+      "id": "C043",
+      "time": 25,
+      "intensity": 4,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "sorpresa",
+      "type": "🎁 SORPRESA",
+      "prompt": "CARTA OCULTA: el otro elige una palabra — «risa», «noche», «locura» o «casa»— y explica por qué la relaciona contigo.",
+      "answers": [
+        "Risa",
+        "Noche",
+        "Locura",
+        "Casa"
+      ],
+      "points": 3,
+      "tags": [
+        "surprise"
+      ],
+      "id": "C044",
+      "time": 25,
+      "intensity": 5,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "sorpresa",
+      "type": "🎁 SORPRESA",
+      "prompt": "CARTA OCULTA: inventad un premio absurdo para vuestra pareja.",
+      "answers": [
+        "Más cabezota",
+        "Mejor provocador/a",
+        "Rey/Reina del drama",
+        "Mejor equipo"
+      ],
+      "points": 3,
+      "tags": [
+        "surprise"
+      ],
+      "id": "C045",
+      "time": 25,
+      "intensity": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "sorpresa",
+      "type": "🎁 SORPRESA",
+      "prompt": "CARTA OCULTA: elegid una regla especial para las próximas dos rondas.",
+      "answers": [
+        "Responder con una pregunta",
+        "Hablar en susurros",
+        "No decir «sí»",
+        "Empezar con una risa"
+      ],
+      "points": 3,
+      "tags": [
+        "surprise"
+      ],
+      "id": "C046",
+      "time": 25,
+      "intensity": 2,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "sorpresa",
+      "type": "🎁 SORPRESA",
+      "prompt": "CARTA OCULTA: uno elige un recuerdo y el otro tiene que adivinar cuál es con tres pistas.",
+      "answers": [
+        "Aceptado",
+        "Cambiar",
+        "Pedir pista"
+      ],
+      "points": 3,
+      "tags": [
+        "surprise"
+      ],
+      "id": "C047",
+      "time": 25,
+      "intensity": 3,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "sorpresa",
+      "type": "🎁 SORPRESA",
+      "prompt": "CARTA OCULTA: durante 30 segundos solo podéis comunicaros con gestos.",
+      "answers": [
+        "Aceptado",
+        "Otra carta"
+      ],
+      "points": 3,
+      "tags": [
+        "surprise"
+      ],
+      "id": "C048",
+      "time": 25,
+      "intensity": 4,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "aventura",
+      "type": "🗺️ AVENTURA",
+      "prompt": "Has encontrado una bifurcación. ¿Qué camino tomáis?",
+      "answers": [
+        "Corazón: +2 puntos",
+        "Reto: +3 puntos",
+        "Azar: tira el dado"
+      ],
+      "points": 2,
+      "tags": [
+        "adventure"
+      ],
+      "id": "C049",
+      "time": 25,
+      "intensity": 5,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "aventura",
+      "type": "🗺️ AVENTURA",
+      "prompt": "Casilla de equipo: si ambos elegís la misma respuesta, ganáis un bonus.",
+      "answers": [
+        "Vamos",
+        "Necesitamos suerte"
+      ],
+      "points": 2,
+      "tags": [
+        "adventure"
+      ],
+      "id": "C050",
+      "time": 25,
+      "intensity": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "aventura",
+      "type": "🗺️ AVENTURA",
+      "prompt": "Casilla de memoria: cada uno cuenta un recuerdo y el otro decide cuál es más divertido.",
+      "answers": null,
+      "points": 2,
+      "tags": [
+        "adventure"
+      ],
+      "id": "C051",
+      "time": 25,
+      "intensity": 2,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "aventura",
+      "type": "🗺️ AVENTURA",
+      "prompt": "Casilla de confesión: decid algo que apreciáis del otro y que pocas veces decís.",
+      "answers": null,
+      "points": 2,
+      "tags": [
+        "adventure"
+      ],
+      "id": "C052",
+      "time": 25,
+      "intensity": 3,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "aventura",
+      "type": "🗺️ AVENTURA",
+      "prompt": "Casilla de velocidad: tenéis 20 segundos para responder la próxima pregunta.",
+      "answers": null,
+      "points": 2,
+      "tags": [
+        "adventure"
+      ],
+      "id": "C053",
+      "time": 25,
+      "intensity": 4,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "aventura",
+      "type": "🗺️ AVENTURA",
+      "prompt": "Casilla comodín: guardad este comodín para saltaros una carta futura.",
+      "answers": [
+        "Guardar",
+        "Usar ahora"
+      ],
+      "points": 2,
+      "tags": [
+        "adventure"
+      ],
+      "id": "C054",
+      "time": 25,
+      "intensity": 5,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "aventura",
+      "type": "🗺️ AVENTURA",
+      "prompt": "Casilla espejo: en la próxima pregunta intentad responder exactamente lo que creéis que dirá el otro.",
+      "answers": null,
+      "points": 2,
+      "tags": [
+        "adventure"
+      ],
+      "id": "C055",
+      "time": 25,
+      "intensity": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "aventura",
+      "type": "🗺️ AVENTURA",
+      "prompt": "Casilla fuego: la próxima carta vale +2 si ambos la completáis.",
+      "answers": null,
+      "points": 2,
+      "tags": [
+        "adventure"
+      ],
+      "id": "C056",
+      "time": 25,
+      "intensity": 2,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "aventura",
+      "type": "💎 COMODÍN",
+      "prompt": "Si pudieras regalarle al otro una experiencia mañana mismo, ¿cuál sería?",
+      "answers": [
+        "Viaje",
+        "Cena",
+        "Aventura",
+        "Día tranquilo"
+      ],
+      "points": 2,
+      "tags": [
+        "general"
+      ],
+      "id": "C057",
+      "time": 25,
+      "intensity": 3,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "aventura",
+      "type": "💎 COMODÍN",
+      "prompt": "¿Qué os hace funcionar especialmente bien como equipo?",
+      "answers": [
+        "Humor",
+        "Confianza",
+        "Paciencia",
+        "Conocernos mucho"
+      ],
+      "points": 2,
+      "tags": [
+        "general"
+      ],
+      "id": "C058",
+      "time": 25,
+      "intensity": 4,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "aventura",
+      "type": "💎 COMODÍN",
+      "prompt": "Inventad una tradición que solo sea vuestra.",
+      "answers": null,
+      "points": 2,
+      "tags": [
+        "general"
+      ],
+      "id": "C059",
+      "time": 25,
+      "intensity": 5,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "aventura",
+      "type": "💎 COMODÍN",
+      "prompt": "¿Qué plan improvisado os representa más?",
+      "answers": [
+        "Salir sin rumbo",
+        "Quedarnos hablando",
+        "Cualquier locura",
+        "Comer y reír"
+      ],
+      "points": 2,
+      "tags": [
+        "general"
+      ],
+      "id": "C060",
+      "time": 25,
+      "intensity": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "aventura",
+      "type": "💎 COMODÍN",
+      "prompt": "Cada uno dice una cosa que quiere volver a hacer juntos.",
+      "answers": null,
+      "points": 2,
+      "tags": [
+        "general"
+      ],
+      "id": "C061",
+      "time": 25,
+      "intensity": 2,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "mode": "aventura",
+      "type": "💎 COMODÍN",
+      "prompt": "Si el otro tuviera una superhabilidad en vuestra relación, ¿cuál sería?",
+      "answers": [
+        "Detectar problemas",
+        "Hacer reír",
+        "Calmar",
+        "Improvisar"
+      ],
+      "points": 2,
+      "tags": [
+        "general"
+      ],
+      "id": "C062",
+      "time": 25,
+      "intensity": 3,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-001",
+      "mode": "pareja",
+      "type": "❤️ CONEXIÓN",
+      "prompt": "¿Qué pequeño gesto mío te hace sentir especialmente querido/a?",
+      "points": 2,
+      "level": 1,
+      "tag": "",
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-002",
+      "mode": "quien",
+      "type": "👀 ¿QUIÉN?",
+      "prompt": "¿Quién detecta antes que el otro necesita un abrazo?",
+      "points": 2,
+      "level": 1,
+      "tag": "",
+      "answers": [
+        "Tú",
+        "Yo",
+        "Los dos",
+        "Depende del día"
+      ],
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-003",
+      "mode": "pareja",
+      "type": "💬 SINCERO",
+      "prompt": "Describe nuestra relación con tres palabras y explica una.",
+      "points": 2,
+      "level": 1,
+      "tag": "",
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-004",
+      "mode": "quien",
+      "type": "👀 ¿QUIÉN?",
+      "prompt": "¿Quién aguantaría menos una semana sin escribir al otro?",
+      "points": 2,
+      "level": 1,
+      "tag": "",
+      "answers": [
+        "Tú",
+        "Yo",
+        "Los dos",
+        "Ninguno"
+      ],
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-005",
+      "mode": "recuerdos",
+      "type": "🧠 RECUERDO",
+      "prompt": "Cuenta un momento de nuestros primeros días que todavía recuerdes con una sonrisa.",
+      "points": 2,
+      "level": 1,
+      "tag": "",
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-006",
+      "mode": "pareja",
+      "type": "❤️ CONEXIÓN",
+      "prompt": "¿Qué fue lo primero que te llamó la atención de mí?",
+      "points": 2,
+      "level": 1,
+      "tag": "",
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-007",
+      "mode": "recuerdos",
+      "type": "🧠 MEMORIA",
+      "prompt": "Sin mirar fotos: ¿qué lugar recuerdas de una de nuestras primeras citas?",
+      "points": 2,
+      "level": 2,
+      "tag": "",
+      "spice": 15,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-008",
+      "mode": "pareja",
+      "type": "🔎 DETALLE",
+      "prompt": "Dime una cosa que hago cuando estoy nervioso/a.",
+      "points": 2,
+      "level": 2,
+      "tag": "",
+      "spice": 15,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-009",
+      "mode": "quien",
+      "type": "👀 ¿QUIÉN?",
+      "prompt": "¿Quién recuerda mejor fechas y detalles?",
+      "points": 2,
+      "level": 2,
+      "tag": "",
+      "answers": [
+        "Tú",
+        "Yo",
+        "Los dos",
+        "Ninguno"
+      ],
+      "spice": 15,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-010",
+      "mode": "pareja",
+      "type": "💬 PROFUNDO",
+      "prompt": "¿Qué has aprendido sobre mí que no sabías al principio?",
+      "points": 2,
+      "level": 2,
+      "tag": "",
+      "spice": 15,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-011",
+      "mode": "recuerdos",
+      "type": "🧠 MEMORIA",
+      "prompt": "Recrea con palabras una escena divertida que hayamos vivido.",
+      "points": 2,
+      "level": 2,
+      "tag": "",
+      "spice": 15,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-012",
+      "mode": "pareja",
+      "type": "❤️ CONEXIÓN",
+      "prompt": "¿Qué costumbre nuestra no quieres perder nunca?",
+      "points": 2,
+      "level": 2,
+      "tag": "",
+      "spice": 15,
+      "intensityBand": "Suave",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-013",
+      "mode": "retos",
+      "type": "🔥 RETO",
+      "prompt": "Durante 20 segundos, intenta hacer reír al otro sin tocarlo.",
+      "points": 3,
+      "level": 3,
+      "tag": "",
+      "time": 20,
+      "spice": 25,
+      "intensityBand": "Coqueta",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-014",
+      "mode": "retos",
+      "type": "🔥 RETO",
+      "prompt": "Representa una película que ambos conozcáis usando solo gestos.",
+      "points": 3,
+      "level": 3,
+      "tag": "",
+      "time": 30,
+      "spice": 25,
+      "intensityBand": "Coqueta",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-015",
+      "mode": "quien",
+      "type": "👀 DUELO",
+      "prompt": "¿Quién es más competitivo/a?",
+      "points": 3,
+      "level": 3,
+      "tag": "",
+      "answers": [
+        "Tú",
+        "Yo",
+        "Los dos",
+        "Ninguno"
+      ],
+      "spice": 25,
+      "intensityBand": "Coqueta",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-016",
+      "mode": "retos",
+      "type": "🔥 RETO",
+      "prompt": "Elige una palabra prohibida durante la siguiente ronda. Si alguien la dice, pierde 1 punto.",
+      "points": 3,
+      "level": 3,
+      "tag": "",
+      "spice": 25,
+      "intensityBand": "Coqueta",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-017",
+      "mode": "pareja",
+      "type": "⚡ DECISIÓN",
+      "prompt": "Elige: noche tranquila juntos o aventura improvisada. Defiende tu elección.",
+      "points": 3,
+      "level": 3,
+      "tag": "",
+      "answers": [
+        "Noche tranquila",
+        "Aventura",
+        "Las dos",
+        "Ninguna"
+      ],
+      "spice": 25,
+      "intensityBand": "Coqueta",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-018",
+      "mode": "retos",
+      "type": "🔥 RETO",
+      "prompt": "Cuenta una anécdota vergonzosa que ahora te haga gracia.",
+      "points": 3,
+      "level": 3,
+      "tag": "",
+      "spice": 25,
+      "intensityBand": "Coqueta",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-019",
+      "mode": "recuerdos",
+      "type": "🧠 MEMORIA",
+      "prompt": "Di tres cosas que recuerdes de una etapa difícil que superamos juntos.",
+      "points": 2,
+      "level": 4,
+      "tag": "",
+      "spice": 35,
+      "intensityBand": "Coqueta",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-020",
+      "mode": "recuerdos",
+      "type": "🧠 MEMORIA",
+      "prompt": "¿Cuál fue una conversación que cambió nuestra relación?",
+      "points": 2,
+      "level": 4,
+      "tag": "",
+      "spice": 35,
+      "intensityBand": "Coqueta",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-021",
+      "mode": "pareja",
+      "type": "❤️ HISTORIA",
+      "prompt": "¿Qué versión de nosotros dos te gustaría volver a vivir por una noche?",
+      "points": 2,
+      "level": 4,
+      "tag": "",
+      "spice": 35,
+      "intensityBand": "Coqueta",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-022",
+      "mode": "quien",
+      "type": "👀 MEMORIA",
+      "prompt": "¿Quién recuerda mejor lo que se dijo en una discusión antigua?",
+      "points": 2,
+      "level": 4,
+      "tag": "",
+      "answers": [
+        "Tú",
+        "Yo",
+        "Los dos",
+        "Mejor no comprobarlo"
+      ],
+      "spice": 35,
+      "intensityBand": "Coqueta",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-023",
+      "mode": "recuerdos",
+      "type": "🧠 RECUERDO",
+      "prompt": "Cuenta un recuerdo que probablemente el otro haya olvidado.",
+      "points": 2,
+      "level": 4,
+      "tag": "",
+      "spice": 35,
+      "intensityBand": "Coqueta",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-024",
+      "mode": "pareja",
+      "type": "💎 APRECIO",
+      "prompt": "¿Qué parte de nuestra historia te hace sentir orgullo?",
+      "points": 2,
+      "level": 4,
+      "tag": "",
+      "spice": 35,
+      "intensityBand": "Coqueta",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-025",
+      "mode": "azar",
+      "type": "🎲 GIRO",
+      "prompt": "Tira mentalmente una moneda: cara = eliges tú el siguiente reto; cruz = elige tu pareja.",
+      "points": 2,
+      "level": 5,
+      "tag": "",
+      "answers": [
+        "Cara",
+        "Cruz"
+      ],
+      "spice": 45,
+      "intensityBand": "Atrevida",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-026",
+      "mode": "sorpresa",
+      "type": "🎁 SORPRESA",
+      "prompt": "El otro puede cambiar esta carta por una carta de su elección.",
+      "points": 2,
+      "level": 5,
+      "tag": "",
+      "spice": 45,
+      "intensityBand": "Atrevida",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-027",
+      "mode": "retos",
+      "type": "🌀 REGLA",
+      "prompt": "Durante dos rondas, cada respuesta debe empezar con “La verdad es que…”",
+      "points": 2,
+      "level": 5,
+      "tag": "",
+      "spice": 45,
+      "intensityBand": "Atrevida",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-028",
+      "mode": "quien",
+      "type": "🎭 GIRO",
+      "prompt": "¿Quién tiene más probabilidades de cambiar de plan a última hora?",
+      "points": 2,
+      "level": 5,
+      "tag": "",
+      "answers": [
+        "Tú",
+        "Yo",
+        "Los dos",
+        "Ninguno"
+      ],
+      "spice": 45,
+      "intensityBand": "Atrevida",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-029",
+      "mode": "pareja",
+      "type": "🌀 GIRO",
+      "prompt": "Inventad una regla absurda que dure una ronda.",
+      "points": 2,
+      "level": 5,
+      "tag": "",
+      "spice": 45,
+      "intensityBand": "Atrevida",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-030",
+      "mode": "azar",
+      "type": "🎲 RIESGO",
+      "prompt": "Apuesta 2 puntos: si coincidís en la próxima carta, ganas 4; si no, pierdes 1.",
+      "points": 4,
+      "level": 5,
+      "tag": "",
+      "spice": 45,
+      "intensityBand": "Atrevida",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-031",
+      "mode": "retos",
+      "type": "⏱️ CONTRARRELOJ",
+      "prompt": "En 15 segundos: di cinco cosas que te encantan de vuestra relación.",
+      "points": 4,
+      "level": 6,
+      "tag": "",
+      "time": 15,
+      "spice": 55,
+      "intensityBand": "Atrevida",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-032",
+      "mode": "retos",
+      "type": "⏱️ CONTRARRELOJ",
+      "prompt": "En 20 segundos: nombrad tres lugares a los que queréis viajar juntos.",
+      "points": 4,
+      "level": 6,
+      "tag": "",
+      "time": 20,
+      "spice": 55,
+      "intensityBand": "Atrevida",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-033",
+      "mode": "quien",
+      "type": "⚡ DUELO RÁPIDO",
+      "prompt": "¿Quién tarda más en decidir qué hacer?",
+      "points": 4,
+      "level": 6,
+      "tag": "",
+      "answers": [
+        "Tú",
+        "Yo",
+        "Los dos",
+        "Ninguno"
+      ],
+      "spice": 55,
+      "intensityBand": "Atrevida",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-034",
+      "mode": "pareja",
+      "type": "⏱️ RESPUESTA RÁPIDA",
+      "prompt": "Responde sin pensarlo: ¿qué plan harías conmigo mañana si tuvieras el día libre?",
+      "points": 2,
+      "level": 6,
+      "tag": "",
+      "spice": 55,
+      "intensityBand": "Atrevida",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-035",
+      "mode": "retos",
+      "type": "🔥 RETO",
+      "prompt": "Imita durante 15 segundos la forma de hablar del otro, con cariño.",
+      "points": 4,
+      "level": 6,
+      "tag": "",
+      "time": 15,
+      "spice": 55,
+      "intensityBand": "Atrevida",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-036",
+      "mode": "pareja",
+      "type": "⚡ INSTANTÁNEA",
+      "prompt": "Completa: “Cuando estamos bien, nosotros…”",
+      "points": 2,
+      "level": 6,
+      "tag": "",
+      "spice": 55,
+      "intensityBand": "Atrevida",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-037",
+      "mode": "aventura",
+      "type": "🗺️ EXPLORACIÓN",
+      "prompt": "Elige una casilla especial del tablero: tesoro, portal o riesgo.",
+      "points": 2,
+      "level": 7,
+      "tag": "",
+      "answers": [
+        "Tesoro",
+        "Portal",
+        "Riesgo"
+      ],
+      "spice": 65,
+      "intensityBand": "Atrevida",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-038",
+      "mode": "sorpresa",
+      "type": "🎁 EVENTO",
+      "prompt": "Encuentra una recompensa oculta: elige entre +2 puntos o recuperar un comodín gastado.",
+      "points": 2,
+      "level": 7,
+      "tag": "",
+      "answers": [
+        "+2 puntos",
+        "Recuperar comodín"
+      ],
+      "spice": 65,
+      "intensityBand": "Atrevida",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-039",
+      "mode": "recuerdos",
+      "type": "🧠 MAPA",
+      "prompt": "Elige un lugar real que represente una etapa de vuestra historia y explica por qué.",
+      "points": 2,
+      "level": 7,
+      "tag": "",
+      "spice": 65,
+      "intensityBand": "Atrevida",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-040",
+      "mode": "retos",
+      "type": "🗺️ MISIÓN",
+      "prompt": "Superad juntos una mini misión: decidid en 30 segundos vuestro próximo plan de pareja.",
+      "points": 5,
+      "level": 7,
+      "tag": "",
+      "time": 30,
+      "spice": 65,
+      "intensityBand": "Atrevida",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-041",
+      "mode": "quien",
+      "type": "👀 EXPLORADOR",
+      "prompt": "¿Quién sería mejor guía en un viaje sin mapa?",
+      "points": 2,
+      "level": 7,
+      "tag": "",
+      "answers": [
+        "Tú",
+        "Yo",
+        "Los dos",
+        "Ninguno"
+      ],
+      "spice": 65,
+      "intensityBand": "Atrevida",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-042",
+      "mode": "pareja",
+      "type": "💎 TESORO",
+      "prompt": "Di una cosa que quieras conservar de la relación durante muchos años.",
+      "points": 2,
+      "level": 7,
+      "tag": "",
+      "spice": 65,
+      "intensityBand": "Atrevida",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-043",
+      "mode": "azar",
+      "type": "💎 DOBLE O NADA",
+      "prompt": "Apuesta 3 puntos: si coincidís en la próxima carta, duplicas la apuesta; si no, pierdes 2.",
+      "points": 5,
+      "level": 8,
+      "tag": "",
+      "spice": 75,
+      "intensityBand": "Picante",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-044",
+      "mode": "retos",
+      "type": "🔥 COMBO",
+      "prompt": "Completa esta carta y la siguiente sin usar un comodín.",
+      "points": 5,
+      "level": 8,
+      "tag": "",
+      "spice": 75,
+      "intensityBand": "Picante",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-045",
+      "mode": "quien",
+      "type": "🏆 DUELO",
+      "prompt": "¿Quién suele convertir una situación normal en una historia memorable?",
+      "points": 5,
+      "level": 8,
+      "tag": "",
+      "answers": [
+        "Tú",
+        "Yo",
+        "Los dos",
+        "Ninguno"
+      ],
+      "spice": 75,
+      "intensityBand": "Picante",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-046",
+      "mode": "sorpresa",
+      "type": "🎁 PREMIO",
+      "prompt": "Elige una recompensa para los dos: +1 bonus o una protección contra la próxima penalización.",
+      "points": 2,
+      "level": 8,
+      "tag": "",
+      "answers": [
+        "+1 bonus",
+        "Protección"
+      ],
+      "spice": 75,
+      "intensityBand": "Picante",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-047",
+      "mode": "pareja",
+      "type": "💎 SINCRONÍA",
+      "prompt": "Di una decisión que crees que tomaríamos igual sin hablar antes.",
+      "points": 2,
+      "level": 8,
+      "tag": "",
+      "spice": 75,
+      "intensityBand": "Picante",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-048",
+      "mode": "azar",
+      "type": "🎲 CAOS",
+      "prompt": "El siguiente jugador decide si avanza, roba una carta o activa un evento.",
+      "points": 2,
+      "level": 8,
+      "tag": "",
+      "spice": 75,
+      "intensityBand": "Picante",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-049",
+      "mode": "recuerdos",
+      "type": "🏆 PRUEBA FINAL",
+      "prompt": "Cuenta el recuerdo que más representa todo lo que habéis vivido.",
+      "points": 2,
+      "level": 9,
+      "tag": "",
+      "spice": 88,
+      "intensityBand": "Picante",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-050",
+      "mode": "pareja",
+      "type": "❤️ PRUEBA FINAL",
+      "prompt": "¿Qué te gustaría que nunca cambiara entre nosotros?",
+      "points": 2,
+      "level": 9,
+      "tag": "",
+      "spice": 88,
+      "intensityBand": "Picante",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-051",
+      "mode": "quien",
+      "type": "⚔️ DUELO FINAL",
+      "prompt": "¿Quién conoce mejor al otro?",
+      "points": 6,
+      "level": 9,
+      "tag": "",
+      "answers": [
+        "Tú",
+        "Yo",
+        "Empate",
+        "Todavía no se sabe"
+      ],
+      "spice": 88,
+      "intensityBand": "Picante",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-052",
+      "mode": "retos",
+      "type": "🔥 PRUEBA FINAL",
+      "prompt": "En 30 segundos: cread un lema para vuestra relación.",
+      "points": 6,
+      "level": 9,
+      "tag": "",
+      "time": 30,
+      "spice": 88,
+      "intensityBand": "Picante",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-053",
+      "mode": "sorpresa",
+      "type": "🎁 ÚLTIMA CARTA",
+      "prompt": "Elige: premio seguro o premio arriesgado.",
+      "points": 6,
+      "level": 9,
+      "tag": "",
+      "answers": [
+        "Seguro",
+        "Arriesgado"
+      ],
+      "spice": 88,
+      "intensityBand": "Picante",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-054",
+      "mode": "pareja",
+      "type": "👑 CORAZÓN",
+      "prompt": "Di algo que nunca hayas dicho en una partida y que quieras que el otro recuerde.",
+      "points": 2,
+      "level": 9,
+      "tag": "",
+      "spice": 88,
+      "intensityBand": "Picante",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-055",
+      "mode": "aventura",
+      "type": "👑 FINAL",
+      "prompt": "Elegid juntos el recuerdo que pondríais en la portada de vuestra historia.",
+      "points": 8,
+      "level": 10,
+      "tag": "",
+      "answers": [
+        "Recuerdo",
+        "Persona",
+        "Lugar",
+        "Momento"
+      ],
+      "spice": 98,
+      "intensityBand": "Picante",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-056",
+      "mode": "pareja",
+      "type": "👑 FINAL",
+      "prompt": "Si vuestra relación fuera una película, ¿qué título tendría?",
+      "points": 2,
+      "level": 10,
+      "tag": "",
+      "spice": 98,
+      "intensityBand": "Picante",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-057",
+      "mode": "retos",
+      "type": "👑 FINAL",
+      "prompt": "En 30 segundos: haced un brindis improvisado por vuestra historia.",
+      "points": 8,
+      "level": 10,
+      "tag": "",
+      "time": 30,
+      "spice": 98,
+      "intensityBand": "Picante",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-058",
+      "mode": "quien",
+      "type": "👑 FINAL",
+      "prompt": "¿Quién ha cambiado más desde que os conocisteis?",
+      "points": 8,
+      "level": 10,
+      "tag": "",
+      "answers": [
+        "Tú",
+        "Yo",
+        "Los dos",
+        "De formas distintas"
+      ],
+      "spice": 98,
+      "intensityBand": "Picante",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-059",
+      "mode": "recuerdos",
+      "type": "👑 FINAL",
+      "prompt": "Cada uno cuenta un recuerdo y el otro debe añadir un detalle que recuerde.",
+      "points": 8,
+      "level": 10,
+      "tag": "",
+      "spice": 98,
+      "intensityBand": "Picante",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V6-060",
+      "mode": "sorpresa",
+      "type": "👑 FINAL",
+      "prompt": "La última elección: final Corazón, final Aventura o final Caos.",
+      "points": 8,
+      "level": 10,
+      "tag": "",
+      "answers": [
+        "❤️ Corazón",
+        "🗺️ Aventura",
+        "🌀 Caos"
+      ],
+      "spice": 98,
+      "intensityBand": "Picante",
+      "consent": "Siempre podéis pasar una carta sin dar explicaciones."
+    },
+    {
+      "id": "V7-001",
+      "phase": "🌸 Suave",
+      "type": "🌸 Suave",
+      "prompt": "Decid en voz alta una cosa pequeña que os hace sentir bien cuando estáis juntos.",
+      "answers": null,
+      "mode": "pareja",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-002",
+      "phase": "🌸 Suave",
+      "type": "🌸 Suave",
+      "prompt": "A la cuenta de tres: ¿quién busca antes una mirada cómplice cuando estáis entre gente?",
+      "answers": [
+        "Jugador 1",
+        "Jugador 2",
+        "Los dos",
+        "Depende"
+      ],
+      "mode": "quien",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-003",
+      "phase": "🌸 Suave",
+      "type": "🌸 Suave",
+      "prompt": "Manteneos la mirada durante 10 segundos y terminad con una sonrisa.",
+      "answers": null,
+      "mode": "retos",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-004",
+      "phase": "🌸 Suave",
+      "type": "🌸 Suave",
+      "prompt": "¿Qué detalle sencillo del otro recuerdas con más cariño?",
+      "answers": null,
+      "mode": "recuerdos",
+      "points": 1,
+      "level": 1,
+      "spice": 5,
+      "intensityBand": "Suave",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-005",
+      "phase": "💕 Coqueta",
+      "type": "💕 Coqueta",
+      "prompt": "Acercaos un poco y decid qué gesto del otro os parece especialmente encantador.",
+      "answers": null,
+      "mode": "pareja",
+      "points": 1,
+      "level": 2,
+      "spice": 15,
+      "intensityBand": "Suave",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-006",
+      "phase": "💕 Coqueta",
+      "type": "💕 Coqueta",
+      "prompt": "¿Quién suele provocar primero una sonrisa cuando quiere llamar la atención del otro?",
+      "answers": [
+        "Jugador 1",
+        "Jugador 2",
+        "Los dos",
+        "Ninguno"
+      ],
+      "mode": "quien",
+      "points": 1,
+      "level": 2,
+      "spice": 15,
+      "intensityBand": "Suave",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-007",
+      "phase": "💕 Coqueta",
+      "type": "💕 Coqueta",
+      "prompt": "Durante 15 segundos, uno intenta hacer sonreír al otro sin tocarlo.",
+      "answers": null,
+      "mode": "retos",
+      "points": 1,
+      "level": 2,
+      "spice": 15,
+      "intensityBand": "Suave",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-008",
+      "phase": "💕 Coqueta",
+      "type": "💕 Coqueta",
+      "prompt": "Confesad una pequeña cosa que os da vergüenza admitir que os encanta del otro.",
+      "answers": null,
+      "mode": "pareja",
+      "points": 1,
+      "level": 2,
+      "spice": 15,
+      "intensityBand": "Suave",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-009",
+      "phase": "🔥 Atrevida",
+      "type": "🔥 Atrevida",
+      "prompt": "Elegid una cualidad del otro que os resulte difícil ignorar cuando está cerca.",
+      "answers": null,
+      "mode": "pareja",
+      "points": 1,
+      "level": 3,
+      "spice": 25,
+      "intensityBand": "Coqueta",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-010",
+      "phase": "🔥 Atrevida",
+      "type": "🔥 Atrevida",
+      "prompt": "¿Quién tiene más poder para poner nervioso al otro con una simple mirada?",
+      "answers": [
+        "Jugador 1",
+        "Jugador 2",
+        "Los dos",
+        "Ninguno"
+      ],
+      "mode": "quien",
+      "points": 1,
+      "level": 3,
+      "spice": 25,
+      "intensityBand": "Coqueta",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-011",
+      "phase": "🔥 Atrevida",
+      "type": "🔥 Atrevida",
+      "prompt": "Acercaos frente a frente y mantened la mirada durante 20 segundos. Sin hablar.",
+      "answers": null,
+      "mode": "retos",
+      "points": 1,
+      "level": 3,
+      "spice": 25,
+      "intensityBand": "Coqueta",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-012",
+      "phase": "🔥 Atrevida",
+      "type": "🔥 Atrevida",
+      "prompt": "Decid una situación romántica que os gustaría vivir juntos alguna vez.",
+      "answers": null,
+      "mode": "pareja",
+      "points": 1,
+      "level": 3,
+      "spice": 25,
+      "intensityBand": "Coqueta",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-013",
+      "phase": "🔥 Atrevida",
+      "type": "🔥 Atrevida",
+      "prompt": "Recordad un momento en el que notasteis una tensión especial entre vosotros. ¿Qué pasó?",
+      "answers": null,
+      "mode": "recuerdos",
+      "points": 1,
+      "level": 4,
+      "spice": 35,
+      "intensityBand": "Coqueta",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-014",
+      "phase": "🔥 Atrevida",
+      "type": "🔥 Atrevida",
+      "prompt": "Decid qué tipo de plan a solas os haría sentir más conectados.",
+      "answers": null,
+      "mode": "pareja",
+      "points": 1,
+      "level": 4,
+      "spice": 35,
+      "intensityBand": "Coqueta",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-015",
+      "phase": "🔥 Atrevida",
+      "type": "🔥 Atrevida",
+      "prompt": "Uno se acerca lentamente; el otro dice \"más cerca\" o \"ahí\" cuando quiera. Respetad la señal.",
+      "answers": null,
+      "mode": "retos",
+      "points": 1,
+      "level": 4,
+      "spice": 35,
+      "intensityBand": "Coqueta",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-016",
+      "phase": "🔥 Atrevida",
+      "type": "🔥 Atrevida",
+      "prompt": "¿Quién creéis que se atrevería antes a proponer una cita inesperada?",
+      "answers": [
+        "Jugador 1",
+        "Jugador 2",
+        "Los dos",
+        "Ninguno"
+      ],
+      "mode": "quien",
+      "points": 1,
+      "level": 4,
+      "spice": 35,
+      "intensityBand": "Coqueta",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-017",
+      "phase": "🔥 Atrevida",
+      "type": "🔥 Atrevida",
+      "prompt": "Decid una fantasía romántica o de seducción que podáis compartir sin entrar en detalles íntimos.",
+      "answers": null,
+      "mode": "pareja",
+      "points": 2,
+      "level": 5,
+      "spice": 45,
+      "intensityBand": "Atrevida",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-018",
+      "phase": "🔥 Atrevida",
+      "type": "🔥 Atrevida",
+      "prompt": "Durante 30 segundos, intentad provocar una sonrisa al otro usando solo palabras.",
+      "answers": null,
+      "mode": "retos",
+      "points": 2,
+      "level": 5,
+      "spice": 45,
+      "intensityBand": "Atrevida",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-019",
+      "phase": "🔥 Atrevida",
+      "type": "🔥 Atrevida",
+      "prompt": "¿Quién creéis que tiene más facilidad para crear tensión con una mirada?",
+      "answers": [
+        "Jugador 1",
+        "Jugador 2",
+        "Los dos",
+        "Ninguno"
+      ],
+      "mode": "quien",
+      "points": 2,
+      "level": 5,
+      "spice": 45,
+      "intensityBand": "Atrevida",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-020",
+      "phase": "🔥 Atrevida",
+      "type": "🔥 Atrevida",
+      "prompt": "Decid qué tipo de cumplido os gustaría escuchar del otro más a menudo.",
+      "answers": null,
+      "mode": "pareja",
+      "points": 2,
+      "level": 5,
+      "spice": 45,
+      "intensityBand": "Atrevida",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-021",
+      "phase": "🌶️ Picante",
+      "type": "🌶️ Picante",
+      "prompt": "Describid una cita ideal para una noche en la que queréis tener máxima complicidad.",
+      "answers": null,
+      "mode": "pareja",
+      "points": 2,
+      "level": 6,
+      "spice": 55,
+      "intensityBand": "Atrevida",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-022",
+      "phase": "🌶️ Picante",
+      "type": "🌶️ Picante",
+      "prompt": "Acercaos, mirad al otro y decidle al oído un cumplido que normalmente no diríais delante de nadie.",
+      "answers": null,
+      "mode": "retos",
+      "points": 2,
+      "level": 6,
+      "spice": 55,
+      "intensityBand": "Atrevida",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-023",
+      "phase": "🌶️ Picante",
+      "type": "🌶️ Picante",
+      "prompt": "¿Quién aguantaría menos tiempo una mirada intensa sin apartarla?",
+      "answers": [
+        "Jugador 1",
+        "Jugador 2",
+        "Los dos",
+        "Ninguno"
+      ],
+      "mode": "quien",
+      "points": 2,
+      "level": 6,
+      "spice": 55,
+      "intensityBand": "Atrevida",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-024",
+      "phase": "🌶️ Picante",
+      "type": "🌶️ Picante",
+      "prompt": "Decid qué ambiente os parece más seductor: música, luz tenue, paseo nocturno o una sorpresa.",
+      "answers": [
+        "Música",
+        "Luz tenue",
+        "Paseo nocturno",
+        "Sorpresa"
+      ],
+      "mode": "pareja",
+      "points": 2,
+      "level": 6,
+      "spice": 55,
+      "intensityBand": "Atrevida",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-025",
+      "phase": "🌶️ Picante",
+      "type": "🌶️ Picante",
+      "prompt": "Elegid una palabra clave para pedir una pausa durante cualquier reto. Después, decid algo que os gustaría probar en el juego, sin obligación.",
+      "answers": null,
+      "mode": "retos",
+      "points": 2,
+      "level": 7,
+      "spice": 65,
+      "intensityBand": "Atrevida",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-026",
+      "phase": "🌶️ Picante",
+      "type": "🌶️ Picante",
+      "prompt": "Decid una cosa que os gustaría que el otro hiciera para haceros sentir especialmente deseados o valorados.",
+      "answers": null,
+      "mode": "pareja",
+      "points": 2,
+      "level": 7,
+      "spice": 65,
+      "intensityBand": "Atrevida",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-027",
+      "phase": "🌶️ Picante",
+      "type": "🌶️ Picante",
+      "prompt": "¿Quién creéis que rompería antes la tensión con una broma?",
+      "answers": [
+        "Jugador 1",
+        "Jugador 2",
+        "Los dos",
+        "Ninguno"
+      ],
+      "mode": "quien",
+      "points": 2,
+      "level": 7,
+      "spice": 65,
+      "intensityBand": "Atrevida",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-028",
+      "phase": "🌶️ Picante",
+      "type": "🌶️ Picante",
+      "prompt": "Frente a frente: 30 segundos de silencio, contacto visual y una frase final que empiece por \"Me encanta cuando…\".",
+      "answers": null,
+      "mode": "retos",
+      "points": 2,
+      "level": 7,
+      "spice": 65,
+      "intensityBand": "Atrevida",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-029",
+      "phase": "🌶️ Picante",
+      "type": "🌶️ Picante",
+      "prompt": "Elegid entre: beso romántico, abrazo largo, baile lento o mirada intensa. Explicad por qué.",
+      "answers": [
+        "Beso romántico",
+        "Abrazo largo",
+        "Baile lento",
+        "Mirada intensa"
+      ],
+      "mode": "pareja",
+      "points": 2,
+      "level": 8,
+      "spice": 75,
+      "intensityBand": "Picante",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-030",
+      "phase": "🌶️ Picante",
+      "type": "🌶️ Picante",
+      "prompt": "Uno elige una canción y el otro improvisa un baile lento durante 30 segundos. Sin obligación de contacto.",
+      "answers": null,
+      "mode": "retos",
+      "points": 2,
+      "level": 8,
+      "spice": 75,
+      "intensityBand": "Picante",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-031",
+      "phase": "🌶️ Picante",
+      "type": "🌶️ Picante",
+      "prompt": "Decid qué momento del día os parece más propicio para una noche especial juntos y por qué.",
+      "answers": null,
+      "mode": "pareja",
+      "points": 2,
+      "level": 8,
+      "spice": 75,
+      "intensityBand": "Picante",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-032",
+      "phase": "🌶️ Picante",
+      "type": "🌶️ Picante",
+      "prompt": "¿Quién sería más probable que preparase una sorpresa romántica sin avisar?",
+      "answers": [
+        "Jugador 1",
+        "Jugador 2",
+        "Los dos",
+        "Ninguno"
+      ],
+      "mode": "quien",
+      "points": 2,
+      "level": 8,
+      "spice": 75,
+      "intensityBand": "Picante",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-033",
+      "phase": "🌶️ Picante",
+      "type": "🌶️ Picante",
+      "prompt": "Cada uno dice una cosa que le gustaría recibir más del otro cuando busca cercanía: palabras, atención, tiempo, humor o contacto.",
+      "answers": [
+        "Palabras",
+        "Atención",
+        "Tiempo",
+        "Humor"
+      ],
+      "mode": "pareja",
+      "points": 2,
+      "level": 9,
+      "spice": 88,
+      "intensityBand": "Picante",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-034",
+      "phase": "🌶️ Picante",
+      "type": "🌶️ Picante",
+      "prompt": "Elegid un reto anterior que os haya gustado y repetidlo, pero aumentando solo la intensidad que ambos queráis.",
+      "answers": null,
+      "mode": "retos",
+      "points": 2,
+      "level": 9,
+      "spice": 88,
+      "intensityBand": "Picante",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-035",
+      "phase": "🌶️ Picante",
+      "type": "🌶️ Picante",
+      "prompt": "Mirándoos a los ojos, terminad la frase: \"Si esta noche fuera solo nuestra, me gustaría que…\"",
+      "answers": null,
+      "mode": "pareja",
+      "points": 2,
+      "level": 9,
+      "spice": 88,
+      "intensityBand": "Picante",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-036",
+      "phase": "🌶️ Picante",
+      "type": "🌶️ Picante",
+      "prompt": "¿Quién creéis que tiene más facilidad para tomar la iniciativa en un momento romántico?",
+      "answers": [
+        "Jugador 1",
+        "Jugador 2",
+        "Los dos",
+        "Depende"
+      ],
+      "mode": "quien",
+      "points": 2,
+      "level": 9,
+      "spice": 88,
+      "intensityBand": "Picante",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-037",
+      "phase": "🌶️ Picante",
+      "type": "🌶️ Picante",
+      "prompt": "Carta final: elegid una experiencia romántica que queráis convertir en un recuerdo real. Solo si ambos queréis.",
+      "answers": null,
+      "mode": "pareja",
+      "points": 2,
+      "level": 10,
+      "spice": 98,
+      "intensityBand": "Picante",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-038",
+      "phase": "🌶️ Picante",
+      "type": "🌶️ Picante",
+      "prompt": "Carta final: 60 segundos de máxima complicidad. Mirada, palabras bonitas y una elección conjunta para terminar la partida.",
+      "answers": null,
+      "mode": "retos",
+      "points": 2,
+      "level": 10,
+      "spice": 98,
+      "intensityBand": "Picante",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-039",
+      "phase": "🌶️ Picante",
+      "type": "🌶️ Picante",
+      "prompt": "Carta final: cada uno dice qué le gustaría conservar de esta partida para repetirlo otro día.",
+      "answers": null,
+      "mode": "pareja",
+      "points": 2,
+      "level": 10,
+      "spice": 98,
+      "intensityBand": "Picante",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    },
+    {
+      "id": "V7-040",
+      "phase": "🌶️ Picante",
+      "type": "🌶️ Picante",
+      "prompt": "Carta final: ¿quién ha sorprendido más al otro durante la partida?",
+      "answers": [
+        "Jugador 1",
+        "Jugador 2",
+        "Los dos",
+        "Imposible decidir"
+      ],
+      "mode": "quien",
+      "points": 2,
+      "level": 10,
+      "spice": 98,
+      "intensityBand": "Picante",
+      "consent": "Podéis pasar esta carta en cualquier momento, sin justificaros."
+    }
+  ],
+  "events": [
+    {
+      "id": "gold",
+      "name": "✨ Fiebre del Oro",
+      "text": "La próxima carta completada vale +2 puntos.",
+      "effect": "bonus2"
+    },
+    {
+      "id": "swap",
+      "name": "🔄 Cambio de Turno",
+      "text": "El otro jugador toma el siguiente turno.",
+      "effect": "swap"
+    },
+    {
+      "id": "shield",
+      "name": "🛡️ Protección",
+      "text": "Obtienes un escudo contra la próxima penalización.",
+      "effect": "shield"
+    },
+    {
+      "id": "portal",
+      "name": "🌀 Portal",
+      "text": "Avanzáis una casilla extra.",
+      "effect": "advance"
+    },
+    {
+      "id": "streak",
+      "name": "🔥 Chispa",
+      "text": "La próxima coincidencia aumenta la racha en 2.",
+      "effect": "streak2"
+    },
+    {
+      "id": "joker",
+      "name": "🃏 Comodín",
+      "text": "Recibes un comodín para cambiar una carta.",
+      "effect": "joker"
+    },
+    {
+      "id": "double",
+      "name": "💎 Doble",
+      "text": "La próxima coincidencia vale doble.",
+      "effect": "double"
+    },
+    {
+      "id": "mystery",
+      "name": "🎁 Caja Misteriosa",
+      "text": "Recibes una recompensa aleatoria.",
+      "effect": "mystery"
+    }
+  ],
+  "levels": [
+    {
+      "id": 1,
+      "name": "LA CHISPA",
+      "subtitle": "El comienzo",
+      "mechanic": "corazones",
+      "objective": 5,
+      "map": [
+        "start",
+        "normal",
+        "heart",
+        "normal",
+        "choice",
+        "normal",
+        "heart",
+        "normal",
+        "bonus",
+        "finish"
+      ],
+      "boss": "El Primer Encaje",
+      "bossText": "Superad una carta de conexión y una de ¿Quién? consecutivas.",
+      "reward": "❤️ Corazón Doble",
+      "unlock": "Comodín Corazón",
+      "intensityMin": 5,
+      "intensityMax": 15,
+      "intensityLabel": "Suave"
+    },
+    {
+      "id": 2,
+      "name": "LA COMPLICIDAD",
+      "subtitle": "Los detalles cuentan",
+      "mechanic": "memory",
+      "objective": 5,
+      "map": [
+        "start",
+        "memory",
+        "normal",
+        "memory",
+        "mirror",
+        "normal",
+        "memory",
+        "bonus",
+        "normal",
+        "finish"
+      ],
+      "boss": "El Espejo",
+      "bossText": "Recordad un detalle del otro que ninguno haya mencionado aún.",
+      "reward": "🪞 Espejo de Respuesta",
+      "unlock": "Cartas de Memoria",
+      "intensityMin": 15,
+      "intensityMax": 25,
+      "intensityLabel": "Coqueta"
+    },
+    {
+      "id": 3,
+      "name": "EL DESAFÍO",
+      "subtitle": "Ahora empieza el juego",
+      "mechanic": "challenge",
+      "objective": 6,
+      "map": [
+        "start",
+        "challenge",
+        "normal",
+        "risk",
+        "challenge",
+        "duel",
+        "normal",
+        "challenge",
+        "bonus",
+        "finish"
+      ],
+      "boss": "La Prueba de Fuego",
+      "bossText": "Completad dos retos seguidos sin saltar.",
+      "reward": "🔥 Ficha de Racha",
+      "unlock": "Cartas de Reto",
+      "intensityMin": 25,
+      "intensityMax": 35,
+      "intensityLabel": "Coqueta"
+    },
+    {
+      "id": 4,
+      "name": "LA MEMORIA",
+      "subtitle": "Lo que habéis vivido",
+      "mechanic": "story",
+      "objective": 6,
+      "map": [
+        "start",
+        "memory",
+        "story",
+        "normal",
+        "memory",
+        "treasure",
+        "story",
+        "memory",
+        "bonus",
+        "finish"
+      ],
+      "boss": "El Guardián del Recuerdo",
+      "bossText": "Cada uno aporta un detalle de un recuerdo y el otro debe reconocerlo.",
+      "reward": "🧠 Archivo Compartido",
+      "unlock": "Cartas de Historia",
+      "intensityMin": 35,
+      "intensityMax": 45,
+      "intensityLabel": "Coqueta"
+    },
+    {
+      "id": 5,
+      "name": "EL GIRO",
+      "subtitle": "Nada es como parece",
+      "mechanic": "chaos",
+      "objective": 6,
+      "map": [
+        "start",
+        "event",
+        "risk",
+        "portal",
+        "event",
+        "chaos",
+        "risk",
+        "bonus",
+        "event",
+        "finish"
+      ],
+      "boss": "La Ruleta",
+      "bossText": "Activad un evento y aceptad su efecto sin usar comodín.",
+      "reward": "🌀 Portal",
+      "unlock": "Eventos de Caos",
+      "intensityMin": 45,
+      "intensityMax": 55,
+      "intensityLabel": "Atrevida"
+    },
+    {
+      "id": 6,
+      "name": "A CONTRARRELOJ",
+      "subtitle": "Piensa rápido",
+      "mechanic": "timer",
+      "objective": 7,
+      "map": [
+        "start",
+        "timer",
+        "timer",
+        "normal",
+        "duel",
+        "timer",
+        "risk",
+        "timer",
+        "bonus",
+        "finish"
+      ],
+      "boss": "60 Segundos",
+      "bossText": "Superad tres cartas con tiempo sin fallar.",
+      "reward": "⏱️ Tiempo Extra",
+      "unlock": "Pruebas a Contrarreloj",
+      "intensityMin": 55,
+      "intensityMax": 65,
+      "intensityLabel": "Atrevida"
+    },
+    {
+      "id": 7,
+      "name": "LA AVENTURA",
+      "subtitle": "El tablero manda",
+      "mechanic": "explore",
+      "objective": 7,
+      "map": [
+        "start",
+        "portal",
+        "treasure",
+        "risk",
+        "explore",
+        "event",
+        "treasure",
+        "portal",
+        "bonus",
+        "finish"
+      ],
+      "boss": "El Guardián del Mapa",
+      "bossText": "Encontrad un tesoro y activad un portal.",
+      "reward": "🗺️ Brújula",
+      "unlock": "Mapa de Aventura",
+      "intensityMin": 65,
+      "intensityMax": 75,
+      "intensityLabel": "Atrevida"
+    },
+    {
+      "id": 8,
+      "name": "DOBLE O NADA",
+      "subtitle": "Arriesgar para ganar",
+      "mechanic": "bet",
+      "objective": 7,
+      "map": [
+        "start",
+        "bet",
+        "risk",
+        "bonus",
+        "bet",
+        "duel",
+        "risk",
+        "treasure",
+        "bonus",
+        "finish"
+      ],
+      "boss": "La Apuesta",
+      "bossText": "Apostad puntos y sobrevivir a una carta de coincidencia.",
+      "reward": "💎 Diamante",
+      "unlock": "Cartas Doble o Nada",
+      "intensityMin": 75,
+      "intensityMax": 85,
+      "intensityLabel": "Picante"
+    },
+    {
+      "id": 9,
+      "name": "LA PRUEBA FINAL",
+      "subtitle": "Todo vuelve",
+      "mechanic": "master",
+      "objective": 8,
+      "map": [
+        "start",
+        "memory",
+        "challenge",
+        "duel",
+        "story",
+        "event",
+        "risk",
+        "master",
+        "bonus",
+        "finish"
+      ],
+      "boss": "El Tribunal",
+      "bossText": "Superad una memoria, un reto y un duelo.",
+      "reward": "👑 Corona",
+      "unlock": "Cartas Finales",
+      "intensityMin": 88,
+      "intensityMax": 95,
+      "intensityLabel": "Picante"
+    },
+    {
+      "id": 10,
+      "name": "SIN ESCAPATORIA",
+      "subtitle": "La gran final",
+      "mechanic": "final",
+      "objective": 8,
+      "map": [
+        "start",
+        "heart",
+        "memory",
+        "challenge",
+        "treasure",
+        "portal",
+        "duel",
+        "final",
+        "crown",
+        "finish"
+      ],
+      "boss": "SIN ESCAPATORIA",
+      "bossText": "Llegad a la última casilla y elegid vuestro final.",
+      "reward": "🏆 Historia Completa",
+      "unlock": "Todos los finales",
+      "intensityMin": 98,
+      "intensityMax": 100,
+      "intensityLabel": "Picante"
+    }
+  ],
+  "specialSpaces": {
+    "heart": {
+      "name": "❤️ Corazón",
+      "desc": "+1 punto si ambos completan la carta."
+    },
+    "memory": {
+      "name": "🧠 Memoria",
+      "desc": "Las cartas de recuerdos dan +1 punto extra."
+    },
+    "choice": {
+      "name": "🎭 Elección",
+      "desc": "El jugador activo decide entre dos tipos de carta."
+    },
+    "mirror": {
+      "name": "🪞 Espejo",
+      "desc": "Si coincidís, recuperáis 1 comodín."
+    },
+    "challenge": {
+      "name": "🔥 Reto",
+      "desc": "Vale +1 punto extra si se completa."
+    },
+    "duel": {
+      "name": "⚔️ Duelo",
+      "desc": "Ambos responden; el primero en acertar gana el bonus."
+    },
+    "risk": {
+      "name": "💀 Riesgo",
+      "desc": "Puedes ganar +3 o perder 2."
+    },
+    "bonus": {
+      "name": "⭐ Bonus",
+      "desc": "Recibes +2 puntos si completas la próxima carta."
+    },
+    "event": {
+      "name": "🃏 Evento",
+      "desc": "Activa un giro de reglas."
+    },
+    "chaos": {
+      "name": "🌀 Caos",
+      "desc": "Cambia el turno o el efecto de la próxima carta."
+    },
+    "timer": {
+      "name": "⏱️ Crono",
+      "desc": "La carta tiene tiempo limitado."
+    },
+    "treasure": {
+      "name": "💎 Tesoro",
+      "desc": "Elige una recompensa."
+    },
+    "portal": {
+      "name": "🌀 Portal",
+      "desc": "Avanza una casilla extra o cambia el tipo de carta."
+    },
+    "explore": {
+      "name": "🗺️ Explora",
+      "desc": "Elige el camino que quieres tomar."
+    },
+    "bet": {
+      "name": "🎲 Apuesta",
+      "desc": "Arriesga puntos por un premio mayor."
+    },
+    "story": {
+      "name": "📖 Historia",
+      "desc": "Carta especial de vuestra historia."
+    },
+    "master": {
+      "name": "⚔️ Maestría",
+      "desc": "Mezcla dos mecánicas anteriores."
+    },
+    "final": {
+      "name": "👑 Final",
+      "desc": "Carta exclusiva del último nivel."
+    },
+    "crown": {
+      "name": "👑 Corona",
+      "desc": "Última recompensa antes del final."
+    },
+    "normal": {
+      "name": "✨ Camino",
+      "desc": "Una carta del nivel."
+    },
+    "start": {
+      "name": "🚪 Inicio",
+      "desc": "Comienza la aventura."
+    },
+    "finish": {
+      "name": "🏁 Meta",
+      "desc": "Casilla de final de nivel."
+    }
+  },
+  "items": {
+    "heart_double": {
+      "name": "❤️ Corazón Doble",
+      "desc": "Duplica los puntos de una coincidencia.",
+      "uses": 1
+    },
+    "shield": {
+      "name": "🛡️ Escudo",
+      "desc": "Evita una penalización.",
+      "uses": 1
+    },
+    "reroll": {
+      "name": "🎲 Repetir",
+      "desc": "Vuelve a tirar el dado.",
+      "uses": 1
+    },
+    "portal": {
+      "name": "🌀 Portal",
+      "desc": "Avanza 2 casillas.",
+      "uses": 1
+    },
+    "joker": {
+      "name": "🃏 Comodín",
+      "desc": "Cambia la carta actual por otra de su nivel.",
+      "uses": 2
+    },
+    "heart": {
+      "name": "💗 Corazón",
+      "desc": "Convierte una no-coincidencia en empate.",
+      "uses": 1
+    },
+    "compass": {
+      "name": "🗺️ Brújula",
+      "desc": "Elige la próxima categoría.",
+      "uses": 1
+    },
+    "clock": {
+      "name": "⏱️ Tiempo Extra",
+      "desc": "Añade 15 segundos a una prueba cronometrada.",
+      "uses": 1
+    },
+    "diamond": {
+      "name": "💎 Diamante",
+      "desc": "+3 puntos al final del nivel si no se ha gastado.",
+      "uses": 1
+    },
+    "crown": {
+      "name": "👑 Corona",
+      "desc": "Desbloquea una elección de final.",
+      "uses": 1
+    }
+  },
+  "finals": [
+    {
+      "id": "heart",
+      "name": "❤️ FINAL CORAZÓN",
+      "desc": "Termináis la campaña celebrando la conexión, las coincidencias y lo que habéis construido juntos."
+    },
+    {
+      "id": "adventure",
+      "name": "🗺️ FINAL AVENTURA",
+      "desc": "El tablero se convierte en el mapa de una próxima historia: el juego termina, pero vuestra siguiente aventura queda abierta."
+    },
+    {
+      "id": "chaos",
+      "name": "🌀 FINAL CAOS",
+      "desc": "Elegís el final más imprevisible: el marcador se cierra con un último giro y una recompensa sorpresa."
+    },
+    {
+      "id": "perfect",
+      "name": "👑 FINAL PERFECTO",
+      "desc": "Si acumuláis suficientes corazones, rachas y recompensas, desbloqueáis el final secreto."
+    }
+  ],
+  "legacyCardCount": 109,
+  "expansionCardCount": 100,
+  "intensitySystem": {
+    "bands": [
+      {
+        "id": "suave",
+        "name": "Suave",
+        "max": 20,
+        "desc": "Coqueteo ligero, conexión y confianza."
+      },
+      {
+        "id": "coqueta",
+        "name": "Coqueta",
+        "max": 45,
+        "desc": "Más tensión, miradas y confesiones juguetonas."
+      },
+      {
+        "id": "atrevida",
+        "name": "Atrevida",
+        "max": 75,
+        "desc": "Retos más personales y románticos."
+      },
+      {
+        "id": "picante",
+        "name": "Picante",
+        "max": 100,
+        "desc": "Máxima intensidad romántica, siempre con consentimiento."
+      }
+    ],
+    "campaign": "Progresión 1→10 de Suave a Picante; el límite elegido actúa como techo y no permite saltar etapas."
+  },
+  "gameVersion": "8.0",
+  "status": "Edición Definitiva"
+}

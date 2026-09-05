@@ -1,0 +1,22 @@
+{
+  "profiles": {
+    "SE-AAA11111": {
+      "id": "SE-AAA11111",
+      "name": "Ana",
+      "updatedAt": 1788568904092
+    },
+    "SE-BBB22222": {
+      "id": "SE-BBB22222",
+      "name": "Luis",
+      "updatedAt": 1788568904099
+    }
+  },
+  "friends": {
+    "SE-AAA11111": [
+      "SE-BBB22222"
+    ],
+    "SE-BBB22222": [
+      "SE-AAA11111"
+    ]
+  }
+}
