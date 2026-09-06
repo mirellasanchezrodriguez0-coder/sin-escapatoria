@@ -11,5 +11,4 @@ COPY manifest.json ./
 COPY sw.js ./
 
 EXPOSE 8787
-
 CMD ["npm", "start"]
