@@ -1,8 +1,1 @@
-{
-  "name": "sin-escapatoria-5d",
-  "version": "11.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node Server.js"
-  }
-}
+{"name":"sin-escapatoria","version":"1.0.0","private":true,"scripts":{"start":"node server.js"},"engines":{"node":">=18"}}
