@@ -1,0 +1,25 @@
+SIN ESCAPATORIA — ARCHIVOS CORREGIDOS
+FECHA: 07/09/2026
+
+Estos archivos conservan los nombres originales para reemplazar los existentes.
+
+BACKEND:
+- Dockerfile -> reemplaza el Dockerfile existente
+- package.json -> reemplaza el package.json existente
+
+ANDROID:
+- android/app/src/main/java/com/sinescapatoria/app/MainActivity.kt
+- android/app/build.gradle.kts
+- android/app/src/main/AndroidManifest.xml
+- android/index.html
+- README_ANDROID.txt
+
+RECURSO:
+- app_logo.png -> reemplaza el app_logo.png existente
+
+IMPORTANTE:
+No cambies los nombres de los archivos al subirlos.
+No borres Server.js del backend.
+El arreglo del Dockerfile hace que Server.js se copie como server.js dentro del contenedor, porque package.json ejecuta node server.js.
+
+NO he renombrado ni sustituido el juego web definitivo (index.html) porque debe conservarse la versión de interfaz que ya has elegido.
