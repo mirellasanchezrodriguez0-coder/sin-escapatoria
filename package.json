@@ -1,0 +1,1 @@
+{"name":"sin-escapatoria","version":"1.0.1","private":true,"scripts":{"start":"if [ -f Server.js ]; then node Server.js; elif [ -f Servidor.js ]; then node Servidor.js; else echo 'No se encuentra Server.js ni Servidor.js'; exit 1; fi"},"engines":{"node":">=18"}}
